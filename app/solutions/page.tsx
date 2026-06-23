@@ -84,7 +84,7 @@ export default function SolutionsPage() {
       <section className="page-hero">
         <div className="page-hero-bg" />
         <div className="page-hero-glow" />
-        <div style={{ position: "relative", maxWidth: 900, margin: "0 auto", padding: "0 32px" }}>
+        <div className="r-inner" style={{ position: "relative", maxWidth: 900 }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="badge" style={{ marginBottom: 20 }}>Robot Solutions</span>
           </motion.div>
@@ -103,14 +103,8 @@ export default function SolutionsPage() {
       {robots.map((robot, idx) => (
         <section key={robot.id} id={robot.id}
           style={{ padding: "96px 0", background: idx % 2 === 1 ? "#0a0a0a" : "#0d0d0d", position: "relative", overflow: "hidden" }}>
-          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: 72,
-              alignItems: "center",
-              direction: robot.reverse ? "rtl" : "ltr",
-            }}>
+          <div className="r-inner">
+            <div className={robot.reverse ? "r-split-rev" : "r-split"} style={{ alignItems: "center" }}>
               {/* Visual */}
               <motion.div
                 initial={{ opacity: 0, x: robot.reverse ? 40 : -40 }}
@@ -145,7 +139,7 @@ export default function SolutionsPage() {
                 <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 15, color: "rgba(232,135,74,0.8)", fontStyle: "italic", marginBottom: 16 }}>"{robot.tagline}"</p>
                 <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 15, color: "rgba(250,250,250,0.62)", lineHeight: 1.75, marginBottom: 24 }}>{robot.description}</p>
 
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 28 }}>
+                <div className="r-grid-2" style={{ marginBottom: 28 }}>
                   {robot.features.map((f) => (
                     <div key={f.text} style={{ display: "flex", alignItems: "flex-start", gap: 9, fontSize: 13, color: "rgba(250,250,250,0.72)", fontFamily: "'Inter', sans-serif", lineHeight: 1.5 }}>
                       <span style={{ color: "#e8874a", flexShrink: 0, marginTop: 2 }}>{f.icon}</span>
@@ -178,45 +172,47 @@ export default function SolutionsPage() {
 
       {/* ── Comparison Table ── */}
       <section style={{ padding: "96px 0", background: "#0a0a0a" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 48px" }}>
+        <div className="r-inner" style={{ maxWidth: 900 }}>
           <SectionHeading badge="Compare" title="Find the Right" highlight="Robot for You" subtitle="Each robot type excels in different areas. See which best suits your business needs." />
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
-            style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 24, overflow: "hidden" }}>
-            <table className="compare-table" style={{ width: "100%" }}>
-              <thead>
-                <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
-                  <th style={{ padding: "16px 24px", textAlign: "left", fontFamily: "'Inter', sans-serif", fontSize: 12, fontWeight: 600, color: "rgba(250,250,250,0.4)", textTransform: "uppercase", letterSpacing: "0.08em" }}>Feature</th>
-                  {[{ icon: <Dog size={16} />, label: "Robot Dog" }, { icon: <Bot size={16} />, label: "Humanoid" }, { icon: <ChefHat size={16} />, label: "Cooking" }].map(col => (
-                    <th key={col.label} style={{ padding: "16px 24px", textAlign: "center", borderLeft: "1px solid rgba(255,255,255,0.07)" }}>
-                      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, color: "#e8874a", fontFamily: "'Sora', sans-serif", fontSize: 14, fontWeight: 600 }}>
-                        {col.icon}<span style={{ color: "#fafafa" }}>{col.label}</span>
-                      </div>
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonRows.map((row, i) => (
-                  <tr key={row.label} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)", background: i % 2 === 0 ? "rgba(255,255,255,0.015)" : "transparent" }}>
-                    <td style={{ padding: "14px 24px", fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.75)" }}>{row.label}</td>
-                    {[row.dog, row.humanoid, row.cooking].map((val, ci) => (
-                      <td key={ci} style={{ padding: "14px 24px", textAlign: "center", borderLeft: "1px solid rgba(255,255,255,0.05)" }}>
-                        {val ? <CheckCircle2 size={18} style={{ color: "#e8874a", display: "inline-block" }} /> : <span style={{ display: "inline-block", width: 20, height: 1, background: "rgba(255,255,255,0.15)" }} />}
-                      </td>
+          <div className="r-compare-wrap">
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
+              style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 24, overflow: "hidden" }}>
+              <table className="compare-table" style={{ width: "100%" }}>
+                <thead>
+                  <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+                    <th style={{ padding: "16px 24px", textAlign: "left", fontFamily: "'Inter', sans-serif", fontSize: 12, fontWeight: 600, color: "rgba(250,250,250,0.4)", textTransform: "uppercase", letterSpacing: "0.08em" }}>Feature</th>
+                    {[{ icon: <Dog size={16} />, label: "Robot Dog" }, { icon: <Bot size={16} />, label: "Humanoid" }, { icon: <ChefHat size={16} />, label: "Cooking" }].map(col => (
+                      <th key={col.label} style={{ padding: "16px 24px", textAlign: "center", borderLeft: "1px solid rgba(255,255,255,0.07)" }}>
+                        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, color: "#e8874a", fontFamily: "'Sora', sans-serif", fontSize: 14, fontWeight: 600 }}>
+                          {col.icon}<span style={{ color: "#fafafa" }}>{col.label}</span>
+                        </div>
+                      </th>
                     ))}
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </motion.div>
+                </thead>
+                <tbody>
+                  {comparisonRows.map((row, i) => (
+                    <tr key={row.label} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)", background: i % 2 === 0 ? "rgba(255,255,255,0.015)" : "transparent" }}>
+                      <td style={{ padding: "14px 24px", fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.75)" }}>{row.label}</td>
+                      {[row.dog, row.humanoid, row.cooking].map((val, ci) => (
+                        <td key={ci} style={{ padding: "14px 24px", textAlign: "center", borderLeft: "1px solid rgba(255,255,255,0.05)" }}>
+                          {val ? <CheckCircle2 size={18} style={{ color: "#e8874a", display: "inline-block" }} /> : <span style={{ display: "inline-block", width: 20, height: 1, background: "rgba(255,255,255,0.15)" }} />}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* ── Features ── */}
       <section style={{ padding: "96px 0" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+        <div className="r-inner">
           <SectionHeading badge="What Sets Us Apart" title="Built for" highlight="Real Results" subtitle="Every Merchant Robot solution is backed by expertise, proven technology, and dedicated support." />
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+          <div className="r-grid-3">
             {[
               { icon: <Zap size={18} />, title: "Rapid Deployment", description: "Get operational quickly with streamlined setup and professional onboarding assistance." },
               { icon: <Settings size={18} />, title: "Customizable", description: "Robots can be configured and branded to match your business identity and workflow." },

@@ -100,7 +100,7 @@ export default function RestaurantPage() {
             From cooking support to guest interaction, Merchant Robot helps restaurants create smarter, faster, and more memorable customer experiences.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
-            style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
+            className="r-hero-btns">
             <Link href="/contact#demo" className="btn-primary">Book a Restaurant Demo</Link>
             <Link href="/solutions" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
               View All Solutions <ArrowRight size={16} />
@@ -111,8 +111,8 @@ export default function RestaurantPage() {
 
       {/* ── Stats ── */}
       <section style={{ padding: "56px 0", background: "#111111", borderTop: "1px solid rgba(255,255,255,0.07)", borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 48px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32 }}>
+        <div className="r-inner" style={{ maxWidth: 1100 }}>
+          <div className="r-stats">
             {statsData.map((s, i) => (
               <motion.div key={s.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} style={{ textAlign: "center" }}>
                 <div className="stat-number">{s.value}</div>
@@ -125,10 +125,10 @@ export default function RestaurantPage() {
 
       {/* ── Why Restaurants Need Robotics ── */}
       <section style={{ padding: "96px 0" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+        <div className="r-inner">
           <SectionHeading badge="Why Robotics?" title="Why Restaurants" highlight="Need Robotics"
             subtitle="The restaurant industry faces rising costs, staffing challenges, and increasing customer expectations. Robotics is the answer." />
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
+          <div className="r-benefits-4">
             {benefits.map((b, i) => <FeatureCard key={b.title} {...b} delay={i * 0.07} />)}
           </div>
         </div>
@@ -138,14 +138,8 @@ export default function RestaurantPage() {
       {robotSections.map((robot, idx) => (
         <section key={robot.id} id={robot.id}
           style={{ padding: "96px 0", background: idx % 2 === 1 ? "#0a0a0a" : "#0d0d0d", position: "relative", overflow: "hidden" }}>
-          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: 72,
-              alignItems: "center",
-              direction: robot.reverse ? "rtl" : "ltr",
-            }}>
+          <div className="r-inner">
+            <div className={robot.reverse ? "r-split-rev" : "r-split"} style={{ alignItems: "center" }}>
               {/* Visual */}
               <motion.div initial={{ opacity: 0, x: robot.reverse ? 40 : -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ direction: "ltr" }}>
                 <div className="visual-panel" style={{ minHeight: 320 }}>
@@ -187,8 +181,8 @@ export default function RestaurantPage() {
 
       {/* ── Staff Support ── */}
       <section style={{ padding: "96px 0" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 72, alignItems: "center" }}>
+        <div className="r-inner">
+          <div className="r-split" style={{ alignItems: "center" }}>
             <div>
               <motion.span initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="badge" style={{ marginBottom: 20 }}>Staff Support</motion.span>
               <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
@@ -216,7 +210,7 @@ export default function RestaurantPage() {
               </ul>
             </div>
             <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+              <div className="r-staff-grid">
                 {[
                   { icon: <Utensils size={18} />, title: "Kitchen Support", desc: "Cooking robots handle high-volume prep and cooking tasks efficiently." },
                   { icon: <Users size={18} />, title: "Guest Service", desc: "Humanoids handle greetings, info requests, and engagement naturally." },

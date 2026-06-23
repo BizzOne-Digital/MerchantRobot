@@ -54,8 +54,8 @@ export default function ContactPage() {
 
       {/* ── Main Content ── */}
       <section style={{ padding: "80px 0 120px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "2fr 3fr", gap: 64, alignItems: "start" }}>
+        <div className="r-inner">
+          <div className="r-contact-grid" style={{ alignItems: "start" }}>
 
             {/* ─ Left: Info ─ */}
             <div>
@@ -98,7 +98,7 @@ export default function ContactPage() {
             {/* ─ Right: Form ─ */}
             <div id="contact-form">
               <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.1 }}>
-                <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.09)", borderRadius: 28, padding: "48px", position: "relative", overflow: "hidden" }}>
+                <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.09)", borderRadius: 28, padding: "clamp(24px, 5vw, 48px)", position: "relative", overflow: "hidden" }}>
                   <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(90deg, #e8874a, #f5c5a3)" }} />
 
                   {submitted ? (
@@ -120,7 +120,7 @@ export default function ContactPage() {
                       <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.5)", marginBottom: 32 }}>Fill in the details below and we'll get back to you shortly.</p>
 
                       <form onSubmit={handleSubmit}>
-                        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 20 }}>
+                        <div className="r-form-row" style={{ marginBottom: 20 }}>
                           <div>
                             <label className="form-label">Full Name *</label>
                             <input type="text" name="name" required value={form.name} onChange={handleChange} placeholder="John Smith" className="form-input" />
@@ -131,7 +131,7 @@ export default function ContactPage() {
                           </div>
                         </div>
 
-                        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 20 }}>
+                        <div className="r-form-row" style={{ marginBottom: 20 }}>
                           <div>
                             <label className="form-label">Phone Number</label>
                             <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="+1 (555) 000-0000" className="form-input" />
@@ -181,9 +181,9 @@ export default function ContactPage() {
 
       {/* ── Bottom guarantees ── */}
       <section style={{ paddingBottom: 96 }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+        <div className="r-inner">
           <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 24, padding: "48px" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 40 }}>
+            <div className="r-guarantees">
               {[
                 { title: "Free Consultation", desc: "We'll assess your business needs at no cost and recommend the best robot solution." },
                 { title: "Live Demo Available", desc: "See the robots in action before making any decisions. Demos available on request." },

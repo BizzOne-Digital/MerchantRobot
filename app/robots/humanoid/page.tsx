@@ -91,74 +91,76 @@ export default function HumanoidPage() {
       </div>
 
       {/* ══ HERO ══ */}
-      <section style={{ position: "relative", minHeight: "90vh", display: "flex", alignItems: "center", overflow: "hidden", paddingTop: 80 }} className="hero-bg">
+      <section style={{ position: "relative", minHeight: "90vh", display: "flex", alignItems: "center", overflow: "hidden", paddingTop: 80 }} className="hero-bg r-hero-pad">
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 65% 55% at 65% 50%, rgba(232,135,74,0.10) 0%, transparent 65%)", pointerEvents: "none" }} />
         <div style={{ position: "absolute", inset: 0, opacity: 0.035, backgroundImage: "linear-gradient(rgba(232,135,74,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(232,135,74,0.5) 1px, transparent 1px)", backgroundSize: "56px 56px", pointerEvents: "none" }} />
 
-        <div style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "80px 48px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
-          {/* Right visual — shown first on desktop via order */}
-          <motion.div initial={{ opacity: 0, scale: 0.85, x: -40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 1, delay: 0.2 }}
-            style={{ order: 2 }}>
-            <div className="visual-panel" style={{ minHeight: 440, position: "relative" }}>
-              <div style={{ position: "absolute", width: 320, height: 320, borderRadius: "50%", background: "rgba(232,135,74,0.08)", filter: "blur(70px)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
-              <div className="float" style={{ position: "relative", zIndex: 1, transform: "scale(1.5)" }}>
-                <HumanoidVisual />
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Left content */}
-          <div style={{ order: 1 }}>
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} style={{ marginBottom: 20 }}>
-              <Link href="/solutions" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, color: "rgba(250,250,250,0.45)", textDecoration: "none", fontFamily: "'Inter', sans-serif", marginBottom: 16, transition: "color 0.2s" }}
-                onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#e8874a"}
-                onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(250,250,250,0.45)"}>
-                <ArrowLeft size={12} /> Robot Solutions
-              </Link>
-              <span className="badge" style={{ display: "block", width: "fit-content" }}>Humanoid Robot</span>
-            </motion.div>
-
-            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-              style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(36px, 5vw, 62px)", fontWeight: 800, color: "#fafafa", lineHeight: 1.06, letterSpacing: "-0.03em", marginBottom: 8 }}>
-              The Humanoid Robot
-            </motion.h1>
-            <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}
-              style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(18px, 2.5vw, 28px)", fontWeight: 600, lineHeight: 1.2, marginBottom: 24 }}>
-              <span className="gradient-text">Human-Like Interaction. Futuristic Brand Experience.</span>
-            </motion.h2>
-
-            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }}
-              style={{ fontFamily: "'Inter', sans-serif", fontSize: 17, color: "rgba(250,250,250,0.65)", lineHeight: 1.8, maxWidth: 500, marginBottom: 36 }}>
-              A lifelike AI-powered robot that welcomes guests, answers questions, provides directions, and creates a genuinely futuristic experience that your customers will remember — and share.
-            </motion.p>
-
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }}
-              style={{ display: "flex", gap: 16, flexWrap: "wrap", marginBottom: 40 }}>
-              <Link href="/contact#demo" className="btn-primary">Request a Demo</Link>
-              <Link href="/contact" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-                Get a Quote <ArrowRight size={15} />
-              </Link>
-            </motion.div>
-
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
-              style={{ display: "flex", flexWrap: "wrap", gap: 20 }}>
-              {["Natural Voice AI", "Multi-Language", "Brand Customizable", "24/7 Available"].map(tag => (
-                <div key={tag} style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 13, color: "rgba(250,250,250,0.55)", fontFamily: "'Inter', sans-serif" }}>
-                  <CheckCircle2 size={13} style={{ color: "#e8874a" }} /> {tag}
+        <div className="r-inner" style={{ position: "relative" }}>
+          <div className="r-robot-hero" style={{ alignItems: "center" }}>
+            {/* Right visual — shown first on desktop via order */}
+            <motion.div initial={{ opacity: 0, scale: 0.85, x: -40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 1, delay: 0.2 }}
+              style={{ order: 2 }} className="hero-visual-center">
+              <div className="visual-panel" style={{ minHeight: 440, position: "relative" }}>
+                <div style={{ position: "absolute", width: 320, height: 320, borderRadius: "50%", background: "rgba(232,135,74,0.08)", filter: "blur(70px)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
+                <div className="float" style={{ position: "relative", zIndex: 1, transform: "scale(1.5)" }}>
+                  <HumanoidVisual />
                 </div>
-              ))}
+              </div>
             </motion.div>
+
+            {/* Left content */}
+            <div style={{ order: 1 }}>
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} style={{ marginBottom: 20 }}>
+                <Link href="/solutions" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, color: "rgba(250,250,250,0.45)", textDecoration: "none", fontFamily: "'Inter', sans-serif", marginBottom: 16, transition: "color 0.2s" }}
+                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#e8874a"}
+                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(250,250,250,0.45)"}>
+                  <ArrowLeft size={12} /> Robot Solutions
+                </Link>
+                <span className="badge" style={{ display: "block", width: "fit-content" }}>Humanoid Robot</span>
+              </motion.div>
+
+              <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
+                style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(36px, 5vw, 62px)", fontWeight: 800, color: "#fafafa", lineHeight: 1.06, letterSpacing: "-0.03em", marginBottom: 8 }}>
+                The Humanoid Robot
+              </motion.h1>
+              <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}
+                style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(18px, 2.5vw, 28px)", fontWeight: 600, lineHeight: 1.2, marginBottom: 24 }}>
+                <span className="gradient-text">Human-Like Interaction. Futuristic Brand Experience.</span>
+              </motion.h2>
+
+              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }}
+                style={{ fontFamily: "'Inter', sans-serif", fontSize: 17, color: "rgba(250,250,250,0.65)", lineHeight: 1.8, maxWidth: 500, marginBottom: 36 }}>
+                A lifelike AI-powered robot that welcomes guests, answers questions, provides directions, and creates a genuinely futuristic experience that your customers will remember — and share.
+              </motion.p>
+
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }}
+                className="r-btn-row" style={{ marginBottom: 40 }}>
+                <Link href="/contact#demo" className="btn-primary">Request a Demo</Link>
+                <Link href="/contact" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+                  Get a Quote <ArrowRight size={15} />
+                </Link>
+              </motion.div>
+
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
+                style={{ display: "flex", flexWrap: "wrap", gap: 20 }}>
+                {["Natural Voice AI", "Multi-Language", "Brand Customizable", "24/7 Available"].map(tag => (
+                  <div key={tag} style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 13, color: "rgba(250,250,250,0.55)", fontFamily: "'Inter', sans-serif" }}>
+                    <CheckCircle2 size={13} style={{ color: "#e8874a" }} /> {tag}
+                  </div>
+                ))}
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ══ SPECS ══ */}
       <section style={{ background: "#111111", borderTop: "1px solid rgba(255,255,255,0.07)", borderBottom: "1px solid rgba(255,255,255,0.07)", padding: "48px 0" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0 }}>
+        <div className="r-inner">
+          <div className="r-specs">
             {specs.map((s, i) => (
               <motion.div key={s.label} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}
-                style={{ padding: "20px 28px", borderRight: i < 7 ? "1px solid rgba(255,255,255,0.07)" : "none", borderBottom: i < 4 ? "1px solid rgba(255,255,255,0.07)" : "none" }}>
+                className="r-spec-cell" style={{ borderRight: i < 7 ? "1px solid rgba(255,255,255,0.07)" : "none", borderBottom: i < 4 ? "1px solid rgba(255,255,255,0.07)" : "none" }}>
                 <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, color: "rgba(250,250,250,0.4)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 6 }}>{s.label}</div>
                 <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 15, fontWeight: 600, color: "#fafafa" }}>{s.value}</div>
               </motion.div>
@@ -169,14 +171,14 @@ export default function HumanoidPage() {
 
       {/* ══ CAPABILITIES ══ */}
       <section style={{ padding: "96px 0" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+        <div className="r-inner">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: "center", marginBottom: 56 }}>
             <span className="badge" style={{ marginBottom: 16 }}>Capabilities</span>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, color: "#fafafa", letterSpacing: "-0.025em", marginBottom: 16, marginTop: 12 }}>
               What the Humanoid Robot <span className="gradient-text">Can Do</span>
             </h2>
           </motion.div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+          <div className="r-grid-3">
             {capabilities.map((c, i) => (
               <motion.div key={c.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} whileHover={{ y: -5 }} className="feature-card">
                 <div className="icon-box">{c.icon}</div>
@@ -190,15 +192,15 @@ export default function HumanoidPage() {
 
       {/* ══ EXPERIENCE FLOW ══ */}
       <section style={{ padding: "96px 0", background: "#0a0a0a" }}>
-        <div style={{ maxWidth: 1000, margin: "0 auto", padding: "0 48px" }}>
+        <div className="r-inner" style={{ maxWidth: 1000 }}>
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: "center", marginBottom: 56 }}>
             <span className="badge" style={{ marginBottom: 16 }}>Guest Journey</span>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, color: "#fafafa", letterSpacing: "-0.025em", marginTop: 12 }}>
               The Guest <span className="gradient-text">Experience Flow</span>
             </h2>
           </motion.div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24, position: "relative" }}>
-            <div style={{ position: "absolute", top: 32, left: "calc(12.5% + 28px)", right: "calc(12.5% + 28px)", height: 1, background: "linear-gradient(90deg, transparent, rgba(232,135,74,0.3), transparent)" }} />
+          <div className="r-flow" style={{ position: "relative" }}>
+            <div className="r-flow-connector" />
             {experienceFlow.map((step, i) => (
               <motion.div key={step.step} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} style={{ textAlign: "center", position: "relative" }}>
                 <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(232,135,74,0.12)", border: "2px solid rgba(232,135,74,0.35)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px", position: "relative", zIndex: 1 }}>
@@ -214,14 +216,14 @@ export default function HumanoidPage() {
 
       {/* ══ USE CASES ══ */}
       <section style={{ padding: "96px 0" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+        <div className="r-inner">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: "center", marginBottom: 56 }}>
             <span className="badge" style={{ marginBottom: 16 }}>Use Cases</span>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, color: "#fafafa", letterSpacing: "-0.025em", marginTop: 12 }}>
               Perfect For <span className="gradient-text">These Environments</span>
             </h2>
           </motion.div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+          <div className="r-grid-3">
             {useCases.map((u, i) => (
               <motion.div key={u.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
                 style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 20, padding: 28, transition: "all 0.3s ease" }}
@@ -240,7 +242,7 @@ export default function HumanoidPage() {
 
       {/* ══ FAQ ══ */}
       <section style={{ padding: "96px 0", background: "#0a0a0a" }}>
-        <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 48px" }}>
+        <div className="r-inner" style={{ maxWidth: 800 }}>
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: "center", marginBottom: 56 }}>
             <span className="badge" style={{ marginBottom: 16 }}>FAQ</span>
             <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, color: "#fafafa", letterSpacing: "-0.025em", marginTop: 12 }}>
@@ -261,9 +263,9 @@ export default function HumanoidPage() {
 
       {/* ══ RELATED ══ */}
       <section style={{ padding: "64px 0" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+        <div className="r-inner">
           <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 700, color: "#fafafa", marginBottom: 28, textAlign: "center" }}>Explore Other Robot Solutions</h3>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20, maxWidth: 700, margin: "0 auto" }}>
+          <div className="r-related">
             {[
               { label: "Robot Dog", href: "/robots/robot-dog", desc: "Smart mobility for events, showrooms & brand activation" },
               { label: "Cooking Robot", href: "/robots/cooking-robot", desc: "Kitchen automation for restaurants & commercial kitchens" },
