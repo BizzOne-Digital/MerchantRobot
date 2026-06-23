@@ -1,0 +1,325 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
+import {
+  ArrowRight, CheckCircle2, ArrowLeft,
+  Clock, Zap, BarChart3, Thermometer, Shield, Settings,
+  UtensilsCrossed, Building2, ChefHat, Flame, Coffee, Package,
+} from "lucide-react";
+import CTASection from "@/components/CTASection";
+import { CookingRobotVisual } from "@/components/RobotVisuals";
+
+const specs = [
+  { label: "Cooking Mode", value: "Stir-Fry / Multi-Function" },
+  { label: "Throughput", value: "Up to 120 Dishes/Hour" },
+  { label: "Temperature Range", value: "Up to 300°C" },
+  { label: "Recipe Memory", value: "500+ Programmable" },
+  { label: "Cleaning", value: "Auto Self-Cleaning" },
+  { label: "Food Safety", value: "ISO / HACCP Compliant" },
+  { label: "Power", value: "Three-Phase Electric" },
+  { label: "Footprint", value: "Compact Commercial Size" },
+];
+
+const capabilities = [
+  { icon: <Zap size={20} />, title: "High-Speed Cooking", desc: "Prepares dishes at speeds far exceeding manual cooking — handling multiple woks or cooking stations simultaneously during peak service hours." },
+  { icon: <BarChart3 size={20} />, title: "Consistent Portioning", desc: "Every serving is precisely portioned to your specifications — eliminating waste, controlling food costs, and ensuring uniform presentation across all dishes." },
+  { icon: <Thermometer size={20} />, title: "Precision Temperature Control", desc: "Maintains exact cooking temperatures for every recipe stage, ensuring consistent flavor, texture, and food safety standards every single time." },
+  { icon: <Settings size={20} />, title: "500+ Programmable Recipes", desc: "Store your entire menu digitally. Each recipe is executed identically regardless of which shift is operating or how busy the kitchen is." },
+  { icon: <Shield size={20} />, title: "Food Safety Compliance", desc: "Built to commercial kitchen hygiene standards with smooth, easy-clean surfaces, automated cleaning cycles, and full HACCP compliance." },
+  { icon: <Clock size={20} />, title: "Auto Self-Cleaning", desc: "Integrated cleaning cycles reduce manual kitchen labor significantly, maintaining hygienic standards without interrupting service flow." },
+];
+
+const useCases = [
+  {
+    icon: <UtensilsCrossed size={22} />,
+    title: "Full-Service Restaurants",
+    desc: "Handle high-volume dinner service with consistent quality. The cooking robot works in tandem with your chefs — handling repetitive prep while they focus on creativity and plating.",
+  },
+  {
+    icon: <Flame size={22} />,
+    title: "Fast Casual & QSR",
+    desc: "Dramatically increase throughput during peak hours without additional headcount. Every order is produced to spec, every time, with no drop in quality under pressure.",
+  },
+  {
+    icon: <Building2 size={22} />,
+    title: "Hotel & Resort Kitchens",
+    desc: "Serve large banquets and breakfast buffets efficiently. Consistent quality across 50 or 500 covers — the robot treats every dish the same.",
+  },
+  {
+    icon: <Package size={22} />,
+    title: "Cloud Kitchens",
+    desc: "Maximize output from limited kitchen space with a robot that operates continuously, enabling you to run multiple virtual restaurant brands from a single kitchen.",
+  },
+  {
+    icon: <Coffee size={22} />,
+    title: "Food Courts & Canteens",
+    desc: "Serve hundreds of diners efficiently during tight lunch windows. Reduce staff dependency and maintain quality across an entire service period without fatigue.",
+  },
+  {
+    icon: <ChefHat size={22} />,
+    title: "Catering & Events",
+    desc: "Deliver consistent quality at scale for corporate catering, weddings, and large events — eliminating the stress of maintaining standards across high-volume service.",
+  },
+];
+
+const kitchenBefore = [
+  "Inconsistent dish quality between staff members",
+  "High food waste from incorrect portioning",
+  "Quality drops significantly during peak rush",
+  "Over-reliance on specific key kitchen staff",
+  "High overtime costs during busy periods",
+  "Manual cleaning adds to kitchen labor hours",
+];
+
+const kitchenAfter = [
+  "Every dish prepared to exact specification",
+  "Precise portioning eliminates food waste",
+  "Consistent quality maintained at full capacity",
+  "Kitchen operates independently of staff availability",
+  "Optimized staffing with predictable costs",
+  "Automated cleaning cycles built into workflow",
+];
+
+const faqs = [
+  { q: "Does the cooking robot replace kitchen staff?", a: "No — it works alongside your team. The robot handles repetitive, high-volume cooking tasks so your chefs can focus on quality control, creativity, and guest interaction." },
+  { q: "How are recipes programmed into the robot?", a: "Merchant Robot's team works with your head chef to digitize your recipes into the system. Recipes can be updated remotely as your menu evolves." },
+  { q: "How do you ensure food safety and hygiene?", a: "The robot is built to commercial kitchen standards with smooth surfaces, a self-cleaning cycle, and full HACCP compliance. It undergoes the same hygiene protocols as your kitchen equipment." },
+  { q: "What type of cooking can it handle?", a: "Primarily stir-fry, sauté, and wok-based cooking — ideal for Asian cuisine, mixed dishes, and high-volume single-pan preparations. Custom configurations are available for other cooking styles." },
+  { q: "How long does installation take?", a: "Typical installation takes 1–3 days depending on kitchen layout. Merchant Robot handles installation, testing, and full staff training before going live." },
+];
+
+export default function CookingRobotPage() {
+  return (
+    <>
+      {/* ── Back nav ── */}
+      <div style={{ position: "fixed", top: 88, left: 32, zIndex: 40 }}>
+        <Link href="/solutions" style={{ display: "inline-flex", alignItems: "center", gap: 7, fontSize: 13, color: "rgba(250,250,250,0.5)", textDecoration: "none", fontFamily: "'Inter', sans-serif", transition: "color 0.2s" }}
+          onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#e8874a"}
+          onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(250,250,250,0.5)"}>
+          <ArrowLeft size={14} /> Back to Solutions
+        </Link>
+      </div>
+
+      {/* ══ HERO ══ */}
+      <section style={{ position: "relative", minHeight: "90vh", display: "flex", alignItems: "center", overflow: "hidden", paddingTop: 80 }} className="hero-bg">
+        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 65% 55% at 35% 50%, rgba(232,135,74,0.12) 0%, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", inset: 0, opacity: 0.035, backgroundImage: "linear-gradient(rgba(232,135,74,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(232,135,74,0.5) 1px, transparent 1px)", backgroundSize: "56px 56px", pointerEvents: "none" }} />
+
+        <div style={{ position: "relative", maxWidth: 1200, margin: "0 auto", padding: "80px 48px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
+          {/* Left */}
+          <div>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} style={{ marginBottom: 20 }}>
+              <Link href="/solutions" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, color: "rgba(250,250,250,0.45)", textDecoration: "none", fontFamily: "'Inter', sans-serif", marginBottom: 16 }}>
+                <ArrowLeft size={12} /> Robot Solutions
+              </Link>
+              <span className="badge" style={{ display: "block", width: "fit-content" }}>Cooking Robot</span>
+            </motion.div>
+
+            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
+              style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(36px, 5vw, 62px)", fontWeight: 800, color: "#fafafa", lineHeight: 1.06, letterSpacing: "-0.03em", marginBottom: 8 }}>
+              The Cooking Robot
+            </motion.h1>
+            <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}
+              style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(18px, 2.5vw, 28px)", fontWeight: 600, lineHeight: 1.2, marginBottom: 24 }}>
+              <span className="gradient-text">Precision. Speed. Consistency. Every Time.</span>
+            </motion.h2>
+
+            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }}
+              style={{ fontFamily: "'Inter', sans-serif", fontSize: 17, color: "rgba(250,250,250,0.65)", lineHeight: 1.8, maxWidth: 500, marginBottom: 36 }}>
+              An advanced commercial cooking robot built for the realities of busy restaurants — delivering perfect dishes at scale, with zero fatigue, zero inconsistency, and maximum efficiency every service.
+            </motion.p>
+
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }}
+              style={{ display: "flex", gap: 16, flexWrap: "wrap", marginBottom: 40 }}>
+              <Link href="/contact#demo" className="btn-primary">Request a Demo</Link>
+              <Link href="/contact" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+                Get a Quote <ArrowRight size={15} />
+              </Link>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
+              style={{ display: "flex", flexWrap: "wrap", gap: 20 }}>
+              {["120 Dishes/Hour", "500+ Recipes", "Self-Cleaning", "HACCP Compliant"].map(tag => (
+                <div key={tag} style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 13, color: "rgba(250,250,250,0.55)", fontFamily: "'Inter', sans-serif" }}>
+                  <CheckCircle2 size={13} style={{ color: "#e8874a" }} /> {tag}
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Right */}
+          <motion.div initial={{ opacity: 0, scale: 0.85, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 1, delay: 0.2 }}>
+            <div className="visual-panel" style={{ minHeight: 420, position: "relative" }}>
+              <div style={{ position: "absolute", width: 300, height: 300, borderRadius: "50%", background: "rgba(232,135,74,0.09)", filter: "blur(60px)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
+              <div className="float" style={{ position: "relative", zIndex: 1, transform: "scale(1.6)" }}>
+                <CookingRobotVisual />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ══ SPECS ══ */}
+      <section style={{ background: "#111111", borderTop: "1px solid rgba(255,255,255,0.07)", borderBottom: "1px solid rgba(255,255,255,0.07)", padding: "48px 0" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0 }}>
+            {specs.map((s, i) => (
+              <motion.div key={s.label} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}
+                style={{ padding: "20px 28px", borderRight: i < 7 ? "1px solid rgba(255,255,255,0.07)" : "none", borderBottom: i < 4 ? "1px solid rgba(255,255,255,0.07)" : "none" }}>
+                <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, color: "rgba(250,250,250,0.4)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 6 }}>{s.label}</div>
+                <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 15, fontWeight: 600, color: "#fafafa" }}>{s.value}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ CAPABILITIES ══ */}
+      <section style={{ padding: "96px 0" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: "center", marginBottom: 56 }}>
+            <span className="badge" style={{ marginBottom: 16 }}>Technical Features</span>
+            <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, color: "#fafafa", letterSpacing: "-0.025em", marginBottom: 16, marginTop: 12 }}>
+              Built for <span className="gradient-text">Commercial Kitchens</span>
+            </h2>
+          </motion.div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+            {capabilities.map((c, i) => (
+              <motion.div key={c.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} whileHover={{ y: -5 }} className="feature-card">
+                <div className="icon-box">{c.icon}</div>
+                <h4>{c.title}</h4>
+                <p>{c.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ BEFORE / AFTER ══ */}
+      <section style={{ padding: "96px 0", background: "#0a0a0a" }}>
+        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 48px" }}>
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: "center", marginBottom: 56 }}>
+            <span className="badge" style={{ marginBottom: 16 }}>The Transformation</span>
+            <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, color: "#fafafa", letterSpacing: "-0.025em", marginTop: 12 }}>
+              Kitchen <span className="gradient-text">Before & After</span>
+            </h2>
+          </motion.div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32 }}>
+            {/* Before */}
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
+              style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 24, padding: 36 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 28 }}>
+                <div style={{ width: 40, height: 40, borderRadius: "50%", background: "rgba(255,80,80,0.12)", border: "1px solid rgba(255,80,80,0.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>❌</div>
+                <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 700, color: "#fafafa" }}>Without Robot</h3>
+              </div>
+              {kitchenBefore.map((item) => (
+                <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 14 }}>
+                  <div style={{ width: 20, height: 20, borderRadius: "50%", background: "rgba(255,80,80,0.15)", border: "1px solid rgba(255,80,80,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>
+                    <span style={{ fontSize: 10, color: "#ff5050" }}>✕</span>
+                  </div>
+                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.6)", lineHeight: 1.6 }}>{item}</span>
+                </div>
+              ))}
+            </motion.div>
+
+            {/* After */}
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
+              style={{ background: "rgba(232,135,74,0.04)", border: "1px solid rgba(232,135,74,0.2)", borderRadius: 24, padding: 36, position: "relative", overflow: "hidden" }}>
+              <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(90deg, #e8874a, #f5c5a3)" }} />
+              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 28 }}>
+                <div style={{ width: 40, height: 40, borderRadius: "50%", background: "rgba(232,135,74,0.15)", border: "1px solid rgba(232,135,74,0.3)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>✅</div>
+                <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 700, color: "#fafafa" }}>With Cooking Robot</h3>
+              </div>
+              {kitchenAfter.map((item) => (
+                <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 14 }}>
+                  <CheckCircle2 size={18} style={{ color: "#e8874a", flexShrink: 0, marginTop: 2 }} />
+                  <span style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.75)", lineHeight: 1.6 }}>{item}</span>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══ USE CASES ══ */}
+      <section style={{ padding: "96px 0" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: "center", marginBottom: 56 }}>
+            <span className="badge" style={{ marginBottom: 16 }}>Where It Works</span>
+            <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, color: "#fafafa", letterSpacing: "-0.025em", marginTop: 12 }}>
+              Ideal for <span className="gradient-text">These Operations</span>
+            </h2>
+          </motion.div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+            {useCases.map((u, i) => (
+              <motion.div key={u.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+                style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 20, padding: 28, transition: "all 0.3s ease" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(232,135,74,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-5px)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
+                <div style={{ width: 48, height: 48, borderRadius: 14, background: "rgba(232,135,74,0.12)", border: "1px solid rgba(232,135,74,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#e8874a", marginBottom: 20 }}>
+                  {u.icon}
+                </div>
+                <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 17, fontWeight: 600, color: "#fafafa", marginBottom: 10 }}>{u.title}</h4>
+                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.6)", lineHeight: 1.7 }}>{u.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ FAQ ══ */}
+      <section style={{ padding: "96px 0", background: "#0a0a0a" }}>
+        <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 48px" }}>
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: "center", marginBottom: 56 }}>
+            <span className="badge" style={{ marginBottom: 16 }}>FAQ</span>
+            <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, color: "#fafafa", letterSpacing: "-0.025em", marginTop: 12 }}>
+              Common <span className="gradient-text">Questions</span>
+            </h2>
+          </motion.div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            {faqs.map((f, i) => (
+              <motion.div key={f.q} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
+                style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 18, padding: "24px 28px" }}>
+                <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 600, color: "#fafafa", marginBottom: 10 }}>{f.q}</h4>
+                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.62)", lineHeight: 1.7 }}>{f.a}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══ RELATED ══ */}
+      <section style={{ padding: "64px 0" }}>
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 48px" }}>
+          <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 700, color: "#fafafa", marginBottom: 28, textAlign: "center" }}>Explore Other Robot Solutions</h3>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20, maxWidth: 700, margin: "0 auto" }}>
+            {[
+              { label: "Robot Dog", href: "/robots/robot-dog", desc: "Smart mobility for events, showrooms & brand activation" },
+              { label: "Humanoid Robot", href: "/robots/humanoid", desc: "Interactive robots for guest welcome & customer service" },
+            ].map(r => (
+              <Link key={r.href} href={r.href} style={{ display: "block", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 18, padding: "24px", textDecoration: "none", transition: "all 0.3s ease" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(232,135,74,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
+                <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 600, color: "#fafafa", marginBottom: 6, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  {r.label} <ArrowRight size={16} style={{ color: "#e8874a" }} />
+                </div>
+                <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, color: "rgba(250,250,250,0.55)" }}>{r.desc}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CTASection
+        badge="Ready to Transform Your Kitchen?"
+        title="Bring the Cooking Robot to"
+        highlight="Your Restaurant"
+        subtitle="See how the cooking robot performs in a real kitchen environment. Book a demo and our team will show you exactly what's possible for your operation."
+        primaryLabel="Book a Kitchen Demo"
+        secondaryLabel="View All Robots"
+        secondaryHref="/solutions"
+      />
+    </>
+  );
+}
