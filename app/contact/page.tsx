@@ -103,7 +103,7 @@ export default function ContactPage() {
 
                   {submitted ? (
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} style={{ padding: "48px 0", textAlign: "center" }}>
-                      <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(204,0,0,0.15)", border: "1px solid rgba(204,0,0,0.3)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
+                      <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(200,200,200,0.05)", border: "1px solid rgba(204,0,0,0.3)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
                         <CheckCircle2 size={28} style={{ color: "#CC0000" }} />
                       </div>
                       <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: 24, fontWeight: 700, color: "#fafafa", marginBottom: 12 }}>Message Sent!</h3>

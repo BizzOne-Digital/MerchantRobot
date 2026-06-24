@@ -79,7 +79,7 @@ export default function AboutPage() {
             <motion.div initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, delay: 0.3 }}
               className="float hero-visual-hide" style={{ flexShrink: 0, width: "min(280px, 35vw)" }}>
               <div style={{ position: "relative" }}>
-                <div style={{ position: "absolute", inset: 0, background: "rgba(204,0,0,0.08)", borderRadius: "50%", filter: "blur(50px)", transform: "scale(1.2)" }} />
+                <div style={{ position: "absolute", inset: 0, background: "rgba(200,200,200,0.05)", borderRadius: "50%", filter: "blur(50px)", transform: "scale(1.2)" }} />
                 <HeroRobotVisual />
               </div>
             </motion.div>
@@ -147,7 +147,7 @@ export default function AboutPage() {
                 <motion.div key={m.year} initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.07 }} style={{ position: "relative" }}>
                   <div style={{ position: "absolute", left: -36, top: 8, width: 14, height: 14, borderRadius: "50%", background: "#CC0000", border: "2px solid #0a0a0a", zIndex: 1 }} />
                   <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 16, padding: "20px 24px" }}>
-                    <span style={{ display: "inline-block", padding: "3px 12px", borderRadius: 100, background: "rgba(204,0,0,0.15)", color: "#CC0000", fontSize: 12, fontWeight: 700, fontFamily: "'Inter', sans-serif", marginBottom: 8 }}>{m.year}</span>
+                    <span style={{ display: "inline-block", padding: "3px 12px", borderRadius: 100, background: "rgba(200,200,200,0.05)", color: "#CC0000", fontSize: 12, fontWeight: 700, fontFamily: "'Inter', sans-serif", marginBottom: 8 }}>{m.year}</span>
                     <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 600, color: "#fafafa", marginBottom: 6 }}>{m.title}</h4>
                     <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.55)", lineHeight: 1.6 }}>{m.desc}</p>
                   </div>

@@ -45,16 +45,16 @@ export default function HomePage() {
     <>
       {/* ══ HERO ══ */}
       <section style={{ position: "relative", minHeight: "100vh", display: "flex", alignItems: "center", overflow: "hidden", paddingTop: 72 }} className="hero-bg">
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 65% 45%, rgba(204,0,0,0.10) 0%, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 65% 45%, rgba(200,200,200,0.05) 0%, transparent 65%)", pointerEvents: "none" }} />
         <div style={{ position: "absolute", inset: 0, opacity: 0.04, backgroundImage: "linear-gradient(rgba(204,0,0,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(204,0,0,0.6) 1px, transparent 1px)", backgroundSize: "64px 64px", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", top: "15%", right: "8%", width: 400, height: 400, borderRadius: "50%", background: "rgba(204,0,0,0.06)", filter: "blur(100px)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", top: "15%", right: "8%", width: 400, height: 400, borderRadius: "50%", background: "rgba(200,200,200,0.05)", filter: "blur(100px)", pointerEvents: "none" }} />
 
         <div style={{ position: "relative", maxWidth: 1200, margin: "0 auto", width: "100%" }}>
           <div className="r-robot-hero r-hero-pad">
             {/* Text */}
             <div>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} style={{ marginBottom: 20 }}>
-                <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "7px 18px", borderRadius: 100, background: "rgba(204,0,0,0.12)", border: "1px solid rgba(204,0,0,0.3)", color: "#CC0000", fontSize: 12, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" as const, fontFamily: "'Inter', sans-serif" }}>
+                <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "7px 18px", borderRadius: 100, background: "rgba(200,200,200,0.05)", border: "1px solid rgba(204,0,0,0.3)", color: "#CC0000", fontSize: 12, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" as const, fontFamily: "'Inter', sans-serif" }}>
                   <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#CC0000", display: "inline-block", animation: "pulse 2s infinite" }} />
                   🍁 100% Canadian Owned · AI Makes Canada Stronger
                 </span>
@@ -100,7 +100,7 @@ export default function HomePage() {
             {/* Robot visual */}
             <motion.div initial={{ opacity: 0, scale: 0.85, y: 30 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.3 }}
               className="hero-visual-center" style={{ position: "relative", maxWidth: 360 }}>
-              <div style={{ position: "absolute", inset: 0, background: "rgba(204,0,0,0.08)", borderRadius: "50%", filter: "blur(60px)", transform: "scale(1.2)" }} />
+              <div style={{ position: "absolute", inset: 0, background: "rgba(200,200,200,0.05)", borderRadius: "50%", filter: "blur(60px)", transform: "scale(1.2)" }} />
               <div className="float" style={{ position: "relative" }}><HeroRobotVisual /></div>
             </motion.div>
           </div>
@@ -133,7 +133,7 @@ export default function HomePage() {
 
       {/* ══ ROBOT CATEGORIES ══ */}
       <section style={{ padding: "80px 0", background: "#0a0a0a", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 40% at 50% 0%, rgba(204,0,0,0.06) 0%, transparent 60%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 40% at 50% 0%, rgba(200,200,200,0.05) 0%, transparent 60%)", pointerEvents: "none" }} />
         <div className="r-inner" style={{ position: "relative" }}>
           <SectionHeading badge="Robot Categories" title="Explore Our" highlight="Robot Solutions"
             subtitle="Three powerful categories of robots designed to transform how your business operates and engages customers." />
@@ -141,12 +141,12 @@ export default function HomePage() {
             {robotCategories.map((cat, i) => (
               <motion.div key={cat.title} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.6, delay: i * 0.12 }} whileHover={{ y: -8 }} className="robot-card">
                 <div className="visual-area">
-                  <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at center, rgba(204,0,0,0.08) 0%, transparent 70%)" }} />
+                  <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at center, rgba(200,200,200,0.05) 0%, transparent 70%)" }} />
                   <div style={{ position: "relative", zIndex: 1 }}>{cat.visual}</div>
                 </div>
                 <div className="card-body">
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-                    <div style={{ width: 34, height: 34, borderRadius: 10, background: "rgba(204,0,0,0.15)", border: "1px solid rgba(204,0,0,0.25)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", flexShrink: 0 }}>{cat.icon}</div>
+                    <div style={{ width: 34, height: 34, borderRadius: 10, background: "rgba(200,200,200,0.05)", border: "1px solid rgba(180,180,180,0.18)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", flexShrink: 0 }}>{cat.icon}</div>
                     <h3>{cat.title}</h3>
                   </div>
                   <p>{cat.desc}</p>
@@ -173,7 +173,7 @@ export default function HomePage() {
 
       {/* ══ RESTAURANT BENEFITS ══ */}
       <section style={{ padding: "80px 0", background: "#0a0a0a", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", right: 0, top: 0, bottom: 0, width: "50%", background: "radial-gradient(ellipse at right, rgba(204,0,0,0.05) 0%, transparent 60%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", right: 0, top: 0, bottom: 0, width: "50%", background: "radial-gradient(ellipse at right, rgba(200,200,200,0.05) 0%, transparent 60%)", pointerEvents: "none" }} />
         <div className="r-inner" style={{ position: "relative" }}>
           <div className="r-split">
             <div>
@@ -223,7 +223,7 @@ export default function HomePage() {
             <div className="hiw-connector" />
             {howItWorks.map((step, i) => (
               <motion.div key={step.step} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.12 }} style={{ textAlign: "center", position: "relative" }}>
-                <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(204,0,0,0.12)", border: "2px solid rgba(204,0,0,0.35)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 18px", position: "relative", zIndex: 1 }}>
+                <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(200,200,200,0.05)", border: "2px solid rgba(180,180,180,0.18)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 18px", position: "relative", zIndex: 1 }}>
                   <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 800, background: "linear-gradient(135deg, #FF6666, #CC0000)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>{step.step}</span>
                 </div>
                 <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 600, color: "#fafafa", marginBottom: 8 }}>{step.title}</h4>

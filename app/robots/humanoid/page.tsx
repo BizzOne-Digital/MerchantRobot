@@ -92,7 +92,7 @@ export default function HumanoidPage() {
 
       {/* ══ HERO ══ */}
       <section style={{ position: "relative", minHeight: "90vh", display: "flex", alignItems: "center", overflow: "hidden", paddingTop: 80 }} className="hero-bg r-hero-pad">
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 65% 55% at 65% 50%, rgba(204,0,0,0.10) 0%, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 65% 55% at 65% 50%, rgba(200,200,200,0.05) 0%, transparent 65%)", pointerEvents: "none" }} />
         <div style={{ position: "absolute", inset: 0, opacity: 0.035, backgroundImage: "linear-gradient(rgba(204,0,0,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(204,0,0,0.5) 1px, transparent 1px)", backgroundSize: "56px 56px", pointerEvents: "none" }} />
 
         <div className="r-inner" style={{ position: "relative" }}>
@@ -101,7 +101,7 @@ export default function HumanoidPage() {
             <motion.div initial={{ opacity: 0, scale: 0.85, x: -40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 1, delay: 0.2 }}
               style={{ order: 2 }} className="hero-visual-center">
               <div className="visual-panel" style={{ minHeight: 440, position: "relative" }}>
-                <div style={{ position: "absolute", width: 320, height: 320, borderRadius: "50%", background: "rgba(204,0,0,0.08)", filter: "blur(70px)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
+                <div style={{ position: "absolute", width: 320, height: 320, borderRadius: "50%", background: "rgba(200,200,200,0.05)", filter: "blur(70px)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
                 <div className="float" style={{ position: "relative", zIndex: 1, transform: "scale(1.5)" }}>
                   <HumanoidVisual />
                 </div>
@@ -203,7 +203,7 @@ export default function HumanoidPage() {
             <div className="r-flow-connector" />
             {experienceFlow.map((step, i) => (
               <motion.div key={step.step} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} style={{ textAlign: "center", position: "relative" }}>
-                <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(204,0,0,0.12)", border: "2px solid rgba(204,0,0,0.35)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px", position: "relative", zIndex: 1 }}>
+                <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(200,200,200,0.05)", border: "2px solid rgba(180,180,180,0.18)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px", position: "relative", zIndex: 1 }}>
                   <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 800, background: "linear-gradient(135deg, #FF6666, #CC0000)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>{step.step}</span>
                 </div>
                 <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 15, fontWeight: 600, color: "#fafafa", marginBottom: 10 }}>{step.title}</h4>
@@ -229,7 +229,7 @@ export default function HumanoidPage() {
                 style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 20, padding: 28, transition: "all 0.3s ease" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,0,0,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-5px)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
-                <div style={{ width: 48, height: 48, borderRadius: 14, background: "rgba(204,0,0,0.12)", border: "1px solid rgba(204,0,0,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", marginBottom: 20 }}>
+                <div style={{ width: 48, height: 48, borderRadius: 14, background: "rgba(200,200,200,0.05)", border: "1px solid rgba(204,0,0,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", marginBottom: 20 }}>
                   {u.icon}
                 </div>
                 <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 17, fontWeight: 600, color: "#fafafa", marginBottom: 10 }}>{u.title}</h4>

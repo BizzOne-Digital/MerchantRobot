@@ -91,7 +91,7 @@ export default function RobotDogPage() {
 
       {/* ══ HERO ══ */}
       <section style={{ position: "relative", minHeight: "90vh", display: "flex", alignItems: "center", overflow: "hidden", paddingTop: 80 }} className="hero-bg r-hero-pad">
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 65% 55% at 35% 50%, rgba(204,0,0,0.10) 0%, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 65% 55% at 35% 50%, rgba(200,200,200,0.05) 0%, transparent 65%)", pointerEvents: "none" }} />
         <div style={{ position: "absolute", inset: 0, opacity: 0.035, backgroundImage: "linear-gradient(rgba(204,0,0,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(204,0,0,0.5) 1px, transparent 1px)", backgroundSize: "56px 56px", pointerEvents: "none" }} />
 
         <div className="r-inner" style={{ position: "relative" }}>
@@ -123,7 +123,7 @@ export default function RobotDogPage() {
 
               {/* Pricing */}
               <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.32 }}
-                style={{ display: "inline-flex", alignItems: "center", gap: 16, padding: "16px 24px", borderRadius: 16, background: "rgba(204,0,0,0.10)", border: "1px solid rgba(204,0,0,0.3)", marginBottom: 28 }}>
+                style={{ display: "inline-flex", alignItems: "center", gap: 16, padding: "16px 24px", borderRadius: 16, background: "rgba(200,200,200,0.05)", border: "1px solid rgba(204,0,0,0.3)", marginBottom: 28 }}>
                 <span style={{ fontSize: 28, fontFamily: "'Sora', sans-serif", fontWeight: 800, color: "#CC0000" }}>$100,000 CAD</span>
                 <div>
                   <div style={{ fontSize: 11, fontWeight: 600, color: "rgba(250,250,250,0.5)", fontFamily: "'Inter', sans-serif", textTransform: "uppercase" as const, letterSpacing: "0.08em" }}>Per Unit</div>
@@ -154,7 +154,7 @@ export default function RobotDogPage() {
             <motion.div initial={{ opacity: 0, scale: 0.85, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 1, delay: 0.2, ease: "easeOut" }} className="hero-visual-center">
               <div className="visual-panel" style={{ minHeight: 400, position: "relative" }}>
                 {/* Glow orb */}
-                <div style={{ position: "absolute", width: 300, height: 300, borderRadius: "50%", background: "rgba(204,0,0,0.08)", filter: "blur(60px)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
+                <div style={{ position: "absolute", width: 300, height: 300, borderRadius: "50%", background: "rgba(200,200,200,0.05)", filter: "blur(60px)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
                 <div className="float" style={{ position: "relative", zIndex: 1, transform: "scale(1.6)" }}>
                   <RobotDogVisual />
                 </div>
@@ -218,7 +218,7 @@ export default function RobotDogPage() {
                 style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 20, padding: 28, transition: "all 0.3s ease", cursor: "default" }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,0,0,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-5px)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
-                <div style={{ width: 48, height: 48, borderRadius: 14, background: "rgba(204,0,0,0.12)", border: "1px solid rgba(204,0,0,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: u.color, marginBottom: 20 }}>
+                <div style={{ width: 48, height: 48, borderRadius: 14, background: "rgba(200,200,200,0.05)", border: "1px solid rgba(204,0,0,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: u.color, marginBottom: 20 }}>
                   {u.icon}
                 </div>
                 <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 17, fontWeight: 600, color: "#fafafa", marginBottom: 10 }}>{u.title}</h4>

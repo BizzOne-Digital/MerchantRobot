@@ -150,7 +150,7 @@ export default function RestaurantPage() {
               {/* Content */}
               <motion.div initial={{ opacity: 0, x: robot.reverse ? -40 : 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.1 }} style={{ direction: "ltr" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-                  <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(204,0,0,0.15)", border: "1px solid rgba(204,0,0,0.28)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000" }}>
+                  <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(200,200,200,0.05)", border: "1px solid rgba(180,180,180,0.18)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000" }}>
                     {robot.icon}
                   </div>
                   <div>
@@ -219,7 +219,7 @@ export default function RestaurantPage() {
                 ].map((item, i) => (
                   <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                     style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 18, padding: "22px", transition: "all 0.3s ease" }}>
-                    <div style={{ width: 40, height: 40, borderRadius: 11, background: "rgba(204,0,0,0.15)", border: "1px solid rgba(204,0,0,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", marginBottom: 14 }}>
+                    <div style={{ width: 40, height: 40, borderRadius: 11, background: "rgba(200,200,200,0.05)", border: "1px solid rgba(204,0,0,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", marginBottom: 14 }}>
                       {item.icon}
                     </div>
                     <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, fontWeight: 600, color: "#fafafa", marginBottom: 6 }}>{item.title}</h4>

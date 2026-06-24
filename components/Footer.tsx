@@ -20,7 +20,7 @@ export default function Footer() {
   return (
     <footer style={{ background: "#0a0a0a", borderTop: "1px solid rgba(255,255,255,0.07)" }}>
       {/* CTA strip */}
-      <div style={{ background: "linear-gradient(135deg, #110000, #1a0000, #110000)", borderBottom: "1px solid rgba(204,0,0,0.15)" }}>
+      <div style={{ background: "linear-gradient(135deg, #111111, #1a1a1a, #111111)", borderBottom: "1px solid rgba(200,200,200,0.05)" }}>
         <div className="r-footer-strip">
           <div>
             <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 700, color: "#fafafa", marginBottom: 8 }}>
