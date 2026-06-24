@@ -19,7 +19,7 @@ export default function CTASection({ badge = "Get Started", title, highlight, su
     <section className="cta-section">
       <div className="cta-ring" style={{ width: 600, height: 600, marginLeft: -300, marginTop: -300 }} />
       <div className="cta-ring" style={{ width: 400, height: 400, marginLeft: -200, marginTop: -200, animationDelay: "1s" }} />
-      <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 50% 50%, rgba(232,135,74,0.10) 0%, transparent 70%)", pointerEvents: "none" }} />
+      <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 50% 50%, rgba(204,0,0,0.10) 0%, transparent 70%)", pointerEvents: "none" }} />
       <div className="r-inner" style={{ maxWidth: 800, position: "relative", textAlign: "center" }}>
         {badge && (
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ marginBottom: 20 }}>

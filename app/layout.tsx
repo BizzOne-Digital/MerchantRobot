@@ -4,12 +4,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Merchant Robot™ | Smart Robotics for Restaurants & Businesses",
-  description: "Merchant Robot delivers advanced robot dog, humanoid robot, and cooking robot solutions designed to improve service, efficiency, and customer experience for modern restaurants and businesses.",
-  keywords: "restaurant robotics, humanoid robots for restaurants, cooking robots, robot dog for business, business automation robots, smart restaurant automation",
+  title: "Canadian Robots™ | AI Makes Canada Stronger | Robot Dogs & Cooking Robots",
+  description: "Canadian Robots™ — 100% Canadian owned robotics company. Supplying robot dogs and humanoids to RCMP and Canadian Armed Forces. Canada's most advanced cooking robot for restaurants. AI Makes Canada Stronger.",
+  keywords: "Canadian robots, robot dog Canada, RCMP robots, Canadian Armed Forces robots, cooking robot Canada, restaurant robotics Canada",
   openGraph: {
-    title: "Merchant Robot™ | Smart Robotics Solutions",
-    description: "Advanced robot dog, humanoid, and cooking robot solutions for modern restaurants and businesses.",
+    title: "Canadian Robots™ | AI Makes Canada Stronger",
+    description: "100% Canadian owned. Robot dogs for RCMP & Armed Forces. Advanced cooking robots for restaurants. AI Makes Canada Stronger. 🍁",
     type: "website",
   },
 };

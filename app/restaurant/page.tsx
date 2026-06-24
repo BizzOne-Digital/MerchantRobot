@@ -87,7 +87,7 @@ export default function RestaurantPage() {
       <section className="page-hero">
         <div className="page-hero-bg" />
         <div className="page-hero-glow" />
-        <div style={{ position: "relative", maxWidth: 900, margin: "0 auto", padding: "0 32px" }}>
+        <div style={{ position: "relative", zIndex: 1, maxWidth: 900, margin: "0 auto", padding: "0 32px" }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="badge" style={{ marginBottom: 20 }}>Restaurant Automation</span>
           </motion.div>
@@ -97,7 +97,7 @@ export default function RestaurantPage() {
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
             style={{ fontFamily: "'Inter', sans-serif", fontSize: 18, color: "rgba(250,250,250,0.6)", lineHeight: 1.7, maxWidth: 600, margin: "0 auto 40px" }}>
-            From cooking support to guest interaction, Merchant Robot helps restaurants create smarter, faster, and more memorable customer experiences.
+            From cooking support to guest interaction, Canadian Robots helps restaurants create smarter, faster, and more memorable customer experiences.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
             className="r-hero-btns">
@@ -150,11 +150,11 @@ export default function RestaurantPage() {
               {/* Content */}
               <motion.div initial={{ opacity: 0, x: robot.reverse ? -40 : 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.1 }} style={{ direction: "ltr" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-                  <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(232,135,74,0.15)", border: "1px solid rgba(232,135,74,0.28)", display: "flex", alignItems: "center", justifyContent: "center", color: "#e8874a" }}>
+                  <div style={{ width: 44, height: 44, borderRadius: 12, background: "rgba(204,0,0,0.15)", border: "1px solid rgba(204,0,0,0.28)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000" }}>
                     {robot.icon}
                   </div>
                   <div>
-                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, color: "#e8874a", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em" }}>{robot.subtitle}</p>
+                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, color: "#CC0000", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.08em" }}>{robot.subtitle}</p>
                     <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 26, fontWeight: 700, color: "#fafafa", lineHeight: 1.1 }}>{robot.title}</h2>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ export default function RestaurantPage() {
                 <ul style={{ listStyle: "none", marginBottom: 32, display: "flex", flexDirection: "column", gap: 10 }}>
                   {robot.points.map(p => (
                     <li key={p} style={{ display: "flex", alignItems: "flex-start", gap: 10, fontSize: 14, color: "rgba(250,250,250,0.75)", fontFamily: "'Inter', sans-serif", lineHeight: 1.5 }}>
-                      <CheckCircle2 size={15} style={{ color: "#e8874a", flexShrink: 0, marginTop: 2 }} />
+                      <CheckCircle2 size={15} style={{ color: "#CC0000", flexShrink: 0, marginTop: 2 }} />
                       {p}
                     </li>
                   ))}
@@ -203,7 +203,7 @@ export default function RestaurantPage() {
                   "Scalable — add more robots as you grow",
                 ].map(item => (
                   <li key={item} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "rgba(250,250,250,0.75)", fontFamily: "'Inter', sans-serif" }}>
-                    <CheckCircle2 size={14} style={{ color: "#e8874a", flexShrink: 0 }} />
+                    <CheckCircle2 size={14} style={{ color: "#CC0000", flexShrink: 0 }} />
                     {item}
                   </li>
                 ))}
@@ -219,7 +219,7 @@ export default function RestaurantPage() {
                 ].map((item, i) => (
                   <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                     style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 18, padding: "22px", transition: "all 0.3s ease" }}>
-                    <div style={{ width: 40, height: 40, borderRadius: 11, background: "rgba(232,135,74,0.15)", border: "1px solid rgba(232,135,74,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#e8874a", marginBottom: 14 }}>
+                    <div style={{ width: 40, height: 40, borderRadius: 11, background: "rgba(204,0,0,0.15)", border: "1px solid rgba(204,0,0,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", marginBottom: 14 }}>
                       {item.icon}
                     </div>
                     <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 14, fontWeight: 600, color: "#fafafa", marginBottom: 6 }}>{item.title}</h4>
@@ -244,3 +244,4 @@ export default function RestaurantPage() {
     </>
   );
 }
+

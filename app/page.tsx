@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Zap, Shield, Users, ChefHat, Dog, Bot, ArrowRight, CheckCircle2, Star, Clock, TrendingUp, Cpu } from "lucide-react";
+import { Zap, Shield, Users, ChefHat, Dog, Bot, ArrowRight, CheckCircle2, Clock, TrendingUp, Cpu } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import FeatureCard from "@/components/FeatureCard";
 import CTASection from "@/components/CTASection";
@@ -10,34 +10,34 @@ import StatsSection from "@/components/StatsSection";
 import { RobotDogVisual, HumanoidVisual, CookingRobotVisual, HeroRobotVisual } from "@/components/RobotVisuals";
 
 const robotCategories = [
-  { icon: <Dog size={20} />, title: "Robot Dog", desc: "Smart robotic mobility for engagement, demonstrations, and advanced business applications.", href: "/robots/robot-dog", visual: <RobotDogVisual /> },
-  { icon: <Bot size={20} />, title: "Humanoid Robot", desc: "Interactive robots designed to welcome, assist, and engage customers intelligently.", href: "/robots/humanoid", visual: <HumanoidVisual /> },
-  { icon: <ChefHat size={20} />, title: "Cooking Robot", desc: "Restaurant automation designed for speed, consistency, and smarter kitchen operations.", href: "/robots/cooking-robot", visual: <CookingRobotVisual /> },
+  { icon: <Dog size={20} />, title: "Robot Dog", desc: "Trusted by RCMP branches and Canadian Armed Forces for patrol, reconnaissance, and public sector operations at scale.", href: "/robots/robot-dog", visual: <RobotDogVisual /> },
+  { icon: <Bot size={20} />, title: "Humanoid Robot", desc: "Deployed across government agencies and public institutions for large-order service, security support, and engagement.", href: "/robots/humanoid", visual: <HumanoidVisual /> },
+  { icon: <ChefHat size={20} />, title: "Cooking Robot", desc: "Our most advanced model — purpose-built for restaurants. Licensed electrician assigned, city permit handled, financing available.", href: "/robots/cooking-robot", visual: <CookingRobotVisual /> },
 ];
 
 const whyChoose = [
-  { icon: <Cpu size={18} />, title: "Advanced Robotic Solutions", description: "Cutting-edge AI-powered robots engineered for real-world business environments." },
-  { icon: <ChefHat size={18} />, title: "Restaurant Specialists", description: "Deep expertise in automating kitchen, service, and dining operations." },
-  { icon: <Users size={18} />, title: "Customer-Focused Automation", description: "Robots that enhance guest experiences and create memorable interactions." },
-  { icon: <Shield size={18} />, title: "Professional Consultation", description: "Expert guidance from robot selection through full deployment and support." },
-  { icon: <TrendingUp size={18} />, title: "Future-Ready Technology", description: "Solutions that grow with your business and adapt to evolving needs." },
-  { icon: <Zap size={18} />, title: "Improved Efficiency", description: "Demonstrably faster operations, reduced costs, and consistent quality." },
+  { icon: <Shield size={18} />, title: "Trusted by Public Sector", description: "Robot dogs and humanoids are actively deployed with RCMP branches and the Canadian Armed Forces." },
+  { icon: <ChefHat size={18} />, title: "Restaurant-Grade Cooking Robot", description: "Our most advanced cooking robot model — built specifically for the demands of commercial restaurant kitchens." },
+  { icon: <Cpu size={18} />, title: "Licensed Electrician Assigned", description: "We assign a licensed electrician to every installation — safety guaranteed, permits handled, no stress for you." },
+  { icon: <TrendingUp size={18} />, title: "City Permits Handled", description: "We take care of all city permit applications and compliance requirements from start to finish." },
+  { icon: <Zap size={18} />, title: "Financing Available", description: "Flexible financing options so you can get your robots deployed now and pay on your terms." },
+  { icon: <Users size={18} />, title: "Just Sign & We Handle the Rest", description: "The easiest deployment process in the industry — sign the agreement and our team takes care of everything." },
 ];
 
-const restaurantBenefits = ["Better operational flow", "Consistent performance", "Improved customer attraction", "Smarter kitchen support", "Modern brand image", "Scalable automation"];
+const restaurantBenefits = ["Licensed electrician assigned by us", "City permit fully managed", "Financing options available", "Consistent food quality", "Faster kitchen throughput", "Reduced staff dependency"];
 
 const howItWorks = [
-  { step: "01", title: "Consultation", desc: "We understand your business needs, goals, and current operations to find the best fit." },
-  { step: "02", title: "Robot Recommendation", desc: "We suggest the right robot — dog, humanoid, or cooking robot — for your use case." },
-  { step: "03", title: "Setup & Guidance", desc: "We help you get started with hands-on onboarding and staff training support." },
-  { step: "04", title: "Business Automation", desc: "Your business becomes smarter, faster, and more engaging with ongoing optimization." },
+  { step: "01", title: "Consultation", desc: "We assess your space, needs, and goals. Whether you're a restaurant or public-sector client, we find the perfect fit." },
+  { step: "02", title: "Robot & Financing Plan", desc: "We match you with the right robot and present flexible financing options — no large upfront commitment needed." },
+  { step: "03", title: "Permits & Licensed Install", desc: "Our licensed electrician handles installation. We pull the city permits and ensure full safety compliance." },
+  { step: "04", title: "Just Sign & Go Live", desc: "Once you sign, we take care of everything. Your robot is running and your business is transformed." },
 ];
 
 const industries = [
+  { name: "RCMP & Police", icon: "🚔" }, { name: "Canadian Armed Forces", icon: "🇨🇦" },
   { name: "Fine Dining", icon: "🍽️" }, { name: "Fast Casual", icon: "🍔" },
-  { name: "Hotels & Resorts", icon: "🏨" }, { name: "Retail & Showrooms", icon: "🛍️" },
-  { name: "Events & Exhibitions", icon: "🎪" }, { name: "Corporate Offices", icon: "🏢" },
-  { name: "Shopping Centers", icon: "🏬" }, { name: "Theme Parks", icon: "🎡" },
+  { name: "Hotels & Resorts", icon: "🏨" }, { name: "Government Agencies", icon: "🏛️" },
+  { name: "Shopping Centers", icon: "🏬" }, { name: "Corporate Offices", icon: "🏢" },
 ];
 
 export default function HomePage() {
@@ -45,31 +45,40 @@ export default function HomePage() {
     <>
       {/* ══ HERO ══ */}
       <section style={{ position: "relative", minHeight: "100vh", display: "flex", alignItems: "center", overflow: "hidden", paddingTop: 72 }} className="hero-bg">
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 65% 45%, rgba(232,135,74,0.10) 0%, transparent 65%)", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", inset: 0, opacity: 0.04, backgroundImage: "linear-gradient(rgba(232,135,74,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(232,135,74,0.6) 1px, transparent 1px)", backgroundSize: "64px 64px", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", top: "15%", right: "8%", width: 400, height: 400, borderRadius: "50%", background: "rgba(232,135,74,0.06)", filter: "blur(100px)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 65% 45%, rgba(204,0,0,0.10) 0%, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", inset: 0, opacity: 0.04, backgroundImage: "linear-gradient(rgba(204,0,0,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(204,0,0,0.6) 1px, transparent 1px)", backgroundSize: "64px 64px", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", top: "15%", right: "8%", width: 400, height: 400, borderRadius: "50%", background: "rgba(204,0,0,0.06)", filter: "blur(100px)", pointerEvents: "none" }} />
 
         <div style={{ position: "relative", maxWidth: 1200, margin: "0 auto", width: "100%" }}>
           <div className="r-robot-hero r-hero-pad">
             {/* Text */}
             <div>
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} style={{ marginBottom: 20 }}>
-                <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "7px 18px", borderRadius: 100, background: "rgba(232,135,74,0.12)", border: "1px solid rgba(232,135,74,0.3)", color: "#e8874a", fontSize: 12, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" as const, fontFamily: "'Inter', sans-serif" }}>
-                  <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#e8874a", display: "inline-block", animation: "pulse 2s infinite" }} />
-                  Next-Generation Robotics
+                <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "7px 18px", borderRadius: 100, background: "rgba(204,0,0,0.12)", border: "1px solid rgba(204,0,0,0.3)", color: "#CC0000", fontSize: 12, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" as const, fontFamily: "'Inter', sans-serif" }}>
+                  <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#CC0000", display: "inline-block", animation: "pulse 2s infinite" }} />
+                  🍁 100% Canadian Owned · AI Makes Canada Stronger
                 </span>
               </motion.div>
 
+              <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 }}
+                style={{ fontFamily: "'Inter', sans-serif", fontSize: "clamp(13px, 1.4vw, 15px)", fontWeight: 600, color: "rgba(204,0,0,0.85)", letterSpacing: "0.06em", textTransform: "uppercase" as const, marginBottom: 14 }}>
+                No.1 Canadian Robot Provider — Proudly Canadian
+              </motion.p>
+
               <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
                 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(32px, 5.5vw, 68px)", fontWeight: 800, color: "#fafafa", lineHeight: 1.06, letterSpacing: "-0.03em", marginBottom: 20 }}>
-                Smart Robotics for{" "}
-                <span className="gradient-text">Modern Restaurants</span>{" "}
-                &amp; Businesses
+                Advanced Robotics for{" "}
+                <span className="gradient-text">Public Sector & Restaurants</span>
               </motion.h1>
+
+              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.18 }}
+                style={{ fontFamily: "'Inter', sans-serif", fontSize: "clamp(14px, 1.8vw, 17px)", fontWeight: 700, color: "#CC0000", letterSpacing: "0.05em", marginBottom: 16 }}>
+                🍁 AI Makes Canada Stronger — 100% Canadian Owned Business, Proudly Canada
+              </motion.p>
 
               <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }}
                 style={{ fontFamily: "'Inter', sans-serif", fontSize: "clamp(15px, 2vw, 18px)", color: "rgba(250,250,250,0.65)", lineHeight: 1.75, maxWidth: 520, marginBottom: 32 }}>
-                Merchant Robot brings advanced robot dog, humanoid, and cooking robot solutions designed to improve service, efficiency, and customer experience.
+                Canadian Robots supplies robot dogs and humanoids to RCMP and Canadian Armed Forces — and deploys Canada's most advanced cooking robot for restaurants. Licensed electrician assigned. Permits handled. Financing available. Just sign.
               </motion.p>
 
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="r-btn-row">
@@ -80,9 +89,9 @@ export default function HomePage() {
               </motion.div>
 
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="r-trust-badges">
-                {["Professional Setup", "Expert Support", "Proven Results"].map(b => (
+                {["Licensed Electrician Assigned", "City Permits Handled", "Financing Available"].map(b => (
                   <div key={b} style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 13, color: "rgba(250,250,250,0.5)", fontFamily: "'Inter', sans-serif" }}>
-                    <CheckCircle2 size={14} style={{ color: "#e8874a", flexShrink: 0 }} />{b}
+                    <CheckCircle2 size={14} style={{ color: "#CC0000", flexShrink: 0 }} />{b}
                   </div>
                 ))}
               </motion.div>
@@ -91,7 +100,7 @@ export default function HomePage() {
             {/* Robot visual */}
             <motion.div initial={{ opacity: 0, scale: 0.85, y: 30 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.3 }}
               className="hero-visual-center" style={{ position: "relative", maxWidth: 360 }}>
-              <div style={{ position: "absolute", inset: 0, background: "rgba(232,135,74,0.08)", borderRadius: "50%", filter: "blur(60px)", transform: "scale(1.2)" }} />
+              <div style={{ position: "absolute", inset: 0, background: "rgba(204,0,0,0.08)", borderRadius: "50%", filter: "blur(60px)", transform: "scale(1.2)" }} />
               <div className="float" style={{ position: "relative" }}><HeroRobotVisual /></div>
             </motion.div>
           </div>
@@ -100,7 +109,7 @@ export default function HomePage() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}
           style={{ position: "absolute", bottom: 28, left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
           <span style={{ fontSize: 11, color: "rgba(250,250,250,0.3)", letterSpacing: "0.15em", textTransform: "uppercase" as const, fontFamily: "'Inter', sans-serif" }}>Scroll</span>
-          <div style={{ width: 1, height: 28, background: "linear-gradient(to bottom, rgba(232,135,74,0.6), transparent)" }} />
+          <div style={{ width: 1, height: 28, background: "linear-gradient(to bottom, rgba(204,0,0,0.6), transparent)" }} />
         </motion.div>
       </section>
 
@@ -111,12 +120,12 @@ export default function HomePage() {
       <section style={{ padding: "80px 0" }}>
         <div className="r-inner">
           <SectionHeading badge="Trusted Robotics" title="Robotics Solutions You Can" highlight="Rely On"
-            subtitle="Merchant Robot delivers tested, reliable robotic systems built for real restaurants and businesses." />
+            subtitle="Canadian Robots delivers tested, reliable robotic systems built for real restaurants and businesses." />
           <div className="r-grid-3">
             {[
-              { icon: <Star size={20} />, title: "Premium Quality", description: "Advanced robotic systems engineered for commercial environments and high-demand usage." },
-              { icon: <Clock size={20} />, title: "Fast Deployment", description: "Get up and running quickly with streamlined setup, configuration, and guided onboarding." },
-              { icon: <Shield size={20} />, title: "Reliable Support", description: "Ongoing technical support and maintenance to keep your robots performing at peak levels." },
+              { icon: <Shield size={20} />, title: "Trusted by Public Sector", description: "Robot dogs and humanoids deployed with RCMP branches and the Canadian Armed Forces in large-volume orders." },
+              { icon: <ChefHat size={20} />, title: "Restaurant-Grade Cooking Robot", description: "Canada's most advanced cooking robot, purpose-built for commercial kitchens. Licensed install, permits, financing — all included." },
+              { icon: <Clock size={20} />, title: "Just Sign — We Handle the Rest", description: "Licensed electrician assigned, city permits managed, financing available. The fastest, easiest way to get operational." },
             ].map((item, i) => <FeatureCard key={item.title} {...item} delay={i * 0.1} />)}
           </div>
         </div>
@@ -124,7 +133,7 @@ export default function HomePage() {
 
       {/* ══ ROBOT CATEGORIES ══ */}
       <section style={{ padding: "80px 0", background: "#0a0a0a", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 40% at 50% 0%, rgba(232,135,74,0.06) 0%, transparent 60%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 40% at 50% 0%, rgba(204,0,0,0.06) 0%, transparent 60%)", pointerEvents: "none" }} />
         <div className="r-inner" style={{ position: "relative" }}>
           <SectionHeading badge="Robot Categories" title="Explore Our" highlight="Robot Solutions"
             subtitle="Three powerful categories of robots designed to transform how your business operates and engages customers." />
@@ -132,16 +141,16 @@ export default function HomePage() {
             {robotCategories.map((cat, i) => (
               <motion.div key={cat.title} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.6, delay: i * 0.12 }} whileHover={{ y: -8 }} className="robot-card">
                 <div className="visual-area">
-                  <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at center, rgba(232,135,74,0.08) 0%, transparent 70%)" }} />
+                  <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at center, rgba(204,0,0,0.08) 0%, transparent 70%)" }} />
                   <div style={{ position: "relative", zIndex: 1 }}>{cat.visual}</div>
                 </div>
                 <div className="card-body">
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-                    <div style={{ width: 34, height: 34, borderRadius: 10, background: "rgba(232,135,74,0.15)", border: "1px solid rgba(232,135,74,0.25)", display: "flex", alignItems: "center", justifyContent: "center", color: "#e8874a", flexShrink: 0 }}>{cat.icon}</div>
+                    <div style={{ width: 34, height: 34, borderRadius: 10, background: "rgba(204,0,0,0.15)", border: "1px solid rgba(204,0,0,0.25)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", flexShrink: 0 }}>{cat.icon}</div>
                     <h3>{cat.title}</h3>
                   </div>
                   <p>{cat.desc}</p>
-                  <Link href={cat.href} style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "#e8874a", fontSize: 14, fontWeight: 600, textDecoration: "none", fontFamily: "'Inter', sans-serif" }}>
+                  <Link href={cat.href} style={{ display: "inline-flex", alignItems: "center", gap: 6, color: "#CC0000", fontSize: 14, fontWeight: 600, textDecoration: "none", fontFamily: "'Inter', sans-serif" }}>
                     Learn More <ArrowRight size={14} />
                   </Link>
                 </div>
@@ -154,7 +163,7 @@ export default function HomePage() {
       {/* ══ WHY CHOOSE ══ */}
       <section style={{ padding: "80px 0" }}>
         <div className="r-inner">
-          <SectionHeading badge="Why Merchant Robot" title="Why Businesses Choose" highlight="Merchant Robot"
+          <SectionHeading badge="Why Canadian Robots" title="Why Businesses Choose" highlight="Canadian Robots"
             subtitle="Advanced robotic technology combined with deep industry knowledge to deliver solutions that genuinely transform operations." />
           <div className="r-grid-3">
             {whyChoose.map((item, i) => <FeatureCard key={item.title} {...item} delay={i * 0.07} />)}
@@ -164,24 +173,24 @@ export default function HomePage() {
 
       {/* ══ RESTAURANT BENEFITS ══ */}
       <section style={{ padding: "80px 0", background: "#0a0a0a", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", right: 0, top: 0, bottom: 0, width: "50%", background: "radial-gradient(ellipse at right, rgba(232,135,74,0.05) 0%, transparent 60%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", right: 0, top: 0, bottom: 0, width: "50%", background: "radial-gradient(ellipse at right, rgba(204,0,0,0.05) 0%, transparent 60%)", pointerEvents: "none" }} />
         <div className="r-inner" style={{ position: "relative" }}>
           <div className="r-split">
             <div>
               <motion.span initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="badge" style={{ marginBottom: 16 }}>Restaurant Automation</motion.span>
               <motion.h2 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
                 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(26px, 4vw, 44px)", fontWeight: 700, color: "#fafafa", lineHeight: 1.15, letterSpacing: "-0.025em", marginBottom: 16, marginTop: 12 }}>
-                Bring Automation Into{" "}<span className="gradient-text">Your Restaurant</span>
+                The Easiest Way to Get a{" "}<span className="gradient-text">Cooking Robot in Your Restaurant</span>
               </motion.h2>
               <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
                 style={{ fontFamily: "'Inter', sans-serif", fontSize: 16, color: "rgba(250,250,250,0.62)", lineHeight: 1.75, marginBottom: 24 }}>
-                Robotics can help restaurants improve service speed, reduce repetitive tasks, support staff, and create a memorable customer experience.
+                We handle everything — from permits to installation. Our licensed electrician is assigned to your project, we pull all city permits, and flexible financing means you don't have to wait. All you need to do is sign.
               </motion.p>
               <ul className="r-benefit-list">
                 {restaurantBenefits.map((b, i) => (
                   <motion.li key={b} initial={{ opacity: 0, x: -16 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 + i * 0.06 }}
                     style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 14, color: "rgba(250,250,250,0.75)", fontFamily: "'Inter', sans-serif" }}>
-                    <CheckCircle2 size={15} style={{ color: "#e8874a", flexShrink: 0 }} />{b}
+                    <CheckCircle2 size={15} style={{ color: "#CC0000", flexShrink: 0 }} />{b}
                   </motion.li>
                 ))}
               </ul>
@@ -214,8 +223,8 @@ export default function HomePage() {
             <div className="hiw-connector" />
             {howItWorks.map((step, i) => (
               <motion.div key={step.step} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.12 }} style={{ textAlign: "center", position: "relative" }}>
-                <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(232,135,74,0.12)", border: "2px solid rgba(232,135,74,0.35)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 18px", position: "relative", zIndex: 1 }}>
-                  <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 800, background: "linear-gradient(135deg, #f5c5a3, #e8874a)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>{step.step}</span>
+                <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(204,0,0,0.12)", border: "2px solid rgba(204,0,0,0.35)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 18px", position: "relative", zIndex: 1 }}>
+                  <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 800, background: "linear-gradient(135deg, #FF6666, #CC0000)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>{step.step}</span>
                 </div>
                 <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 600, color: "#fafafa", marginBottom: 8 }}>{step.title}</h4>
                 <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.55)", lineHeight: 1.65 }}>{step.desc}</p>
@@ -229,7 +238,7 @@ export default function HomePage() {
       <section style={{ padding: "80px 0", background: "#0a0a0a" }}>
         <div className="r-inner">
           <SectionHeading badge="Industries We Serve" title="Built for" highlight="Every Business"
-            subtitle="Merchant Robot solutions are deployed across a wide range of industries and business types." />
+            subtitle="Canadian Robots solutions are deployed across a wide range of industries and business types." />
           <div className="r-industries">
             {industries.map((ind, i) => (
               <motion.div key={ind.name} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }} whileHover={{ scale: 1.04, y: -4 }} className="industry-card">
@@ -241,9 +250,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <CTASection badge="Start Today" title="Ready to Transform Your" highlight="Business?"
-        subtitle="Discover how robot dogs, humanoid robots, and cooking robots can elevate your restaurant or business. Book a free consultation."
-        primaryLabel="Book a Free Demo" secondaryLabel="View Robot Solutions" />
+      <CTASection badge="Start Today" title="Ready to Work With" highlight="Canadian Robots?"
+        subtitle="Public sector procurement for robot dogs and humanoids. Restaurant cooking robot with licensed electrician, permits, and financing included. Just sign and we handle everything."
+        primaryLabel="Contact Us Now" secondaryLabel="View Robot Solutions" />
     </>
   );
 }
+

@@ -8,7 +8,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, ArrowRight } from "luci
 const robotInterests = ["Robot Dog", "Humanoid Robot", "Cooking Robot", "General Inquiry"];
 
 const contactInfo = [
-  { icon: <Mail size={18} />, label: "Email", value: "info@merchantrobot.com", sub: "We reply within 24 hours" },
+  { icon: <Mail size={18} />, label: "Email", value: "info@canadianrobots.ca", sub: "We reply within 24 hours" },
   { icon: <Phone size={18} />, label: "Phone", value: "+1 (800) 000-0000", sub: "Mon–Fri, 9AM–6PM" },
   { icon: <MapPin size={18} />, label: "Service Area", value: "Nationwide Coverage", sub: "Serving restaurants & businesses everywhere" },
   { icon: <Clock size={18} />, label: "Business Hours", value: "Mon–Fri: 9AM–6PM", sub: "Weekend inquiries responded Monday" },
@@ -37,7 +37,7 @@ export default function ContactPage() {
       <section className="page-hero">
         <div className="page-hero-bg" />
         <div className="page-hero-glow" />
-        <div style={{ position: "relative", maxWidth: 800, margin: "0 auto", padding: "0 32px" }}>
+        <div style={{ position: "relative", zIndex: 1, maxWidth: 800, margin: "0 auto", padding: "0 32px" }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="badge" style={{ marginBottom: 20 }}>Contact Us</span>
           </motion.div>
@@ -47,7 +47,7 @@ export default function ContactPage() {
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
             style={{ fontFamily: "'Inter', sans-serif", fontSize: 18, color: "rgba(250,250,250,0.6)", lineHeight: 1.7, maxWidth: 580, margin: "0 auto" }}>
-            Interested in robot dogs, humanoid robots, or cooking robots? Contact Merchant Robot today to discuss the right solution for your business.
+            Interested in robot dogs, humanoid robots, or cooking robots? Contact Canadian Robots today to discuss the right solution for your business.
           </motion.p>
         </div>
       </section>
@@ -99,18 +99,18 @@ export default function ContactPage() {
             <div id="contact-form">
               <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.1 }}>
                 <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.09)", borderRadius: 28, padding: "clamp(24px, 5vw, 48px)", position: "relative", overflow: "hidden" }}>
-                  <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(90deg, #e8874a, #f5c5a3)" }} />
+                  <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(90deg, #CC0000, #FF6666)" }} />
 
                   {submitted ? (
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} style={{ padding: "48px 0", textAlign: "center" }}>
-                      <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(232,135,74,0.15)", border: "1px solid rgba(232,135,74,0.3)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
-                        <CheckCircle2 size={28} style={{ color: "#e8874a" }} />
+                      <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(204,0,0,0.15)", border: "1px solid rgba(204,0,0,0.3)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
+                        <CheckCircle2 size={28} style={{ color: "#CC0000" }} />
                       </div>
                       <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: 24, fontWeight: 700, color: "#fafafa", marginBottom: 12 }}>Message Sent!</h3>
                       <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 15, color: "rgba(250,250,250,0.6)", lineHeight: 1.7, maxWidth: 340, margin: "0 auto 24px" }}>
                         Thank you for reaching out. Our team will review your inquiry and get back to you within 24 hours.
                       </p>
-                      <button onClick={() => setSubmitted(false)} style={{ background: "none", border: "none", color: "#e8874a", fontSize: 14, cursor: "pointer", textDecoration: "underline", fontFamily: "'Inter', sans-serif" }}>
+                      <button onClick={() => setSubmitted(false)} style={{ background: "none", border: "none", color: "#CC0000", fontSize: 14, cursor: "pointer", textDecoration: "underline", fontFamily: "'Inter', sans-serif" }}>
                         Send another message
                       </button>
                     </motion.div>
@@ -166,7 +166,7 @@ export default function ContactPage() {
                           )}
                         </button>
                         <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 12, color: "rgba(250,250,250,0.3)", textAlign: "center", marginTop: 16 }}>
-                          By submitting, you agree to be contacted by the Merchant Robot team.
+                          By submitting, you agree to be contacted by the our team.
                         </p>
                       </form>
                       <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
@@ -191,7 +191,7 @@ export default function ContactPage() {
               ].map((item, i) => (
                 <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                   style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
-                  <CheckCircle2 size={20} style={{ color: "#e8874a", flexShrink: 0, marginTop: 2 }} />
+                  <CheckCircle2 size={20} style={{ color: "#CC0000", flexShrink: 0, marginTop: 2 }} />
                   <div>
                     <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 600, color: "#fafafa", marginBottom: 8 }}>{item.title}</h4>
                     <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.57)", lineHeight: 1.65 }}>{item.desc}</p>
@@ -205,3 +205,4 @@ export default function ContactPage() {
     </>
   );
 }
+

@@ -13,21 +13,21 @@ const solutionLinks = [
 const companyLinks = [
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
-  { label: "Book a Demo", href: "/contact#demo" },
+  { label: "Get a Quote", href: "/contact#demo" },
 ];
 
 export default function Footer() {
   return (
     <footer style={{ background: "#0a0a0a", borderTop: "1px solid rgba(255,255,255,0.07)" }}>
       {/* CTA strip */}
-      <div style={{ background: "linear-gradient(135deg, #130a03, #1a0f05, #130a03)", borderBottom: "1px solid rgba(232,135,74,0.12)" }}>
+      <div style={{ background: "linear-gradient(135deg, #110000, #1a0000, #110000)", borderBottom: "1px solid rgba(204,0,0,0.15)" }}>
         <div className="r-footer-strip">
           <div>
             <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 700, color: "#fafafa", marginBottom: 8 }}>
-              Ready to Automate Your Business?
+              Ready to Deploy Canadian Robots? 🍁
             </h3>
             <p style={{ fontSize: 15, color: "rgba(250,250,250,0.6)", fontFamily: "'Inter', sans-serif" }}>
-              Talk to our team and find the right robot solution for your needs.
+              Contact our team for public sector procurement or restaurant deployment.
             </p>
           </div>
           <Link href="/contact" className="btn-primary" style={{ flexShrink: 0 }}>Get Started Today</Link>
@@ -40,10 +40,13 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" style={{ display: "inline-flex", alignItems: "center", textDecoration: "none", marginBottom: 16 }}>
-              <img src="/logo.png" alt="Merchant Robot" style={{ height: 44, width: "auto", objectFit: "contain" }} />
+              <img src="/logo.png" alt="Canadian Robots" style={{ height: 80, width: "auto", objectFit: "contain" }} />
             </Link>
-            <p style={{ fontSize: 14, color: "rgba(250,250,250,0.55)", lineHeight: 1.7, maxWidth: 300, fontFamily: "'Inter', sans-serif" }}>
-              Smart robotics solutions for modern restaurants and businesses. Robot dogs, humanoid robots, and cooking robots.
+            <p style={{ fontSize: 14, color: "rgba(250,250,250,0.55)", lineHeight: 1.7, maxWidth: 300, marginBottom: 8, fontFamily: "'Inter', sans-serif" }}>
+              100% Canadian owned robotics company. AI Makes Canada Stronger. Proudly serving RCMP, Canadian Armed Forces, and restaurants across Canada. 🍁
+            </p>
+            <p style={{ fontSize: 13, color: "#CC0000", fontWeight: 600, fontFamily: "'Inter', sans-serif" }}>
+              🍁 AI Makes Canada Stronger
             </p>
           </div>
 
@@ -63,12 +66,12 @@ export default function Footer() {
           <div>
             <h4 style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#fafafa", marginBottom: 18 }}>Contact</h4>
             {[
-              { icon: <Mail size={13} />, text: "info@merchantrobot.com" },
+              { icon: <Mail size={13} />, text: "info@canadianrobots.ca" },
               { icon: <Phone size={13} />, text: "+1 (800) 000-0000" },
-              { icon: <MapPin size={13} />, text: "Nationwide Coverage" },
+              { icon: <MapPin size={13} />, text: "Serving Canada Nationwide" },
             ].map(({ icon, text }) => (
               <div key={text} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 13, color: "rgba(250,250,250,0.55)", fontFamily: "'Inter', sans-serif", marginBottom: 12 }}>
-                <span style={{ color: "#e8874a", flexShrink: 0 }}>{icon}</span>{text}
+                <span style={{ color: "#CC0000", flexShrink: 0 }}>{icon}</span>{text}
               </div>
             ))}
           </div>
@@ -77,10 +80,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", marginTop: 48, paddingTop: 24, display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
           <p style={{ fontSize: 12, color: "rgba(250,250,250,0.3)", fontFamily: "'Inter', sans-serif" }}>
-            © {new Date().getFullYear()} Merchant Robot™. All rights reserved.
+            © {new Date().getFullYear()} Canadian Robots™. All rights reserved. 🍁 100% Canadian Owned
           </p>
-          <p style={{ fontSize: 12, color: "rgba(250,250,250,0.2)", fontFamily: "'Inter', sans-serif" }}>
-            Innovation · Automation · Efficiency · Experience
+          <p style={{ fontSize: 12, color: "#CC0000", fontFamily: "'Inter', sans-serif", fontWeight: 600 }}>
+            AI Makes Canada Stronger 🍁
           </p>
         </div>
       </div>

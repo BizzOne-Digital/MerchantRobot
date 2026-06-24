@@ -13,21 +13,21 @@ import { CookingRobotVisual } from "@/components/RobotVisuals";
 const specs = [
   { label: "Cooking Mode", value: "Stir-Fry / Multi-Function" },
   { label: "Throughput", value: "Up to 120 Dishes/Hour" },
-  { label: "Temperature Range", value: "Up to 300°C" },
+  { label: "Temperature", value: "Up to 300°C Precision" },
   { label: "Recipe Memory", value: "500+ Programmable" },
-  { label: "Cleaning", value: "Auto Self-Cleaning" },
+  { label: "Cleaning", value: "Auto Self-Cleaning Cycle" },
   { label: "Food Safety", value: "ISO / HACCP Compliant" },
-  { label: "Power", value: "Three-Phase Electric" },
-  { label: "Footprint", value: "Compact Commercial Size" },
+  { label: "Installation", value: "Licensed Electrician Assigned" },
+  { label: "Financing", value: "Flexible Options Available" },
 ];
 
 const capabilities = [
-  { icon: <Zap size={20} />, title: "High-Speed Cooking", desc: "Prepares dishes at speeds far exceeding manual cooking — handling multiple woks or cooking stations simultaneously during peak service hours." },
-  { icon: <BarChart3 size={20} />, title: "Consistent Portioning", desc: "Every serving is precisely portioned to your specifications — eliminating waste, controlling food costs, and ensuring uniform presentation across all dishes." },
-  { icon: <Thermometer size={20} />, title: "Precision Temperature Control", desc: "Maintains exact cooking temperatures for every recipe stage, ensuring consistent flavor, texture, and food safety standards every single time." },
-  { icon: <Settings size={20} />, title: "500+ Programmable Recipes", desc: "Store your entire menu digitally. Each recipe is executed identically regardless of which shift is operating or how busy the kitchen is." },
-  { icon: <Shield size={20} />, title: "Food Safety Compliance", desc: "Built to commercial kitchen hygiene standards with smooth, easy-clean surfaces, automated cleaning cycles, and full HACCP compliance." },
-  { icon: <Clock size={20} />, title: "Auto Self-Cleaning", desc: "Integrated cleaning cycles reduce manual kitchen labor significantly, maintaining hygienic standards without interrupting service flow." },
+  { icon: <Zap size={20} />, title: "Up to 120 Dishes per Hour", desc: "Consistently prepares dishes at high speed — far exceeding manual cooking rates — without any drop in quality during rush periods." },
+  { icon: <BarChart3 size={20} />, title: "Precise Portioning Every Time", desc: "Every serving is portioned to your exact specifications — eliminating food waste, controlling costs, and ensuring uniform presentation across all plates." },
+  { icon: <Thermometer size={20} />, title: "Precision Temperature Control", desc: "Maintains exact cooking temperatures throughout every recipe stage, guaranteeing consistent flavour, texture, and food safety on every cycle." },
+  { icon: <Settings size={20} />, title: "500+ Programmable Recipes", desc: "Your entire menu stored digitally. Each recipe executes identically regardless of which shift is running or how busy the kitchen gets." },
+  { icon: <Shield size={20} />, title: "HACCP & Food Safety Compliant", desc: "Smooth easy-clean surfaces, automated cleaning cycles, and full food safety compliance built in — no extra certification paperwork for you." },
+  { icon: <Clock size={20} />, title: "Auto Self-Cleaning", desc: "Integrated cleaning cycles run automatically, maintaining hygiene standards without interrupting service flow or adding to staff workload." },
 ];
 
 const useCases = [
@@ -64,29 +64,29 @@ const useCases = [
 ];
 
 const kitchenBefore = [
-  "Inconsistent dish quality between staff members",
+  "Inconsistent dish quality between different staff",
   "High food waste from incorrect portioning",
-  "Quality drops significantly during peak rush",
+  "Quality drops during peak rush hours",
   "Over-reliance on specific key kitchen staff",
   "High overtime costs during busy periods",
   "Manual cleaning adds to kitchen labor hours",
 ];
 
 const kitchenAfter = [
-  "Every dish prepared to exact specification",
-  "Precise portioning eliminates food waste",
-  "Consistent quality maintained at full capacity",
-  "Kitchen operates independently of staff availability",
-  "Optimized staffing with predictable costs",
-  "Automated cleaning cycles built into workflow",
+  "Every dish prepared to exact specification, every time",
+  "Precise portioning eliminates waste and controls costs",
+  "Consistent quality maintained at full capacity under pressure",
+  "Kitchen runs independently of staff availability or turnover",
+  "Predictable operating costs, no unplanned overtime",
+  "Automated cleaning built into the workflow — zero extra labor",
 ];
 
 const faqs = [
-  { q: "Does the cooking robot replace kitchen staff?", a: "No — it works alongside your team. The robot handles repetitive, high-volume cooking tasks so your chefs can focus on quality control, creativity, and guest interaction." },
-  { q: "How are recipes programmed into the robot?", a: "Merchant Robot's team works with your head chef to digitize your recipes into the system. Recipes can be updated remotely as your menu evolves." },
-  { q: "How do you ensure food safety and hygiene?", a: "The robot is built to commercial kitchen standards with smooth surfaces, a self-cleaning cycle, and full HACCP compliance. It undergoes the same hygiene protocols as your kitchen equipment." },
-  { q: "What type of cooking can it handle?", a: "Primarily stir-fry, sauté, and wok-based cooking — ideal for Asian cuisine, mixed dishes, and high-volume single-pan preparations. Custom configurations are available for other cooking styles." },
-  { q: "How long does installation take?", a: "Typical installation takes 1–3 days depending on kitchen layout. Merchant Robot handles installation, testing, and full staff training before going live." },
+  { q: "What makes your process different from other suppliers?", a: "We handle everything end-to-end. A licensed electrician is assigned to your installation, we pull all city permits, handle compliance, and offer financing. You sign — we do the rest." },
+  { q: "What does the licensed electrician cover?", a: "Our licensed electrician handles all electrical installation, safety inspection, and compliance sign-off for commercial kitchen equipment. The full city permit process is managed by our team — no paperwork for you." },
+  { q: "How does financing work?", a: "We offer flexible financing tailored to restaurant budgets. Get your cooking robot deployed now and pay on a schedule that works for your cash flow. Contact us for current plans." },
+  { q: "How are recipes programmed?", a: "Our team works with your head chef to digitize your recipes. Recipes can be updated remotely at any time as your menu evolves — no technical expertise required." },
+  { q: "How long from signing to fully operational?", a: "Typically 3–7 business days depending on your kitchen layout. Our licensed electrician, install team, and trainer coordinate together to minimize any disruption to your service." },
 ];
 
 export default function CookingRobotPage() {
@@ -95,7 +95,7 @@ export default function CookingRobotPage() {
       {/* ── Back nav ── */}
       <div style={{ position: "fixed", top: 88, left: 32, zIndex: 40 }}>
         <Link href="/solutions" style={{ display: "inline-flex", alignItems: "center", gap: 7, fontSize: 13, color: "rgba(250,250,250,0.5)", textDecoration: "none", fontFamily: "'Inter', sans-serif", transition: "color 0.2s" }}
-          onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#e8874a"}
+          onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#CC0000"}
           onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(250,250,250,0.5)"}>
           <ArrowLeft size={14} /> Back to Solutions
         </Link>
@@ -103,8 +103,8 @@ export default function CookingRobotPage() {
 
       {/* ══ HERO ══ */}
       <section style={{ position: "relative", minHeight: "90vh", display: "flex", alignItems: "center", overflow: "hidden", paddingTop: 80 }} className="hero-bg r-hero-pad">
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 65% 55% at 35% 50%, rgba(232,135,74,0.12) 0%, transparent 65%)", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", inset: 0, opacity: 0.035, backgroundImage: "linear-gradient(rgba(232,135,74,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(232,135,74,0.5) 1px, transparent 1px)", backgroundSize: "56px 56px", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 65% 55% at 35% 50%, rgba(204,0,0,0.12) 0%, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", inset: 0, opacity: 0.035, backgroundImage: "linear-gradient(rgba(204,0,0,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(204,0,0,0.5) 1px, transparent 1px)", backgroundSize: "56px 56px", pointerEvents: "none" }} />
 
         <div className="r-inner" style={{ position: "relative" }}>
           <div className="r-robot-hero" style={{ alignItems: "center" }}>
@@ -123,27 +123,27 @@ export default function CookingRobotPage() {
               </motion.h1>
               <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}
                 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(18px, 2.5vw, 28px)", fontWeight: 600, lineHeight: 1.2, marginBottom: 24 }}>
-                <span className="gradient-text">Precision. Speed. Consistency. Every Time.</span>
+                <span className="gradient-text">Canada's Most Advanced Restaurant Cooking Robot.</span>
               </motion.h2>
 
               <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }}
                 style={{ fontFamily: "'Inter', sans-serif", fontSize: 17, color: "rgba(250,250,250,0.65)", lineHeight: 1.8, maxWidth: 500, marginBottom: 36 }}>
-                An advanced commercial cooking robot built for the realities of busy restaurants — delivering perfect dishes at scale, with zero fatigue, zero inconsistency, and maximum efficiency every service.
+                We don't just deliver a robot — we assign a licensed electrician, handle all city permits, and offer flexible financing. Your restaurant gets fully operational fast with zero bureaucratic headaches. All you need to do is sign.
               </motion.p>
 
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }}
                 className="r-btn-row" style={{ marginBottom: 40 }}>
-                <Link href="/contact#demo" className="btn-primary">Request a Demo</Link>
+                <Link href="/contact#demo" className="btn-primary">Get Started — Just Sign</Link>
                 <Link href="/contact" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-                  Get a Quote <ArrowRight size={15} />
+                  Request a Quote <ArrowRight size={15} />
                 </Link>
               </motion.div>
 
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
                 style={{ display: "flex", flexWrap: "wrap", gap: 20 }}>
-                {["120 Dishes/Hour", "500+ Recipes", "Self-Cleaning", "HACCP Compliant"].map(tag => (
+                {["Licensed Electrician Assigned", "City Permits Handled", "Financing Available", "HACCP Compliant"].map(tag => (
                   <div key={tag} style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 13, color: "rgba(250,250,250,0.55)", fontFamily: "'Inter', sans-serif" }}>
-                    <CheckCircle2 size={13} style={{ color: "#e8874a" }} /> {tag}
+                    <CheckCircle2 size={13} style={{ color: "#CC0000" }} /> {tag}
                   </div>
                 ))}
               </motion.div>
@@ -152,7 +152,7 @@ export default function CookingRobotPage() {
             {/* Right */}
             <motion.div initial={{ opacity: 0, scale: 0.85, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 1, delay: 0.2 }} className="hero-visual-center">
               <div className="visual-panel" style={{ minHeight: 420, position: "relative" }}>
-                <div style={{ position: "absolute", width: 300, height: 300, borderRadius: "50%", background: "rgba(232,135,74,0.09)", filter: "blur(60px)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
+                <div style={{ position: "absolute", width: 300, height: 300, borderRadius: "50%", background: "rgba(204,0,0,0.09)", filter: "blur(60px)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
                 <div className="float" style={{ position: "relative", zIndex: 1, transform: "scale(1.6)" }}>
                   <CookingRobotVisual />
                 </div>
@@ -227,15 +227,15 @@ export default function CookingRobotPage() {
 
             {/* After */}
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              style={{ background: "rgba(232,135,74,0.04)", border: "1px solid rgba(232,135,74,0.2)", borderRadius: 24, padding: 36, position: "relative", overflow: "hidden" }}>
-              <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(90deg, #e8874a, #f5c5a3)" }} />
+              style={{ background: "rgba(204,0,0,0.04)", border: "1px solid rgba(204,0,0,0.2)", borderRadius: 24, padding: 36, position: "relative", overflow: "hidden" }}>
+              <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(90deg, #CC0000, #FF6666)" }} />
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 28 }}>
-                <div style={{ width: 40, height: 40, borderRadius: "50%", background: "rgba(232,135,74,0.15)", border: "1px solid rgba(232,135,74,0.3)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>✅</div>
+                <div style={{ width: 40, height: 40, borderRadius: "50%", background: "rgba(204,0,0,0.15)", border: "1px solid rgba(204,0,0,0.3)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>✅</div>
                 <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 700, color: "#fafafa" }}>With Cooking Robot</h3>
               </div>
               {kitchenAfter.map((item) => (
                 <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 14 }}>
-                  <CheckCircle2 size={18} style={{ color: "#e8874a", flexShrink: 0, marginTop: 2 }} />
+                  <CheckCircle2 size={18} style={{ color: "#CC0000", flexShrink: 0, marginTop: 2 }} />
                   <span style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.75)", lineHeight: 1.6 }}>{item}</span>
                 </div>
               ))}
@@ -257,9 +257,9 @@ export default function CookingRobotPage() {
             {useCases.map((u, i) => (
               <motion.div key={u.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
                 style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 20, padding: 28, transition: "all 0.3s ease" }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(232,135,74,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-5px)"; }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,0,0,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-5px)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
-                <div style={{ width: 48, height: 48, borderRadius: 14, background: "rgba(232,135,74,0.12)", border: "1px solid rgba(232,135,74,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#e8874a", marginBottom: 20 }}>
+                <div style={{ width: 48, height: 48, borderRadius: 14, background: "rgba(204,0,0,0.12)", border: "1px solid rgba(204,0,0,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", marginBottom: 20 }}>
                   {u.icon}
                 </div>
                 <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 17, fontWeight: 600, color: "#fafafa", marginBottom: 10 }}>{u.title}</h4>
@@ -301,10 +301,10 @@ export default function CookingRobotPage() {
               { label: "Humanoid Robot", href: "/robots/humanoid", desc: "Interactive robots for guest welcome & customer service" },
             ].map(r => (
               <Link key={r.href} href={r.href} style={{ display: "block", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 18, padding: "24px", textDecoration: "none", transition: "all 0.3s ease" }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(232,135,74,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,0,0,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
                 <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 600, color: "#fafafa", marginBottom: 6, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                  {r.label} <ArrowRight size={16} style={{ color: "#e8874a" }} />
+                  {r.label} <ArrowRight size={16} style={{ color: "#CC0000" }} />
                 </div>
                 <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, color: "rgba(250,250,250,0.55)" }}>{r.desc}</div>
               </Link>
@@ -314,14 +314,16 @@ export default function CookingRobotPage() {
       </section>
 
       <CTASection
-        badge="Ready to Transform Your Kitchen?"
-        title="Bring the Cooking Robot to"
+        badge="Just Sign & We Handle the Rest"
+        title="Get Canada's Most Advanced Cooking Robot in"
         highlight="Your Restaurant"
-        subtitle="See how the cooking robot performs in a real kitchen environment. Book a demo and our team will show you exactly what's possible for your operation."
-        primaryLabel="Book a Kitchen Demo"
+        subtitle="Licensed electrician assigned. City permits handled. Financing available. We take care of everything — you just need to sign and we get your kitchen running."
+        primaryLabel="Get Started — Contact Us Now"
+        primaryHref="/contact"
         secondaryLabel="View All Robots"
         secondaryHref="/solutions"
       />
     </>
   );
 }
+

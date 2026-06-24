@@ -13,17 +13,17 @@ const robots = [
     id: "robot-dog",
     icon: <Dog size={24} />,
     title: "Robot Dog",
-    tagline: "Smart Mobility. Intelligent Engagement.",
-    description: "Smart, mobile, and highly adaptable robot dogs for business environments, security, demonstrations, guest interaction, and advanced automation experiences. These four-legged robots navigate complex spaces and create unforgettable impressions.",
+    tagline: "Trusted by RCMP & Canadian Armed Forces.",
+    description: "Our robot dogs are primarily deployed with Canadian public sector clients — including multiple RCMP branches and the Canadian Armed Forces — handling large-volume orders for patrol, reconnaissance, public safety demonstrations, and advanced field operations. Highly mobile, AI-powered, and built for demanding real-world environments.",
     features: [
-      { icon: <Brain size={15} />, text: "Intelligent movement and terrain navigation" },
-      { icon: <Users size={15} />, text: "Interactive guest experience capabilities" },
-      { icon: <Star size={15} />, text: "Modern business applications and demonstrations" },
-      { icon: <Zap size={15} />, text: "Ideal for events, showrooms, and high-tech environments" },
-      { icon: <Settings size={15} />, text: "Impressive customer engagement and brand impact" },
-      { icon: <Clock size={15} />, text: "Autonomous operation with advanced sensors" },
+      { icon: <Brain size={15} />, text: "Deployed with RCMP branches across Canada" },
+      { icon: <Shield size={15} />, text: "Canadian Armed Forces large-order supply" },
+      { icon: <Zap size={15} />, text: "Autonomous patrol and reconnaissance missions" },
+      { icon: <Settings size={15} />, text: "AI-powered terrain navigation and obstacle avoidance" },
+      { icon: <Users size={15} />, text: "Public safety demonstrations and community engagement" },
+      { icon: <Clock size={15} />, text: "Reliable performance in demanding field conditions" },
     ],
-    useCases: ["Corporate Events", "Showrooms", "Brand Activations", "Security Patrols", "Tech Exhibitions", "Entertainment"],
+    useCases: ["RCMP Branches", "Canadian Armed Forces", "Public Safety", "Border Operations", "Military Demonstrations", "Government Events"],
     visual: <RobotDogVisual />,
     detailHref: "/robots/robot-dog",
     reverse: false,
@@ -32,17 +32,17 @@ const robots = [
     id: "humanoid",
     icon: <Bot size={24} />,
     title: "Humanoid Robot",
-    tagline: "Human-Like Interaction. Futuristic Brand Experience.",
-    description: "Humanoid robots designed to interact with people, support customer service, welcome guests, assist staff, and create a futuristic brand experience. With natural voice interaction and lifelike movement, these robots redefine hospitality and service.",
+    tagline: "Large-Order Supply to Public Institutions.",
+    description: "Humanoid robots supplied in large orders to public sector institutions — government agencies, Canadian military bases, and RCMP facilities. These robots handle public-facing interaction, information delivery, security support, and institutional automation — bringing a futuristic capability to Canada's public sector.",
     features: [
-      { icon: <Users size={15} />, text: "Guest greeting and welcoming interactions" },
-      { icon: <Brain size={15} />, text: "Customer interaction and Q&A support" },
-      { icon: <Zap size={15} />, text: "Voice-based assistance and navigation guidance" },
-      { icon: <Star size={15} />, text: "Brand engagement and marketing presence" },
-      { icon: <Settings size={15} />, text: "Smart business automation support" },
-      { icon: <Clock size={15} />, text: "Multi-language communication capabilities" },
+      { icon: <Users size={15} />, text: "Government agency and institutional deployment" },
+      { icon: <Brain size={15} />, text: "Public information and service delivery" },
+      { icon: <Shield size={15} />, text: "Security support at government facilities" },
+      { icon: <Zap size={15} />, text: "Multi-language voice-based assistance" },
+      { icon: <Settings size={15} />, text: "Large-volume procurement available" },
+      { icon: <Clock size={15} />, text: "24/7 operational capability, no fatigue" },
     ],
-    useCases: ["Hotel Lobbies", "Restaurant Front-of-House", "Retail Stores", "Corporate Reception", "Trade Shows", "Malls"],
+    useCases: ["RCMP Facilities", "Military Bases", "Government Offices", "Public Institutions", "National Defence Sites", "Border Services"],
     visual: <HumanoidVisual />,
     detailHref: "/robots/humanoid",
     reverse: true,
@@ -51,17 +51,17 @@ const robots = [
     id: "cooking",
     icon: <ChefHat size={24} />,
     title: "Cooking Robot",
-    tagline: "Precision. Speed. Consistency. Every Time.",
-    description: "Advanced cooking robots built to help restaurants improve food preparation speed, consistency, and operational efficiency. From stir-frying to portioning, these robots bring precision engineering into the heart of your kitchen.",
+    tagline: "Canada's Most Advanced Restaurant Cooking Robot.",
+    description: "Our most advanced model — purpose-built for commercial restaurant kitchens. We don't just deliver the robot: a licensed electrician is assigned to your project, we handle all city permits and compliance, and flexible financing is available. Your restaurant gets fully operational fast. All you need to do is sign.",
     features: [
-      { icon: <Clock size={15} />, text: "Consistent food preparation every single cycle" },
-      { icon: <Zap size={15} />, text: "Improved kitchen productivity and throughput" },
-      { icon: <Settings size={15} />, text: "Reduced repetitive workload for kitchen staff" },
-      { icon: <Star size={15} />, text: "Better service speed during peak hours" },
-      { icon: <Brain size={15} />, text: "Ideal for restaurants and commercial kitchens" },
-      { icon: <Users size={15} />, text: "Hygienic and standardized cooking processes" },
+      { icon: <Clock size={15} />, text: "Licensed electrician assigned to every installation" },
+      { icon: <Shield size={15} />, text: "City permits fully managed by our team" },
+      { icon: <Zap size={15} />, text: "Financing available — deploy now, pay on your terms" },
+      { icon: <Star size={15} />, text: "Up to 120 dishes/hour — consistent every cycle" },
+      { icon: <Brain size={15} />, text: "500+ programmable recipes stored on-device" },
+      { icon: <Settings size={15} />, text: "Auto self-cleaning, HACCP food safety compliant" },
     ],
-    useCases: ["Full-Service Restaurants", "Fast Casual Chains", "Hotel Kitchens", "Food Courts", "Catering", "Cloud Kitchens"],
+    useCases: ["Full-Service Restaurants", "Fast Casual Chains", "Hotel Kitchens", "Food Courts", "Catering Operations", "Cloud Kitchens"],
     visual: <CookingRobotVisual />,
     detailHref: "/robots/cooking-robot",
     reverse: false,
@@ -84,7 +84,7 @@ export default function SolutionsPage() {
       <section className="page-hero">
         <div className="page-hero-bg" />
         <div className="page-hero-glow" />
-        <div className="r-inner" style={{ position: "relative", maxWidth: 900 }}>
+        <div className="r-inner" style={{ position: "relative", zIndex: 1, maxWidth: 900 }}>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="badge" style={{ marginBottom: 20 }}>Robot Solutions</span>
           </motion.div>
@@ -93,8 +93,8 @@ export default function SolutionsPage() {
             Advanced Robots for{" "}<span className="gradient-text">Every Business Need</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-            style={{ fontFamily: "'Inter', sans-serif", fontSize: 18, color: "rgba(250,250,250,0.6)", lineHeight: 1.7, maxWidth: 600, margin: "0 auto" }}>
-            Explore our three flagship robot categories — each engineered to solve specific business challenges and create extraordinary experiences.
+            style={{ fontFamily: "'Inter', sans-serif", fontSize: 18, color: "rgba(250,250,250,0.6)", lineHeight: 1.7, maxWidth: 620, margin: "0 auto" }}>
+            Robot dogs and humanoids for RCMP and Canadian Armed Forces. Canada's most advanced cooking robot for restaurants — with licensed electrician, city permits, and financing included.
           </motion.p>
         </div>
       </section>
@@ -127,22 +127,22 @@ export default function SolutionsPage() {
                 style={{ direction: "ltr" }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 20 }}>
-                  <div style={{ width: 48, height: 48, borderRadius: 14, background: "rgba(232,135,74,0.15)", border: "1px solid rgba(232,135,74,0.3)", display: "flex", alignItems: "center", justifyContent: "center", color: "#e8874a", flexShrink: 0 }}>
+                  <div style={{ width: 48, height: 48, borderRadius: 14, background: "rgba(204,0,0,0.15)", border: "1px solid rgba(204,0,0,0.3)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", flexShrink: 0 }}>
                     {robot.icon}
                   </div>
                   <div>
-                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 600, color: "#e8874a", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 3 }}>Robot Solution</p>
+                    <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 600, color: "#CC0000", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 3 }}>Robot Solution</p>
                     <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: 28, fontWeight: 700, color: "#fafafa", lineHeight: 1 }}>{robot.title}</h2>
                   </div>
                 </div>
 
-                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 15, color: "rgba(232,135,74,0.8)", fontStyle: "italic", marginBottom: 16 }}>"{robot.tagline}"</p>
+                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 15, color: "rgba(204,0,0,0.8)", fontStyle: "italic", marginBottom: 16 }}>"{robot.tagline}"</p>
                 <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 15, color: "rgba(250,250,250,0.62)", lineHeight: 1.75, marginBottom: 24 }}>{robot.description}</p>
 
                 <div className="r-grid-2" style={{ marginBottom: 28 }}>
                   {robot.features.map((f) => (
                     <div key={f.text} style={{ display: "flex", alignItems: "flex-start", gap: 9, fontSize: 13, color: "rgba(250,250,250,0.72)", fontFamily: "'Inter', sans-serif", lineHeight: 1.5 }}>
-                      <span style={{ color: "#e8874a", flexShrink: 0, marginTop: 2 }}>{f.icon}</span>
+                      <span style={{ color: "#CC0000", flexShrink: 0, marginTop: 2 }}>{f.icon}</span>
                       {f.text}
                     </div>
                   ))}
@@ -183,7 +183,7 @@ export default function SolutionsPage() {
                     <th style={{ padding: "16px 24px", textAlign: "left", fontFamily: "'Inter', sans-serif", fontSize: 12, fontWeight: 600, color: "rgba(250,250,250,0.4)", textTransform: "uppercase", letterSpacing: "0.08em" }}>Feature</th>
                     {[{ icon: <Dog size={16} />, label: "Robot Dog" }, { icon: <Bot size={16} />, label: "Humanoid" }, { icon: <ChefHat size={16} />, label: "Cooking" }].map(col => (
                       <th key={col.label} style={{ padding: "16px 24px", textAlign: "center", borderLeft: "1px solid rgba(255,255,255,0.07)" }}>
-                        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, color: "#e8874a", fontFamily: "'Sora', sans-serif", fontSize: 14, fontWeight: 600 }}>
+                        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, color: "#CC0000", fontFamily: "'Sora', sans-serif", fontSize: 14, fontWeight: 600 }}>
                           {col.icon}<span style={{ color: "#fafafa" }}>{col.label}</span>
                         </div>
                       </th>
@@ -196,7 +196,7 @@ export default function SolutionsPage() {
                       <td style={{ padding: "14px 24px", fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.75)" }}>{row.label}</td>
                       {[row.dog, row.humanoid, row.cooking].map((val, ci) => (
                         <td key={ci} style={{ padding: "14px 24px", textAlign: "center", borderLeft: "1px solid rgba(255,255,255,0.05)" }}>
-                          {val ? <CheckCircle2 size={18} style={{ color: "#e8874a", display: "inline-block" }} /> : <span style={{ display: "inline-block", width: 20, height: 1, background: "rgba(255,255,255,0.15)" }} />}
+                          {val ? <CheckCircle2 size={18} style={{ color: "#CC0000", display: "inline-block" }} /> : <span style={{ display: "inline-block", width: 20, height: 1, background: "rgba(255,255,255,0.15)" }} />}
                         </td>
                       ))}
                     </tr>
@@ -211,7 +211,7 @@ export default function SolutionsPage() {
       {/* ── Features ── */}
       <section style={{ padding: "96px 0" }}>
         <div className="r-inner">
-          <SectionHeading badge="What Sets Us Apart" title="Built for" highlight="Real Results" subtitle="Every Merchant Robot solution is backed by expertise, proven technology, and dedicated support." />
+          <SectionHeading badge="What Sets Us Apart" title="Built for" highlight="Real Results" subtitle="Every Canadian Robots solution is backed by expertise, proven technology, and dedicated support." />
           <div className="r-grid-3">
             {[
               { icon: <Zap size={18} />, title: "Rapid Deployment", description: "Get operational quickly with streamlined setup and professional onboarding assistance." },
@@ -226,14 +226,16 @@ export default function SolutionsPage() {
       </section>
 
       <CTASection
-        badge="Ready to Explore?"
-        title="Find Your Perfect"
-        highlight="Robot Match"
-        subtitle="Our experts will help you identify the ideal robot solution for your specific business. Book a free consultation today."
-        primaryLabel="Book a Free Demo"
+        badge="Ready to Move Forward?"
+        title="Public Sector or Restaurant —"
+        highlight="We Have Your Robot"
+        subtitle="RCMP, Armed Forces, and government procurement for Robot Dogs and Humanoids. Cooking Robot for restaurants with licensed electrician, city permits, and financing handled. Just sign."
+        primaryLabel="Contact Us Now"
+        primaryHref="/contact"
         secondaryLabel="Contact Our Team"
         secondaryHref="/contact"
       />
     </>
   );
 }
+
