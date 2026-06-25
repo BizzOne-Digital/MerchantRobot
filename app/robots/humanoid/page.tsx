@@ -97,14 +97,11 @@ export default function HumanoidPage() {
 
         <div className="r-inner" style={{ position: "relative" }}>
           <div className="r-robot-hero" style={{ alignItems: "center" }}>
-            {/* Right visual — shown first on desktop via order */}
+            {/* Right visual */}
             <motion.div initial={{ opacity: 0, scale: 0.85, x: -40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 1, delay: 0.2 }}
               style={{ order: 2 }} className="hero-visual-center">
-              <div className="visual-panel" style={{ minHeight: 440, position: "relative" }}>
-                <div style={{ position: "absolute", width: 320, height: 320, borderRadius: "50%", background: "rgba(200,200,200,0.05)", filter: "blur(70px)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
-                <div className="float" style={{ position: "relative", zIndex: 1, transform: "scale(1.5)" }}>
-                  <HumanoidVisual />
-                </div>
+              <div style={{ borderRadius: 28, overflow: "hidden", height: 460, width: "100%", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <img src="/humanoid-robot.jpg" alt="Canadian Robots — Humanoid Robot" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 20%", display: "block" }} />
               </div>
             </motion.div>
 

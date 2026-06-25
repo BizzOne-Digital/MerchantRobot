@@ -113,8 +113,12 @@ export default function SolutionsPage() {
                 transition={{ duration: 0.8 }}
                 style={{ direction: "ltr" }}
               >
-                <div className="visual-panel" style={{ minHeight: 340 }}>
-                  <div className="float" style={{ position: "relative", zIndex: 1 }}>{robot.visual}</div>
+                <div style={{ borderRadius: 28, overflow: "hidden", height: 400, width: "100%", border: "1px solid rgba(255,255,255,0.08)" }}>
+                  <img
+                    src={robot.id === "robot-dog" ? "/robot-dog.jpg" : robot.id === "humanoid" ? "/humanoid-robot.jpg" : "/cooking-robot-4wok.jpg"}
+                    alt={robot.title}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: robot.id === "humanoid" ? "center top" : "center center", display: "block" }}
+                  />
                 </div>
               </motion.div>
 

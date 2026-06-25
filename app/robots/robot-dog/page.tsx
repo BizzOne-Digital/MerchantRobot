@@ -123,11 +123,11 @@ export default function RobotDogPage() {
 
               {/* Pricing */}
               <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.32 }}
-                style={{ display: "inline-flex", alignItems: "center", gap: 16, padding: "16px 24px", borderRadius: 16, background: "rgba(200,200,200,0.05)", border: "1px solid rgba(204,0,0,0.3)", marginBottom: 28 }}>
-                <span style={{ fontSize: 28, fontFamily: "'Sora', sans-serif", fontWeight: 800, color: "#CC0000" }}>$100,000 CAD</span>
+                style={{ display: "inline-flex", alignItems: "center", gap: 18, padding: "18px 28px", borderRadius: 18, background: "rgba(204,0,0,0.08)", border: "2px solid rgba(204,0,0,0.55)", marginBottom: 28, boxShadow: "0 0 24px rgba(204,0,0,0.15)" }}>
                 <div>
-                  <div style={{ fontSize: 11, fontWeight: 600, color: "rgba(250,250,250,0.5)", fontFamily: "'Inter', sans-serif", textTransform: "uppercase" as const, letterSpacing: "0.08em" }}>Per Unit</div>
-                  <div style={{ fontSize: 13, color: "rgba(250,250,250,0.75)", fontFamily: "'Inter', sans-serif" }}>Professional High Quality — Public Sector Grade</div>
+                  <div style={{ fontSize: 11, fontWeight: 700, color: "#CC0000", fontFamily: "'Inter', sans-serif", textTransform: "uppercase" as const, letterSpacing: "0.12em", marginBottom: 4 }}>🍁 Price Per Unit</div>
+                  <span style={{ fontSize: 32, fontFamily: "'Sora', sans-serif", fontWeight: 900, color: "#CC0000", lineHeight: 1, display: "block" }}>$100,000 CAD</span>
+                  <div style={{ fontSize: 13, color: "rgba(250,250,250,0.65)", fontFamily: "'Inter', sans-serif", marginTop: 4 }}>Professional High Quality — Public Sector Grade</div>
                 </div>
               </motion.div>
 
@@ -152,12 +152,8 @@ export default function RobotDogPage() {
 
             {/* Right: Visual */}
             <motion.div initial={{ opacity: 0, scale: 0.85, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 1, delay: 0.2, ease: "easeOut" }} className="hero-visual-center">
-              <div className="visual-panel" style={{ minHeight: 400, position: "relative" }}>
-                {/* Glow orb */}
-                <div style={{ position: "absolute", width: 300, height: 300, borderRadius: "50%", background: "rgba(200,200,200,0.05)", filter: "blur(60px)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
-                <div className="float" style={{ position: "relative", zIndex: 1, transform: "scale(1.6)" }}>
-                  <RobotDogVisual />
-                </div>
+              <div style={{ borderRadius: 28, overflow: "hidden", height: 460, width: "100%", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <img src="/robot-dog.jpg" alt="Canadian Robots — Robot Dog" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center", display: "block" }} />
               </div>
             </motion.div>
           </div>

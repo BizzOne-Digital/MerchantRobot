@@ -43,72 +43,70 @@ const industries = [
 export default function HomePage() {
   return (
     <>
-      {/* ══ HERO ══ */}
-      <section style={{ position: "relative", minHeight: "100vh", display: "flex", alignItems: "center", overflow: "hidden", paddingTop: 72 }} className="hero-bg">
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 65% 45%, rgba(200,200,200,0.05) 0%, transparent 65%)", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", inset: 0, opacity: 0.04, backgroundImage: "linear-gradient(rgba(204,0,0,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(204,0,0,0.6) 1px, transparent 1px)", backgroundSize: "64px 64px", pointerEvents: "none" }} />
-        <div style={{ position: "absolute", top: "15%", right: "8%", width: 400, height: 400, borderRadius: "50%", background: "rgba(200,200,200,0.05)", filter: "blur(100px)", pointerEvents: "none" }} />
+      {/* ══ HERO — Full background image ══ */}
+      <section style={{ position: "relative", minHeight: "100vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
+        {/* Full-bleed background image */}
+        <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+          <img src="/hero-robots.jpg" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center", display: "block" }} />
+        </div>
+        {/* Dark gradient overlay — left side darker for text readability, right side reveals image */}
+        <div style={{ position: "absolute", inset: 0, zIndex: 1, background: "linear-gradient(105deg, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.82) 38%, rgba(10,10,10,0.45) 60%, rgba(10,10,10,0.15) 100%)" }} />
+        {/* Bottom fade */}
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 120, zIndex: 1, background: "linear-gradient(to top, #0d0d0d, transparent)" }} />
 
-        <div style={{ position: "relative", maxWidth: 1200, margin: "0 auto", width: "100%" }}>
-          <div className="r-robot-hero r-hero-pad">
-            {/* Text */}
-            <div>
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} style={{ marginBottom: 20 }}>
-                <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "7px 18px", borderRadius: 100, background: "rgba(200,200,200,0.05)", border: "1px solid rgba(204,0,0,0.3)", color: "#CC0000", fontSize: 12, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" as const, fontFamily: "'Inter', sans-serif" }}>
-                  <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#CC0000", display: "inline-block", animation: "pulse 2s infinite" }} />
-                  🍁 100% Canadian Owned · AI Makes Canada Stronger
-                </span>
-              </motion.div>
+        {/* Content */}
+        <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", width: "100%", paddingTop: 72 }}>
+          <div style={{ padding: "80px 48px", maxWidth: 700 }}>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} style={{ marginBottom: 20 }}>
+              <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "7px 18px", borderRadius: 100, background: "rgba(204,0,0,0.18)", border: "1px solid rgba(204,0,0,0.4)", color: "#FF4444", fontSize: 12, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" as const, fontFamily: "'Inter', sans-serif" }}>
+                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#CC0000", display: "inline-block", animation: "pulse 2s infinite" }} />
+                🍁 100% Canadian Owned · AI Makes Canada Stronger
+              </span>
+            </motion.div>
 
-              <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 }}
-                style={{ fontFamily: "'Inter', sans-serif", fontSize: "clamp(13px, 1.4vw, 15px)", fontWeight: 600, color: "rgba(204,0,0,0.85)", letterSpacing: "0.06em", textTransform: "uppercase" as const, marginBottom: 14 }}>
-                No.1 Canadian Robot Provider — Proudly Canadian
-              </motion.p>
+            <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 }}
+              style={{ fontFamily: "'Inter', sans-serif", fontSize: "clamp(12px, 1.3vw, 14px)", fontWeight: 700, color: "#CC0000", letterSpacing: "0.08em", textTransform: "uppercase" as const, marginBottom: 14 }}>
+              No.1 Canadian Robot Provider — Proudly Canadian
+            </motion.p>
 
-              <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
-                style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(32px, 5.5vw, 68px)", fontWeight: 800, color: "#fafafa", lineHeight: 1.06, letterSpacing: "-0.03em", marginBottom: 20 }}>
-                Advanced Robotics for{" "}
-                <span className="gradient-text">Public Sector & Restaurants</span>
-              </motion.h1>
+            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.12 }}
+              style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(36px, 6vw, 76px)", fontWeight: 800, color: "#ffffff", lineHeight: 1.04, letterSpacing: "-0.03em", marginBottom: 20, textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}>
+              Advanced Robotics for{" "}
+              <span className="gradient-text">Public Sector</span>{" "}
+              &amp; Restaurants
+            </motion.h1>
 
-              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.18 }}
-                style={{ fontFamily: "'Inter', sans-serif", fontSize: "clamp(14px, 1.8vw, 17px)", fontWeight: 700, color: "#CC0000", letterSpacing: "0.05em", marginBottom: 16 }}>
-                🍁 AI Makes Canada Stronger — 100% Canadian Owned Business, Proudly Canada
-              </motion.p>
+            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.22 }}
+              style={{ fontFamily: "'Inter', sans-serif", fontSize: "clamp(15px, 1.8vw, 18px)", color: "rgba(250,250,250,0.80)", lineHeight: 1.75, maxWidth: 560, marginBottom: 12 }}>
+              Canadian Robots supplies robot dogs and humanoids to RCMP and Canadian Armed Forces — and deploys Canada's most advanced cooking robot for restaurants.
+            </motion.p>
 
-              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }}
-                style={{ fontFamily: "'Inter', sans-serif", fontSize: "clamp(15px, 2vw, 18px)", color: "rgba(250,250,250,0.65)", lineHeight: 1.75, maxWidth: 520, marginBottom: 32 }}>
-                Canadian Robots supplies robot dogs and humanoids to RCMP and Canadian Armed Forces — and deploys Canada's most advanced cooking robot for restaurants. Licensed electrician assigned. Permits handled. Financing available. Just sign.
-              </motion.p>
+            <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.28 }}
+              style={{ fontFamily: "'Inter', sans-serif", fontSize: "clamp(13px, 1.5vw, 15px)", fontWeight: 700, color: "#CC0000", letterSpacing: "0.04em", marginBottom: 36 }}>
+              🍁 AI Makes Canada Stronger — Licensed Electrician Assigned · Permits Handled · Financing Available
+            </motion.p>
 
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="r-btn-row">
-                <Link href="/solutions" className="btn-primary">Explore Robots</Link>
-                <Link href="/contact" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-                  Book a Consultation <ArrowRight size={16} />
-                </Link>
-              </motion.div>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="r-btn-row">
+              <Link href="/solutions" className="btn-primary">Explore Robots</Link>
+              <Link href="/contact" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, borderColor: "rgba(255,255,255,0.35)", color: "#fff" }}>
+                Book a Consultation <ArrowRight size={16} />
+              </Link>
+            </motion.div>
 
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="r-trust-badges">
-                {["Licensed Electrician Assigned", "City Permits Handled", "Financing Available"].map(b => (
-                  <div key={b} style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 13, color: "rgba(250,250,250,0.5)", fontFamily: "'Inter', sans-serif" }}>
-                    <CheckCircle2 size={14} style={{ color: "#CC0000", flexShrink: 0 }} />{b}
-                  </div>
-                ))}
-              </motion.div>
-            </div>
-
-            {/* Robot visual */}
-            <motion.div initial={{ opacity: 0, scale: 0.85, y: 30 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.3 }}
-              className="hero-visual-center" style={{ position: "relative", maxWidth: 360 }}>
-              <div style={{ position: "absolute", inset: 0, background: "rgba(200,200,200,0.05)", borderRadius: "50%", filter: "blur(60px)", transform: "scale(1.2)" }} />
-              <div className="float" style={{ position: "relative" }}><HeroRobotVisual /></div>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="r-trust-badges">
+              {["RCMP & Armed Forces", "Restaurant Grade", "Just Sign & We Handle the Rest"].map(b => (
+                <div key={b} style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 13, color: "rgba(250,250,250,0.65)", fontFamily: "'Inter', sans-serif" }}>
+                  <CheckCircle2 size={14} style={{ color: "#CC0000", flexShrink: 0 }} />{b}
+                </div>
+              ))}
             </motion.div>
           </div>
         </div>
 
+        {/* Scroll hint */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }}
-          style={{ position: "absolute", bottom: 28, left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
-          <span style={{ fontSize: 11, color: "rgba(250,250,250,0.3)", letterSpacing: "0.15em", textTransform: "uppercase" as const, fontFamily: "'Inter', sans-serif" }}>Scroll</span>
+          style={{ position: "absolute", bottom: 28, left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: 8, zIndex: 2 }}>
+          <span style={{ fontSize: 11, color: "rgba(250,250,250,0.4)", letterSpacing: "0.15em", textTransform: "uppercase" as const, fontFamily: "'Inter', sans-serif" }}>Scroll</span>
           <div style={{ width: 1, height: 28, background: "linear-gradient(to bottom, rgba(204,0,0,0.6), transparent)" }} />
         </motion.div>
       </section>
@@ -141,8 +139,11 @@ export default function HomePage() {
             {robotCategories.map((cat, i) => (
               <motion.div key={cat.title} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.6, delay: i * 0.12 }} whileHover={{ y: -8 }} className="robot-card">
                 <div className="visual-area">
-                  <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse at center, rgba(200,200,200,0.05) 0%, transparent 70%)" }} />
-                  <div style={{ position: "relative", zIndex: 1 }}>{cat.visual}</div>
+                  <img
+                    src={cat.title === "Robot Dog" ? "/robot-dog.jpg" : cat.title === "Humanoid Robot" ? "/humanoid-robot.jpg" : "/cooking-robot-4wok.jpg"}
+                    alt={cat.title}
+                    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: cat.title === "Humanoid Robot" ? "center top" : "center center", transition: "transform 0.6s ease" }}
+                  />
                 </div>
                 <div className="card-body">
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
@@ -199,9 +200,11 @@ export default function HomePage() {
               </Link>
             </div>
             <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}>
-              <div className="visual-panel" style={{ flexDirection: "column" }}>
-                <div style={{ position: "relative", zIndex: 1, marginBottom: 16 }}><CookingRobotVisual /></div>
-                <div className="r-ministats">
+              <div className="visual-panel" style={{ flexDirection: "column", padding: 0, overflow: "hidden", gap: 0 }}>
+                <div style={{ flex: 1, overflow: "hidden", borderRadius: "28px 28px 0 0" }}>
+                  <img src="/cooking-robot-4wok.jpg" alt="Cooking Robot" style={{ width: "100%", height: 280, objectFit: "cover", objectPosition: "center", display: "block" }} />
+                </div>
+                <div className="r-ministats" style={{ padding: "20px 28px 28px", borderRadius: "0 0 28px 28px", background: "rgba(255,255,255,0.03)" }}>
                   {[{ val: "40%", label: "Faster Service" }, { val: "98%", label: "Consistency" }, { val: "60%", label: "Less Repetition" }].map(s => (
                     <div key={s.label} style={{ textAlign: "center" }}>
                       <div className="mini-stat-val">{s.val}</div>

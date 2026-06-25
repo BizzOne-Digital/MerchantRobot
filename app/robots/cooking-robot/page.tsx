@@ -151,11 +151,8 @@ export default function CookingRobotPage() {
 
             {/* Right */}
             <motion.div initial={{ opacity: 0, scale: 0.85, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 1, delay: 0.2 }} className="hero-visual-center">
-              <div className="visual-panel" style={{ minHeight: 420, position: "relative" }}>
-                <div style={{ position: "absolute", width: 300, height: 300, borderRadius: "50%", background: "rgba(200,200,200,0.05)", filter: "blur(60px)", top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
-                <div className="float" style={{ position: "relative", zIndex: 1, transform: "scale(1.6)" }}>
-                  <CookingRobotVisual />
-                </div>
+              <div style={{ borderRadius: 28, overflow: "hidden", height: 460, width: "100%", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <img src="/cooking-robot-4wok.jpg" alt="Canadian Robots Cooking Robot" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
               </div>
             </motion.div>
           </div>
@@ -174,6 +171,118 @@ export default function CookingRobotPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ══ MODELS & PRICING ══ */}
+      <section style={{ padding: "96px 0", background: "#0a0a0a" }}>
+        <div className="r-inner">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} style={{ textAlign: "center", marginBottom: 56 }}>
+            <span className="badge" style={{ marginBottom: 16 }}>Choose Your Model</span>
+            <h2 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 700, color: "#fafafa", letterSpacing: "-0.025em", marginTop: 12, marginBottom: 16 }}>
+              Two Models. <span className="gradient-text">One Decision.</span>
+            </h2>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 17, color: "rgba(250,250,250,0.6)", maxWidth: 560, margin: "0 auto", lineHeight: 1.7 }}>
+              Select the model that matches your kitchen volume. Both include licensed electrician installation, city permits, and financing.
+            </p>
+          </motion.div>
+
+          <div className="r-grid-2" style={{ gap: 32, maxWidth: 960, margin: "0 auto" }}>
+            {/* Model 1 — 2 Wok */}
+            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
+              style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 24, overflow: "hidden", transition: "all 0.3s ease" }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,0,0,0.45)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 20px 50px rgba(0,0,0,0.5)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.1)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "none"; }}>
+              {/* Image */}
+              <div style={{ height: 320, overflow: "hidden", background: "#0d0d0d", position: "relative" }}>
+                <img src="/cooking-robot-2wok.jpg" alt="Cooking Robot 2-Wok Model" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
+                <div style={{ position: "absolute", top: 16, left: 16 }}>
+                  <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 100, background: "rgba(13,13,13,0.85)", border: "1px solid rgba(255,255,255,0.15)", fontSize: 12, fontWeight: 600, color: "#fafafa", fontFamily: "'Inter', sans-serif" }}>
+                    2-Wok Model
+                  </span>
+                </div>
+              </div>
+              {/* Content */}
+              <div style={{ padding: "28px" }}>
+                <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: 22, fontWeight: 700, color: "#fafafa", marginBottom: 8 }}>Standard Commercial Model</h3>
+                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.6)", lineHeight: 1.65, marginBottom: 24 }}>
+                  Dual-wok configuration ideal for small to mid-size restaurants. Handles up to 60 dishes/hour with consistent quality and precision temperature control.
+                </p>
+                {/* Features */}
+                <ul style={{ listStyle: "none", marginBottom: 28, display: "flex", flexDirection: "column", gap: 8 }}>
+                  {["2 cooking woks", "Up to 60 dishes/hour", "Compact footprint", "Ideal for small-mid restaurants", "Auto self-cleaning"].map(f => (
+                    <li key={f} style={{ display: "flex", alignItems: "center", gap: 9, fontSize: 13, color: "rgba(250,250,250,0.72)", fontFamily: "'Inter', sans-serif" }}>
+                      <CheckCircle2 size={14} style={{ color: "#CC0000", flexShrink: 0 }} />{f}
+                    </li>
+                  ))}
+                </ul>
+                {/* Price */}
+                <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", paddingTop: 20, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+                  <div>
+                    <div style={{ fontSize: 11, fontWeight: 600, color: "rgba(250,250,250,0.45)", fontFamily: "'Inter', sans-serif", textTransform: "uppercase" as const, letterSpacing: "0.1em", marginBottom: 4 }}>Monthly Rate</div>
+                    <div style={{ fontSize: 36, fontFamily: "'Sora', sans-serif", fontWeight: 900, color: "#CC0000", lineHeight: 1 }}>$650</div>
+                    <div style={{ fontSize: 13, color: "rgba(250,250,250,0.5)", fontFamily: "'Inter', sans-serif" }}>CAD / month</div>
+                  </div>
+                  <Link href="/contact" className="btn-primary" style={{ padding: "12px 24px", fontSize: 14 }}>Get This Model</Link>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Model 2 — 4 Wok */}
+            <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.12 }}
+              style={{ background: "rgba(255,255,255,0.03)", border: "2px solid rgba(204,0,0,0.4)", borderRadius: 24, overflow: "hidden", transition: "all 0.3s ease", position: "relative" }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,0,0,0.7)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 20px 50px rgba(0,0,0,0.5)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,0,0,0.4)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "none"; }}>
+              {/* Popular badge */}
+              <div style={{ position: "absolute", top: 16, right: 16, zIndex: 2, background: "#CC0000", color: "#fff", fontSize: 11, fontWeight: 700, padding: "5px 14px", borderRadius: 100, fontFamily: "'Inter', sans-serif", letterSpacing: "0.08em", textTransform: "uppercase" as const }}>
+                Most Popular
+              </div>
+              {/* Image */}
+              <div style={{ height: 320, overflow: "hidden", background: "#0d0d0d", position: "relative" }}>
+                <img src="/cooking-robot-4wok.jpg" alt="Cooking Robot 4-Wok Model" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
+                <div style={{ position: "absolute", top: 16, left: 16 }}>
+                  <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 100, background: "rgba(13,13,13,0.85)", border: "1px solid rgba(255,255,255,0.15)", fontSize: 12, fontWeight: 600, color: "#fafafa", fontFamily: "'Inter', sans-serif" }}>
+                    4-Wok Model
+                  </span>
+                </div>
+              </div>
+              {/* Content */}
+              <div style={{ padding: "28px" }}>
+                <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: 22, fontWeight: 700, color: "#fafafa", marginBottom: 8 }}>High-Volume Pro Model</h3>
+                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.6)", lineHeight: 1.65, marginBottom: 24 }}>
+                  Quad-wok configuration built for high-volume restaurants and commercial kitchens. Handles up to 120 dishes/hour — the most advanced cooking robot in Canada.
+                </p>
+                {/* Features */}
+                <ul style={{ listStyle: "none", marginBottom: 28, display: "flex", flexDirection: "column", gap: 8 }}>
+                  {["4 cooking woks", "Up to 120 dishes/hour", "Commercial-grade throughput", "Ideal for high-volume kitchens", "Auto self-cleaning + HACCP"].map(f => (
+                    <li key={f} style={{ display: "flex", alignItems: "center", gap: 9, fontSize: 13, color: "rgba(250,250,250,0.72)", fontFamily: "'Inter', sans-serif" }}>
+                      <CheckCircle2 size={14} style={{ color: "#CC0000", flexShrink: 0 }} />{f}
+                    </li>
+                  ))}
+                </ul>
+                {/* Price */}
+                <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", paddingTop: 20, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+                  <div>
+                    <div style={{ fontSize: 11, fontWeight: 600, color: "rgba(250,250,250,0.45)", fontFamily: "'Inter', sans-serif", textTransform: "uppercase" as const, letterSpacing: "0.1em", marginBottom: 4 }}>Monthly Rate</div>
+                    <div style={{ fontSize: 36, fontFamily: "'Sora', sans-serif", fontWeight: 900, color: "#CC0000", lineHeight: 1 }}>$750</div>
+                    <div style={{ fontSize: 13, color: "rgba(250,250,250,0.5)", fontFamily: "'Inter', sans-serif" }}>CAD / month</div>
+                  </div>
+                  <Link href="/contact" className="btn-primary" style={{ padding: "12px 24px", fontSize: 14 }}>Get This Model</Link>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Included with both */}
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
+            style={{ marginTop: 40, padding: "24px 32px", borderRadius: 18, background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", display: "flex", flexWrap: "wrap", gap: 24, justifyContent: "center", alignItems: "center", maxWidth: 960, margin: "40px auto 0" }}>
+            <span style={{ fontSize: 13, fontWeight: 600, color: "rgba(250,250,250,0.5)", fontFamily: "'Inter', sans-serif", textTransform: "uppercase" as const, letterSpacing: "0.08em" }}>Included with both models:</span>
+            {["Licensed Electrician Assigned", "City Permits Handled", "Financing Available", "Staff Training", "Ongoing Support"].map(item => (
+              <div key={item} style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 13, color: "rgba(250,250,250,0.72)", fontFamily: "'Inter', sans-serif" }}>
+                <CheckCircle2 size={14} style={{ color: "#CC0000" }} />{item}
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
 

@@ -142,8 +142,22 @@ export default function RestaurantPage() {
             <div className={robot.reverse ? "r-split-rev" : "r-split"} style={{ alignItems: "center" }}>
               {/* Visual */}
               <motion.div initial={{ opacity: 0, x: robot.reverse ? 40 : -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ direction: "ltr" }}>
-                <div className="visual-panel" style={{ minHeight: 320 }}>
-                  <div className="float" style={{ position: "relative", zIndex: 1 }}>{robot.visual}</div>
+                <div style={{ borderRadius: 28, overflow: "hidden", height: 400, width: "100%", position: "relative", border: "1px solid rgba(255,255,255,0.08)" }}>
+                  <img
+                    src={
+                      robot.id === "cooking-robot" ? "/cooking-robot-4wok.jpg"
+                      : robot.id === "humanoid-front" ? "/humanoid-robot.jpg"
+                      : "/robot-dog.jpg"
+                    }
+                    alt={robot.title}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: robot.id === "humanoid-front" ? "center 20%" : "center center",
+                      display: "block",
+                    }}
+                  />
                 </div>
               </motion.div>
 
