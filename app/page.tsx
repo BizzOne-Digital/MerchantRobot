@@ -47,10 +47,10 @@ export default function HomePage() {
       <section style={{ position: "relative", minHeight: "100vh", display: "flex", alignItems: "center", overflow: "hidden" }}>
         {/* Full-bleed background image */}
         <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
-          <img src="/hero-robots.jpg" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center", display: "block" }} />
+          <img src="/hero-robots.jpg" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "70% center", display: "block" }} />
         </div>
         {/* Dark gradient overlay — left side darker for text readability, right side reveals image */}
-        <div style={{ position: "absolute", inset: 0, zIndex: 1, background: "linear-gradient(105deg, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.82) 38%, rgba(10,10,10,0.45) 60%, rgba(10,10,10,0.15) 100%)" }} />
+        <div style={{ position: "absolute", inset: 0, zIndex: 1, background: "linear-gradient(105deg, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.75) 32%, rgba(10,10,10,0.30) 55%, rgba(10,10,10,0.05) 100%)" }} />
         {/* Bottom fade */}
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 120, zIndex: 1, background: "linear-gradient(to top, #0d0d0d, transparent)" }} />
 
