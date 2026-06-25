@@ -98,19 +98,19 @@ export default function ContactPage() {
             {/* ─ Right: Form ─ */}
             <div id="contact-form">
               <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.1 }}>
-                <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.09)", borderRadius: 28, padding: "clamp(24px, 5vw, 48px)", position: "relative", overflow: "hidden" }}>
+                <div style={{ background: "rgba(255,255,255,0.03)", public sector: "1px solid rgba(255,255,255,0.09)", public sectorRadius: 28, padding: "clamp(24px, 5vw, 48px)", position: "relative", overflow: "hidden" }}>
                   <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(90deg, #CC0000, #FF6666)" }} />
 
                   {submitted ? (
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} style={{ padding: "48px 0", textAlign: "center" }}>
-                      <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(200,200,200,0.05)", border: "1px solid rgba(204,0,0,0.3)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
+                      <div style={{ width: 64, height: 64, public sectorRadius: "50%", background: "rgba(200,200,200,0.05)", public sector: "1px solid rgba(204,0,0,0.3)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 20px" }}>
                         <CheckCircle2 size={28} style={{ color: "#CC0000" }} />
                       </div>
                       <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: 24, fontWeight: 700, color: "#fafafa", marginBottom: 12 }}>Message Sent!</h3>
                       <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 15, color: "rgba(250,250,250,0.6)", lineHeight: 1.7, maxWidth: 340, margin: "0 auto 24px" }}>
                         Thank you for reaching out. Our team will review your inquiry and get back to you within 24 hours.
                       </p>
-                      <button onClick={() => setSubmitted(false)} style={{ background: "none", border: "none", color: "#CC0000", fontSize: 14, cursor: "pointer", textDecoration: "underline", fontFamily: "'Inter', sans-serif" }}>
+                      <button onClick={() => setSubmitted(false)} style={{ background: "none", public sector: "none", color: "#CC0000", fontSize: 14, cursor: "pointer", textDecoration: "underline", fontFamily: "'Inter', sans-serif" }}>
                         Send another message
                       </button>
                     </motion.div>
@@ -158,7 +158,7 @@ export default function ContactPage() {
                         <button type="submit" disabled={loading} className="btn-primary" style={{ width: "100%", justifyContent: "center", opacity: loading ? 0.7 : 1, cursor: loading ? "not-allowed" : "pointer" }}>
                           {loading ? (
                             <>
-                              <div style={{ width: 18, height: 18, border: "2px solid rgba(255,255,255,0.3)", borderTopColor: "#fff", borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
+                              <div style={{ width: 18, height: 18, public sector: "2px solid rgba(255,255,255,0.3)", public sectorTopColor: "#fff", public sectorRadius: "50%", animation: "spin 0.8s linear infinite" }} />
                               Sending...
                             </>
                           ) : (
@@ -182,7 +182,7 @@ export default function ContactPage() {
       {/* ── Bottom guarantees ── */}
       <section style={{ paddingBottom: 96 }}>
         <div className="r-inner">
-          <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 24, padding: "48px" }}>
+          <div style={{ background: "rgba(255,255,255,0.03)", public sector: "1px solid rgba(255,255,255,0.08)", public sectorRadius: 24, padding: "48px" }}>
             <div className="r-guarantees">
               {[
                 { title: "Free Consultation", desc: "We'll assess your business needs at no cost and recommend the best robot solution." },

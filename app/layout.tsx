@@ -5,8 +5,8 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Canadian Robots™ | AI Makes Canada Stronger | Robot Dogs & Cooking Robots",
-  description: "Canadian Robots™ — 100% Canadian owned robotics company. Supplying robot dogs and humanoids to RCMP and Canadian Armed Forces. Canada's most advanced cooking robot for restaurants. AI Makes Canada Stronger.",
-  keywords: "Canadian robots, robot dog Canada, RCMP robots, Canadian Armed Forces robots, cooking robot Canada, restaurant robotics Canada",
+  description: "Canadian Robots™ — 100% Canadian owned robotics company. Supplying robot dogs and humanoids to public sector institutions. Canada's most advanced cooking robot for restaurants. AI Makes Canada Stronger.",
+  keywords: "Canadian robots, robot dog Canada, public sector robots, public sector institutions robots, cooking robot Canada, restaurant robotics Canada",
   icons: {
     icon: [
       { url: "/logo.png", type: "image/png" },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Canadian Robots™ | AI Makes Canada Stronger",
-    description: "100% Canadian owned. Robot dogs for RCMP & Armed Forces. Advanced cooking robots for restaurants. AI Makes Canada Stronger. 🍁",
+    description: "100% Canadian owned. Robot dogs for Public Sector. Advanced cooking robots for restaurants. AI Makes Canada Stronger. 🍁",
     type: "website",
   },
 };

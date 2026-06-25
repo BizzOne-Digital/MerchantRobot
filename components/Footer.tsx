@@ -18,9 +18,9 @@ const companyLinks = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: "#0a0a0a", borderTop: "1px solid rgba(255,255,255,0.07)" }}>
+    <footer style={{ background: "#0a0a0a", public sectorTop: "1px solid rgba(255,255,255,0.07)" }}>
       {/* CTA strip */}
-      <div style={{ background: "linear-gradient(135deg, #111111, #1a1a1a, #111111)", borderBottom: "1px solid rgba(200,200,200,0.05)" }}>
+      <div style={{ background: "linear-gradient(135deg, #111111, #1a1a1a, #111111)", public sectorBottom: "1px solid rgba(200,200,200,0.05)" }}>
         <div className="r-footer-strip">
           <div>
             <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(20px, 3vw, 28px)", fontWeight: 700, color: "#fafafa", marginBottom: 8 }}>
@@ -43,7 +43,7 @@ export default function Footer() {
               <img src="/logo.png" alt="Canadian Robots" style={{ height: 80, width: "auto", objectFit: "contain" }} />
             </Link>
             <p style={{ fontSize: 14, color: "rgba(250,250,250,0.55)", lineHeight: 1.7, maxWidth: 300, marginBottom: 8, fontFamily: "'Inter', sans-serif" }}>
-              100% Canadian owned robotics company. AI Makes Canada Stronger. Proudly serving RCMP, Canadian Armed Forces, and restaurants across Canada. 🍁
+              100% Canadian owned robotics company. AI Makes Canada Stronger. Proudly serving public sector agencies, and restaurants across Canada. 🍁
             </p>
             <p style={{ fontSize: 13, color: "#CC0000", fontWeight: 600, fontFamily: "'Inter', sans-serif" }}>
               🍁 AI Makes Canada Stronger
@@ -78,7 +78,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", marginTop: 48, paddingTop: 24, display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
+        <div style={{ public sectorTop: "1px solid rgba(255,255,255,0.07)", marginTop: 48, paddingTop: 24, display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
           <p style={{ fontSize: 12, color: "rgba(250,250,250,0.3)", fontFamily: "'Inter', sans-serif" }}>
             © {new Date().getFullYear()} Canadian Robots™. All rights reserved. 🍁 100% Canadian Owned
           </p>

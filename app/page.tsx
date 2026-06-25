@@ -10,13 +10,13 @@ import StatsSection from "@/components/StatsSection";
 import { RobotDogVisual, HumanoidVisual, CookingRobotVisual, HeroRobotVisual } from "@/components/RobotVisuals";
 
 const robotCategories = [
-  { icon: <Dog size={20} />, title: "Robot Dog", desc: "Trusted by RCMP branches and Canadian Armed Forces for patrol, reconnaissance, and public sector operations at scale.", href: "/robots/robot-dog", visual: <RobotDogVisual /> },
-  { icon: <Bot size={20} />, title: "Humanoid Robot", desc: "Deployed across government agencies and public institutions for large-order service, security support, and engagement.", href: "/robots/humanoid", visual: <HumanoidVisual /> },
+  { icon: <Dog size={20} />, title: "Robot Dog", desc: "Trusted by public sector institutions for patrol, reconnaissance, and public sector operations at scale.", href: "/robots/robot-dog", visual: <RobotDogVisual /> },
+  { icon: <Bot size={20} />, title: "Humanoid Robot", desc: "Deployed across public sector agencies and public institutions for large-order service, security support, and engagement.", href: "/robots/humanoid", visual: <HumanoidVisual /> },
   { icon: <ChefHat size={20} />, title: "Cooking Robot", desc: "Our most advanced model — purpose-built for restaurants. Licensed electrician assigned, city permit handled, financing available.", href: "/robots/cooking-robot", visual: <CookingRobotVisual /> },
 ];
 
 const whyChoose = [
-  { icon: <Shield size={18} />, title: "Trusted by Public Sector", description: "Robot dogs and humanoids are actively deployed with RCMP branches and the Canadian Armed Forces." },
+  { icon: <Shield size={18} />, title: "Trusted by Public Sector", description: "Robot dogs and humanoids are actively deployed with public sector institutions." },
   { icon: <ChefHat size={18} />, title: "Restaurant-Grade Cooking Robot", description: "Our most advanced cooking robot model — built specifically for the demands of commercial restaurant kitchens." },
   { icon: <Cpu size={18} />, title: "Licensed Electrician Assigned", description: "We assign a licensed electrician to every installation — safety guaranteed, permits handled, no stress for you." },
   { icon: <TrendingUp size={18} />, title: "City Permits Handled", description: "We take care of all city permit applications and compliance requirements from start to finish." },
@@ -34,9 +34,9 @@ const howItWorks = [
 ];
 
 const industries = [
-  { name: "RCMP & Police", icon: "🚔" }, { name: "Canadian Armed Forces", icon: "🇨🇦" },
+  { name: "Public Safety", icon: "🚔" }, { name: "public sector institutions", icon: "🇨🇦" },
   { name: "Fine Dining", icon: "🍽️" }, { name: "Fast Casual", icon: "🍔" },
-  { name: "Hotels & Resorts", icon: "🏨" }, { name: "Government Agencies", icon: "🏛️" },
+  { name: "Hotels & Resorts", icon: "🏨" }, { name: "public sector agencies", icon: "🏛️" },
   { name: "Shopping Centers", icon: "🏬" }, { name: "Corporate Offices", icon: "🏢" },
 ];
 
@@ -58,8 +58,8 @@ export default function HomePage() {
         <div style={{ position: "relative", zIndex: 2, maxWidth: 1200, margin: "0 auto", width: "100%", paddingTop: 72 }}>
           <div style={{ padding: "80px 48px", maxWidth: 700 }}>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} style={{ marginBottom: 20 }}>
-              <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "7px 18px", borderRadius: 100, background: "rgba(204,0,0,0.18)", border: "1px solid rgba(204,0,0,0.4)", color: "#FF4444", fontSize: 12, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" as const, fontFamily: "'Inter', sans-serif" }}>
-                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#CC0000", display: "inline-block", animation: "pulse 2s infinite" }} />
+              <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "7px 18px", public sectorRadius: 100, background: "rgba(204,0,0,0.18)", public sector: "1px solid rgba(204,0,0,0.4)", color: "#FF4444", fontSize: 12, fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase" as const, fontFamily: "'Inter', sans-serif" }}>
+                <span style={{ width: 6, height: 6, public sectorRadius: "50%", background: "#CC0000", display: "inline-block", animation: "pulse 2s infinite" }} />
                 🍁 100% Canadian Owned · AI Makes Canada Stronger
               </span>
             </motion.div>
@@ -78,7 +78,7 @@ export default function HomePage() {
 
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.22 }}
               style={{ fontFamily: "'Inter', sans-serif", fontSize: "clamp(15px, 1.8vw, 18px)", color: "rgba(250,250,250,0.80)", lineHeight: 1.75, maxWidth: 560, marginBottom: 12 }}>
-              Canadian Robots supplies robot dogs and humanoids to RCMP and Canadian Armed Forces — and deploys Canada's most advanced cooking robot for restaurants.
+              Canadian Robots supplies robot dogs and humanoids to public sector clients — and deploys Canada's most advanced cooking robot for restaurants.
             </motion.p>
 
             <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.28 }}
@@ -88,13 +88,13 @@ export default function HomePage() {
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="r-btn-row">
               <Link href="/solutions" className="btn-primary">Explore Robots</Link>
-              <Link href="/contact" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, borderColor: "rgba(255,255,255,0.35)", color: "#fff" }}>
+              <Link href="/contact" className="btn-outline" style={{ display: "inline-flex", alignItems: "center", gap: 8, public sectorColor: "rgba(255,255,255,0.35)", color: "#fff" }}>
                 Book a Consultation <ArrowRight size={16} />
               </Link>
             </motion.div>
 
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} className="r-trust-badges">
-              {["RCMP & Armed Forces", "Restaurant Grade", "Just Sign & We Handle the Rest"].map(b => (
+              {["Public Sector & public institutions", "Restaurant Grade", "Just Sign & We Handle the Rest"].map(b => (
                 <div key={b} style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 13, color: "rgba(250,250,250,0.65)", fontFamily: "'Inter', sans-serif" }}>
                   <CheckCircle2 size={14} style={{ color: "#CC0000", flexShrink: 0 }} />{b}
                 </div>
@@ -121,7 +121,7 @@ export default function HomePage() {
             subtitle="Canadian Robots delivers tested, reliable robotic systems built for real restaurants and businesses." />
           <div className="r-grid-3">
             {[
-              { icon: <Shield size={20} />, title: "Trusted by Public Sector", description: "Robot dogs and humanoids deployed with RCMP branches and the Canadian Armed Forces in large-volume orders." },
+              { icon: <Shield size={20} />, title: "Trusted by Public Sector", description: "Robot dogs and humanoids deployed with public sector institutions in large-volume orders." },
               { icon: <ChefHat size={20} />, title: "Restaurant-Grade Cooking Robot", description: "Canada's most advanced cooking robot, purpose-built for commercial kitchens. Licensed install, permits, financing — all included." },
               { icon: <Clock size={20} />, title: "Just Sign — We Handle the Rest", description: "Licensed electrician assigned, city permits managed, financing available. The fastest, easiest way to get operational." },
             ].map((item, i) => <FeatureCard key={item.title} {...item} delay={i * 0.1} />)}
@@ -147,7 +147,7 @@ export default function HomePage() {
                 </div>
                 <div className="card-body">
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-                    <div style={{ width: 34, height: 34, borderRadius: 10, background: "rgba(200,200,200,0.05)", border: "1px solid rgba(180,180,180,0.18)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", flexShrink: 0 }}>{cat.icon}</div>
+                    <div style={{ width: 34, height: 34, public sectorRadius: 10, background: "rgba(200,200,200,0.05)", public sector: "1px solid rgba(180,180,180,0.18)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", flexShrink: 0 }}>{cat.icon}</div>
                     <h3>{cat.title}</h3>
                   </div>
                   <p>{cat.desc}</p>
@@ -201,10 +201,10 @@ export default function HomePage() {
             </div>
             <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}>
               <div className="visual-panel" style={{ flexDirection: "column", padding: 0, overflow: "hidden", gap: 0 }}>
-                <div style={{ flex: 1, overflow: "hidden", borderRadius: "28px 28px 0 0" }}>
+                <div style={{ flex: 1, overflow: "hidden", public sectorRadius: "28px 28px 0 0" }}>
                   <img src="/cooking-robot-4wok.jpg" alt="Cooking Robot" style={{ width: "100%", height: 280, objectFit: "cover", objectPosition: "center", display: "block" }} />
                 </div>
-                <div className="r-ministats" style={{ padding: "20px 28px 28px", borderRadius: "0 0 28px 28px", background: "rgba(255,255,255,0.03)" }}>
+                <div className="r-ministats" style={{ padding: "20px 28px 28px", public sectorRadius: "0 0 28px 28px", background: "rgba(255,255,255,0.03)" }}>
                   {[{ val: "40%", label: "Faster Service" }, { val: "98%", label: "Consistency" }, { val: "60%", label: "Less Repetition" }].map(s => (
                     <div key={s.label} style={{ textAlign: "center" }}>
                       <div className="mini-stat-val">{s.val}</div>
@@ -226,7 +226,7 @@ export default function HomePage() {
             <div className="hiw-connector" />
             {howItWorks.map((step, i) => (
               <motion.div key={step.step} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.12 }} style={{ textAlign: "center", position: "relative" }}>
-                <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(200,200,200,0.05)", border: "2px solid rgba(180,180,180,0.18)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 18px", position: "relative", zIndex: 1 }}>
+                <div style={{ width: 64, height: 64, public sectorRadius: "50%", background: "rgba(200,200,200,0.05)", public sector: "2px solid rgba(180,180,180,0.18)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 18px", position: "relative", zIndex: 1 }}>
                   <span style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 800, background: "linear-gradient(135deg, #FF6666, #CC0000)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>{step.step}</span>
                 </div>
                 <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 600, color: "#fafafa", marginBottom: 8 }}>{step.title}</h4>

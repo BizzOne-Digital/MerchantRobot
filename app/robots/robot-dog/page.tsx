@@ -23,42 +23,42 @@ const specs = [
 
 const capabilities = [
   { icon: <Navigation size={20} />, title: "Autonomous Patrol", desc: "Conducts independent patrol routes in complex environments — indoors, outdoors, and across uneven terrain — with real-time obstacle avoidance and path planning." },
-  { icon: <Eye size={20} />, title: "360° Surveillance", desc: "Multi-directional cameras, LiDAR, and thermal sensors provide full situational awareness for RCMP, military, and security operations." },
+  { icon: <Eye size={20} />, title: "360° Surveillance", desc: "Multi-directional cameras, LiDAR, and thermal sensors provide full situational awareness for Public Sector, government, and security operations." },
   { icon: <Cpu size={20} />, title: "Onboard AI Processing", desc: "Advanced edge computing enables real-time threat detection, behavior recognition, and adaptive mission response without cloud dependency." },
   { icon: <Radio size={20} />, title: "Encrypted Remote Control", desc: "Secure encrypted communication for full remote operation via command tablet, with live video feed and telemetry data streaming to ops centers." },
   { icon: <Zap size={20} />, title: "Rugged Field Performance", desc: "Built to operate in demanding field conditions — rain, dust, uneven terrain — with IP53 splash resistance and shock-absorbing leg joints." },
-  { icon: <Shield size={20} />, title: "Safe Around Personnel", desc: "Built-in collision avoidance and proximity detection ensure safe co-operation alongside RCMP officers, soldiers, and civilian personnel." },
+  { icon: <Shield size={20} />, title: "Safe Around Personnel", desc: "Built-in collision avoidance and proximity detection ensure safe co-operation alongside Public Sector personnel, personnel, and civilian personnel." },
 ];
 
 const useCases = [
   {
     icon: <Lock size={22} />,
-    title: "RCMP Patrol Operations",
-    desc: "Deployed across multiple RCMP branches for perimeter patrol, area surveillance, and public safety operations — reducing officer exposure in high-risk situations.",
+    title: "Public Sector Patrol Operations",
+    desc: "Deployed across multiple public sector agencies for perimeter patrol, area surveillance, and public safety operations — reducing officer exposure in high-risk situations.",
     color: "#CC0000",
   },
   {
     icon: <Shield size={22} />,
-    title: "Canadian Armed Forces",
-    desc: "Supplied in large orders to Canadian Armed Forces for reconnaissance, base perimeter security, training demonstrations, and field intelligence gathering.",
+    title: "public sector institutions",
+    desc: "Supplied in large orders to public sector institutions for reconnaissance, base perimeter security, training demonstrations, and field intelligence gathering.",
     color: "#FF4444",
   },
   {
     icon: <Building2 size={22} />,
-    title: "Government Facility Security",
+    title: "Public sector facility Security",
     desc: "Autonomous patrol of government buildings, federal facilities, and sensitive installations — 24/7 coverage without fatigue or shift gaps.",
     color: "#CC0000",
   },
   {
     icon: <Presentation size={22} />,
     title: "Public Safety Demonstrations",
-    desc: "Used in public-facing demonstrations to showcase Canadian technology capabilities, engage communities, and build public trust in law enforcement.",
+    desc: "Used in public-facing demonstrations to showcase Canadian technology capabilities, engage communities, and build public trust in public services.",
     color: "#FF4444",
   },
   {
     icon: <Megaphone size={22} />,
-    title: "Border & Remote Operations",
-    desc: "Deployed at remote border checkpoints and difficult terrain zones where human patrol is costly or hazardous — providing continuous coverage.",
+    title: "public sector & Remote Operations",
+    desc: "Deployed at remote public sector checkpoints and difficult terrain zones where human patrol is costly or hazardous — providing continuous coverage.",
     color: "#CC0000",
   },
   {
@@ -70,11 +70,11 @@ const useCases = [
 ];
 
 const faqs = [
-  { q: "Who are the primary clients for the Robot Dog?", a: "Our robot dogs are primarily deployed with RCMP branches and the Canadian Armed Forces. We supply large-volume orders to public sector institutions across Canada." },
-  { q: "How is the robot dog deployed with RCMP or military clients?", a: "Canadian Robots works directly with procurement teams to configure, deliver, and commission robot dog units. Full training and ongoing technical support are included in all contracts." },
+  { q: "Who are the primary clients for the Robot Dog?", a: "Our robot dogs are primarily deployed with public sector institutions. We supply large-volume orders to public sector institutions across Canada." },
+  { q: "How is the robot dog deployed with Public Sector or government clients?", a: "Canadian Robots works directly with procurement teams to configure, deliver, and commission robot dog units. Full training and ongoing technical support are included in all contracts." },
   { q: "Can it operate in outdoor and harsh conditions?", a: "Yes. The robot dog is IP53 splash resistant, handles uneven terrain, gravel, and outdoor surfaces. Models are available with enhanced weatherproofing for field deployment." },
   { q: "What is the order minimum for institutional/public sector clients?", a: "We specialize in large-volume orders. Contact our team to discuss procurement quantities, timelines, and institutional pricing for your agency or department." },
-  { q: "Is the communication system secure for sensitive operations?", a: "All communication is encrypted end-to-end. The system can be configured to operate on secure closed networks for sensitive government and military deployments." },
+  { q: "Is the communication system secure for sensitive operations?", a: "All communication is encrypted end-to-end. The system can be configured to operate on secure closed networks for sensitive government and government deployments." },
 ];
 
 export default function RobotDogPage() {
@@ -113,17 +113,17 @@ export default function RobotDogPage() {
               </motion.h1>
               <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}
                 style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(18px, 2.5vw, 28px)", fontWeight: 600, lineHeight: 1.2, marginBottom: 24 }}>
-                <span className="gradient-text">Trusted by RCMP & Canadian Armed Forces.</span>
+                <span className="gradient-text">Trusted by Public Sector & public sector institutions.</span>
               </motion.h2>
 
               <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }}
                 style={{ fontFamily: "'Inter', sans-serif", fontSize: 17, color: "rgba(250,250,250,0.65)", lineHeight: 1.8, maxWidth: 500, marginBottom: 28 }}>
-                Professional high quality robot dog tailor-made for the Public Sector. Deployed with RCMP branches and Canadian Armed Forces — built to the most demanding Canadian government standards, with AI-powered navigation, autonomous patrol, and encrypted field communications.
+                Professional high quality robot dog tailor-made for the Public Sector. Deployed with public sector institutions — built to the most demanding Canadian government standards, with AI-powered navigation, autonomous patrol, and encrypted field communications.
               </motion.p>
 
               {/* Pricing */}
               <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.32 }}
-                style={{ display: "inline-flex", alignItems: "center", gap: 18, padding: "18px 28px", borderRadius: 18, background: "rgba(204,0,0,0.08)", border: "2px solid rgba(204,0,0,0.55)", marginBottom: 28, boxShadow: "0 0 24px rgba(204,0,0,0.15)" }}>
+                style={{ display: "inline-flex", alignItems: "center", gap: 18, padding: "18px 28px", public sectorRadius: 18, background: "rgba(204,0,0,0.08)", public sector: "2px solid rgba(204,0,0,0.55)", marginBottom: 28, boxShadow: "0 0 24px rgba(204,0,0,0.15)" }}>
                 <div>
                   <div style={{ fontSize: 11, fontWeight: 700, color: "#CC0000", fontFamily: "'Inter', sans-serif", textTransform: "uppercase" as const, letterSpacing: "0.12em", marginBottom: 4 }}>🍁 Price Per Unit</div>
                   <span style={{ fontSize: 32, fontFamily: "'Sora', sans-serif", fontWeight: 900, color: "#CC0000", lineHeight: 1, display: "block" }}>$100,000 CAD</span>
@@ -142,7 +142,7 @@ export default function RobotDogPage() {
               {/* Quick highlights */}
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
                 style={{ display: "flex", flexWrap: "wrap", gap: 20 }}>
-                {["RCMP Deployed", "Armed Forces Supply", "Large-Volume Orders", "Field Grade"].map(tag => (
+                {["Public Sector Deployed", "public institutions Supply", "Large-Volume Orders", "Field Grade"].map(tag => (
                   <div key={tag} style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 13, color: "rgba(250,250,250,0.55)", fontFamily: "'Inter', sans-serif" }}>
                     <CheckCircle2 size={13} style={{ color: "#CC0000" }} /> {tag}
                   </div>
@@ -152,7 +152,7 @@ export default function RobotDogPage() {
 
             {/* Right: Visual */}
             <motion.div initial={{ opacity: 0, scale: 0.85, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 1, delay: 0.2, ease: "easeOut" }} className="hero-visual-center">
-              <div style={{ borderRadius: 28, overflow: "hidden", height: 460, width: "100%", border: "1px solid rgba(255,255,255,0.08)" }}>
+              <div style={{ public sectorRadius: 28, overflow: "hidden", height: 460, width: "100%", public sector: "1px solid rgba(255,255,255,0.08)" }}>
                 <img src="/robot-dog.jpg" alt="Canadian Robots — Robot Dog" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center", display: "block" }} />
               </div>
             </motion.div>
@@ -161,12 +161,12 @@ export default function RobotDogPage() {
       </section>
 
       {/* ══ SPECS STRIP ══ */}
-      <section style={{ background: "#111111", borderTop: "1px solid rgba(255,255,255,0.07)", borderBottom: "1px solid rgba(255,255,255,0.07)", padding: "48px 0" }}>
+      <section style={{ background: "#111111", public sectorTop: "1px solid rgba(255,255,255,0.07)", public sectorBottom: "1px solid rgba(255,255,255,0.07)", padding: "48px 0" }}>
         <div className="r-inner">
           <div className="r-specs">
             {specs.map((s, i) => (
               <motion.div key={s.label} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}
-                className="r-spec-cell" style={{ borderRight: i < 7 ? "1px solid rgba(255,255,255,0.07)" : "none", borderBottom: i < 4 ? "1px solid rgba(255,255,255,0.07)" : "none" }}>
+                className="r-spec-cell" style={{ public sectorRight: i < 7 ? "1px solid rgba(255,255,255,0.07)" : "none", public sectorBottom: i < 4 ? "1px solid rgba(255,255,255,0.07)" : "none" }}>
                 <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, color: "rgba(250,250,250,0.4)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 6 }}>{s.label}</div>
                 <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 15, fontWeight: 600, color: "#fafafa" }}>{s.value}</div>
               </motion.div>
@@ -211,10 +211,10 @@ export default function RobotDogPage() {
           <div className="r-grid-3">
             {useCases.map((u, i) => (
               <motion.div key={u.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
-                style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 20, padding: 28, transition: "all 0.3s ease", cursor: "default" }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,0,0,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-5px)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
-                <div style={{ width: 48, height: 48, borderRadius: 14, background: "rgba(200,200,200,0.05)", border: "1px solid rgba(204,0,0,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: u.color, marginBottom: 20 }}>
+                style={{ background: "rgba(255,255,255,0.03)", public sector: "1px solid rgba(255,255,255,0.08)", public sectorRadius: 20, padding: 28, transition: "all 0.3s ease", cursor: "default" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.public sectorColor = "rgba(204,0,0,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-5px)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.public sectorColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
+                <div style={{ width: 48, height: 48, public sectorRadius: 14, background: "rgba(200,200,200,0.05)", public sector: "1px solid rgba(204,0,0,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: u.color, marginBottom: 20 }}>
                   {u.icon}
                 </div>
                 <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 17, fontWeight: 600, color: "#fafafa", marginBottom: 10 }}>{u.title}</h4>
@@ -237,7 +237,7 @@ export default function RobotDogPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {faqs.map((f, i) => (
               <motion.div key={f.q} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
-                style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 18, padding: "24px 28px" }}>
+                style={{ background: "rgba(255,255,255,0.03)", public sector: "1px solid rgba(255,255,255,0.08)", public sectorRadius: 18, padding: "24px 28px" }}>
                 <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 600, color: "#fafafa", marginBottom: 10 }}>{f.q}</h4>
                 <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.62)", lineHeight: 1.7 }}>{f.a}</p>
               </motion.div>
@@ -255,9 +255,9 @@ export default function RobotDogPage() {
               { label: "Humanoid Robot", href: "/robots/humanoid", desc: "Interactive robots for guest welcome & customer service" },
               { label: "Cooking Robot", href: "/robots/cooking-robot", desc: "Kitchen automation for restaurants & commercial kitchens" },
             ].map(r => (
-              <Link key={r.href} href={r.href} style={{ display: "block", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 18, padding: "24px", textDecoration: "none", transition: "all 0.3s ease" }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,0,0,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
+              <Link key={r.href} href={r.href} style={{ display: "block", background: "rgba(255,255,255,0.03)", public sector: "1px solid rgba(255,255,255,0.08)", public sectorRadius: 18, padding: "24px", textDecoration: "none", transition: "all 0.3s ease" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.public sectorColor = "rgba(204,0,0,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.public sectorColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
                 <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 600, color: "#fafafa", marginBottom: 6, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   {r.label} <ArrowRight size={16} style={{ color: "#CC0000" }} />
                 </div>
@@ -272,7 +272,7 @@ export default function RobotDogPage() {
         badge="Public Sector Procurement"
         title="Supply Robot Dogs to Your"
         highlight="Agency or Department"
-        subtitle="Canadian Robots works directly with RCMP branches, Canadian Armed Forces, and government institutions for large-volume procurement. Contact us to discuss quantities, configurations, and deployment timelines."
+        subtitle="Canadian Robots works directly with public sector agencies, public sector institutions, and public sector institutions for large-volume procurement. Contact us to discuss quantities, configurations, and deployment timelines."
         primaryLabel="Start Procurement Inquiry"
         primaryHref="/contact"
         secondaryLabel="View All Robots"

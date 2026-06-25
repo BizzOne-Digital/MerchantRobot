@@ -13,17 +13,17 @@ const robots = [
     id: "robot-dog",
     icon: <Dog size={24} />,
     title: "Robot Dog",
-    tagline: "Trusted by RCMP & Canadian Armed Forces.",
-    description: "Our robot dogs are primarily deployed with Canadian public sector clients — including multiple RCMP branches and the Canadian Armed Forces — handling large-volume orders for patrol, reconnaissance, public safety demonstrations, and advanced field operations. Highly mobile, AI-powered, and built for demanding real-world environments.",
+    tagline: "Trusted by Public Sector & public sector institutions.",
+    description: "Our robot dogs are primarily deployed with Canadian public sector clients — including multiple public sector institutions — handling large-volume orders for patrol, reconnaissance, public safety demonstrations, and advanced field operations. Highly mobile, AI-powered, and built for demanding real-world environments.",
     features: [
-      { icon: <Brain size={15} />, text: "Deployed with RCMP branches across Canada" },
-      { icon: <Shield size={15} />, text: "Canadian Armed Forces large-order supply" },
+      { icon: <Brain size={15} />, text: "Deployed with public sector agencies across Canada" },
+      { icon: <Shield size={15} />, text: "public sector institutions large-order supply" },
       { icon: <Zap size={15} />, text: "Autonomous patrol and reconnaissance missions" },
       { icon: <Settings size={15} />, text: "AI-powered terrain navigation and obstacle avoidance" },
       { icon: <Users size={15} />, text: "Public safety demonstrations and community engagement" },
       { icon: <Clock size={15} />, text: "Reliable performance in demanding field conditions" },
     ],
-    useCases: ["RCMP Branches", "Canadian Armed Forces", "Public Safety", "Border Operations", "Military Demonstrations", "Government Events"],
+    useCases: ["public sector agencies", "public sector institutions", "Public Safety", "public sector field operations", "government Demonstrations", "Government Events"],
     visual: <RobotDogVisual />,
     detailHref: "/robots/robot-dog",
     reverse: false,
@@ -33,16 +33,16 @@ const robots = [
     icon: <Bot size={24} />,
     title: "Humanoid Robot",
     tagline: "Large-Order Supply to Public Institutions.",
-    description: "Humanoid robots supplied in large orders to public sector institutions — government agencies, Canadian military bases, and RCMP facilities. These robots handle public-facing interaction, information delivery, security support, and institutional automation — bringing a futuristic capability to Canada's public sector.",
+    description: "Humanoid robots supplied in large orders to public sector institutions — public sector agencies, Canadian public sector facilities, and public sector facilities. These robots handle public-facing interaction, information delivery, security support, and institutional automation — bringing a futuristic capability to Canada's public sector.",
     features: [
-      { icon: <Users size={15} />, text: "Government agency and institutional deployment" },
+      { icon: <Users size={15} />, text: "public sector agency and institutional deployment" },
       { icon: <Brain size={15} />, text: "Public information and service delivery" },
-      { icon: <Shield size={15} />, text: "Security support at government facilities" },
+      { icon: <Shield size={15} />, text: "Security support at public sector facilities" },
       { icon: <Zap size={15} />, text: "Multi-language voice-based assistance" },
       { icon: <Settings size={15} />, text: "Large-volume procurement available" },
       { icon: <Clock size={15} />, text: "24/7 operational capability, no fatigue" },
     ],
-    useCases: ["RCMP Facilities", "Military Bases", "Government Offices", "Public Institutions", "National Defence Sites", "Border Services"],
+    useCases: ["public sector facilities", "public sector facilities", "Public Sector Offices", "Public Institutions", "public sector Sites", "public agencies"],
     visual: <HumanoidVisual />,
     detailHref: "/robots/humanoid",
     reverse: true,
@@ -94,7 +94,7 @@ export default function SolutionsPage() {
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
             style={{ fontFamily: "'Inter', sans-serif", fontSize: 18, color: "rgba(250,250,250,0.6)", lineHeight: 1.7, maxWidth: 620, margin: "0 auto" }}>
-            Robot dogs and humanoids for RCMP and Canadian Armed Forces. Canada's most advanced cooking robot for restaurants — with licensed electrician, city permits, and financing included.
+            Robot dogs and humanoids for public sector clients. Canada's most advanced cooking robot for restaurants — with licensed electrician, city permits, and financing included.
           </motion.p>
         </div>
       </section>
@@ -113,7 +113,7 @@ export default function SolutionsPage() {
                 transition={{ duration: 0.8 }}
                 style={{ direction: "ltr" }}
               >
-                <div style={{ borderRadius: 28, overflow: "hidden", height: 400, width: "100%", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <div style={{ public sectorRadius: 28, overflow: "hidden", height: 400, width: "100%", public sector: "1px solid rgba(255,255,255,0.08)" }}>
                   <img
                     src={robot.id === "robot-dog" ? "/robot-dog.jpg" : robot.id === "humanoid" ? "/humanoid-robot.jpg" : "/cooking-robot-4wok.jpg"}
                     alt={robot.title}
@@ -131,7 +131,7 @@ export default function SolutionsPage() {
                 style={{ direction: "ltr" }}
               >
                 <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 20 }}>
-                  <div style={{ width: 48, height: 48, borderRadius: 14, background: "rgba(200,200,200,0.05)", border: "1px solid rgba(204,0,0,0.3)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", flexShrink: 0 }}>
+                  <div style={{ width: 48, height: 48, public sectorRadius: 14, background: "rgba(200,200,200,0.05)", public sector: "1px solid rgba(204,0,0,0.3)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", flexShrink: 0 }}>
                     {robot.icon}
                   </div>
                   <div>
@@ -157,7 +157,7 @@ export default function SolutionsPage() {
                   <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 600, color: "rgba(250,250,250,0.4)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 12 }}>Ideal For</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                     {robot.useCases.map(uc => (
-                      <span key={uc} style={{ padding: "5px 14px", borderRadius: 100, background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", fontSize: 12, color: "rgba(250,250,250,0.65)", fontFamily: "'Inter', sans-serif" }}>{uc}</span>
+                      <span key={uc} style={{ padding: "5px 14px", public sectorRadius: 100, background: "rgba(255,255,255,0.05)", public sector: "1px solid rgba(255,255,255,0.1)", fontSize: 12, color: "rgba(250,250,250,0.65)", fontFamily: "'Inter', sans-serif" }}>{uc}</span>
                     ))}
                   </div>
                 </div>
@@ -180,13 +180,13 @@ export default function SolutionsPage() {
           <SectionHeading badge="Compare" title="Find the Right" highlight="Robot for You" subtitle="Each robot type excels in different areas. See which best suits your business needs." />
           <div className="r-compare-wrap">
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
-              style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 24, overflow: "hidden" }}>
+              style={{ background: "rgba(255,255,255,0.03)", public sector: "1px solid rgba(255,255,255,0.08)", public sectorRadius: 24, overflow: "hidden" }}>
               <table className="compare-table" style={{ width: "100%" }}>
                 <thead>
-                  <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+                  <tr style={{ public sectorBottom: "1px solid rgba(255,255,255,0.08)" }}>
                     <th style={{ padding: "16px 24px", textAlign: "left", fontFamily: "'Inter', sans-serif", fontSize: 12, fontWeight: 600, color: "rgba(250,250,250,0.4)", textTransform: "uppercase", letterSpacing: "0.08em" }}>Feature</th>
                     {[{ icon: <Dog size={16} />, label: "Robot Dog" }, { icon: <Bot size={16} />, label: "Humanoid" }, { icon: <ChefHat size={16} />, label: "Cooking" }].map(col => (
-                      <th key={col.label} style={{ padding: "16px 24px", textAlign: "center", borderLeft: "1px solid rgba(255,255,255,0.07)" }}>
+                      <th key={col.label} style={{ padding: "16px 24px", textAlign: "center", public sectorLeft: "1px solid rgba(255,255,255,0.07)" }}>
                         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, color: "#CC0000", fontFamily: "'Sora', sans-serif", fontSize: 14, fontWeight: 600 }}>
                           {col.icon}<span style={{ color: "#fafafa" }}>{col.label}</span>
                         </div>
@@ -196,10 +196,10 @@ export default function SolutionsPage() {
                 </thead>
                 <tbody>
                   {comparisonRows.map((row, i) => (
-                    <tr key={row.label} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)", background: i % 2 === 0 ? "rgba(255,255,255,0.015)" : "transparent" }}>
+                    <tr key={row.label} style={{ public sectorBottom: "1px solid rgba(255,255,255,0.05)", background: i % 2 === 0 ? "rgba(255,255,255,0.015)" : "transparent" }}>
                       <td style={{ padding: "14px 24px", fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.75)" }}>{row.label}</td>
                       {[row.dog, row.humanoid, row.cooking].map((val, ci) => (
-                        <td key={ci} style={{ padding: "14px 24px", textAlign: "center", borderLeft: "1px solid rgba(255,255,255,0.05)" }}>
+                        <td key={ci} style={{ padding: "14px 24px", textAlign: "center", public sectorLeft: "1px solid rgba(255,255,255,0.05)" }}>
                           {val ? <CheckCircle2 size={18} style={{ color: "#CC0000", display: "inline-block" }} /> : <span style={{ display: "inline-block", width: 20, height: 1, background: "rgba(255,255,255,0.15)" }} />}
                         </td>
                       ))}
@@ -233,7 +233,7 @@ export default function SolutionsPage() {
         badge="Ready to Move Forward?"
         title="Public Sector or Restaurant —"
         highlight="We Have Your Robot"
-        subtitle="RCMP, Armed Forces, and government procurement for Robot Dogs and Humanoids. Cooking Robot for restaurants with licensed electrician, city permits, and financing handled. Just sign."
+        subtitle="Public Sector, public institutions, and government procurement for Robot Dogs and Humanoids. Cooking Robot for restaurants with licensed electrician, city permits, and financing handled. Just sign."
         primaryLabel="Contact Us Now"
         primaryHref="/contact"
         secondaryLabel="Contact Our Team"

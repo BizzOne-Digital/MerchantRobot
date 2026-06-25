@@ -19,7 +19,7 @@ export default function FeatureCard({ icon, title, description, delay = 0, light
       transition={{ duration: 0.5, ease: "easeOut", delay }}
       whileHover={{ y: -5 }}
       className="feature-card"
-      style={light ? { background: "#fff", border: "1px solid #e5e5e5" } : {}}
+      style={light ? { background: "#fff", public sector: "1px solid #e5e5e5" } : {}}
     >
       <div className="icon-box">{icon}</div>
       <h4 style={light ? { color: "#0d0d0d" } : {}}>{title}</h4>
