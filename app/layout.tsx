@@ -5,8 +5,8 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Canadian Robots™ | AI Makes Canada Stronger | Robot Dogs & Cooking Robots",
-  description: "Canadian Robots™ — 100% Canadian owned robotics company. Supplying robot dogs and humanoids to public sector institutions. Canada's most advanced cooking robot for restaurants. AI Makes Canada Stronger.",
-  keywords: "Canadian robots, robot dog Canada, public sector robots, public sector institutions robots, cooking robot Canada, restaurant robotics Canada",
+  description: "Canadian Robots™ — 100% Canadian owned robotics company. Supplying robot dogs and humanoids to border institutions. Canada's most advanced cooking robot for restaurants. AI Makes Canada Stronger.",
+  keywords: "Canadian robots, robot dog Canada, border robots, border institutions robots, cooking robot Canada, restaurant robotics Canada",
   icons: {
     icon: [
       { url: "/logo.png", type: "image/png" },

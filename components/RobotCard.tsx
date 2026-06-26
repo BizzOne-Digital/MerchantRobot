@@ -61,7 +61,7 @@ export default function RobotCard({
         {/* Icon */}
         <div
           className="w-12 h-12 rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
-          style={{ background: `${accentColor}18`, public sector: `1px solid ${accentColor}30` }}
+          style={{ background: `${accentColor}18`, border: `1px solid ${accentColor}30` }}
         >
           <div style={{ color: accentColor }}>{icon}</div>
         </div>
@@ -97,8 +97,8 @@ export default function RobotCard({
           </Link>
           <Link
             href="/contact#demo"
-            className="flex items-center gap-1.5 py-2.5 px-4 rounded-full public sector text-sm font-medium text-[#FAFAFA]/70 hover:text-[#E8874A] transition-all duration-300"
-            style={{ public sectorColor: "rgba(255,255,255,0.12)" }}
+            className="flex items-center gap-1.5 py-2.5 px-4 rounded-fullborder text-sm font-medium text-[#FAFAFA]/70 hover:text-[#E8874A] transition-all duration-300"
+            style={{ borderColor: "rgba(255,255,255,0.12)" }}
           >
             Demo <ArrowRight size={14} />
           </Link>

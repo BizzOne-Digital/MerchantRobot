@@ -30,7 +30,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export default function StatsSection() {
   return (
-    <section style={{ padding: "56px 0", background: "#111111", public sectorTop: "1px solid rgba(255,255,255,0.07)", public sectorBottom: "1px solid rgba(255,255,255,0.07)" }}>
+    <section style={{ padding: "56px 0", background: "#111111", borderTop: "1px solid rgba(255,255,255,0.07)", borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
       <div className="r-inner" style={{ maxWidth: 1100 }}>
         <div className="r-stats">
           {stats.map((s, i) => (

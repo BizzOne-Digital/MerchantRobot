@@ -61,7 +61,7 @@ export default function Navbar() {
                 >
                   {link.label}
                   {pathname === link.href && (
-                    <span style={{ position: "absolute", bottom: 0, left: 16, right: 16, height: 2, background: "linear-gradient(90deg, #CC0000, #FF6666)", public sectorRadius: 2 }} />
+                    <span style={{ position: "absolute", bottom: 0, left: 16, right: 16, height: 2, background: "linear-gradient(90deg, #CC0000, #FF6666)", borderRadius: 2 }} />
                   )}
                 </Link>
               ))}
@@ -76,7 +76,7 @@ export default function Navbar() {
 
             {/* Hamburger */}
             <button onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu"
-              style={{ display: "none", padding: 8, background: "none", public sector: "none", color: "rgba(250,250,250,0.8)", cursor: "pointer" }}
+              style={{ display: "none", padding: 8, background: "none", border: "none", color: "rgba(250,250,250,0.8)", cursor: "pointer" }}
               className="show-mobile">
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -99,16 +99,16 @@ export default function Navbar() {
               style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.7)", backdropFilter: "blur(4px)" }} />
             <motion.div initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 28, stiffness: 280 }}
-              style={{ position: "absolute", top: 0, right: 0, bottom: 0, width: 300, background: "#141414", public sectorLeft: "1px solid rgba(255,255,255,0.08)", display: "flex", flexDirection: "column", paddingTop: 88, paddingBottom: 32, paddingLeft: 24, paddingRight: 24 }}>
+              style={{ position: "absolute", top: 0, right: 0, bottom: 0, width: 300, background: "#141414", borderLeft: "1px solid rgba(255,255,255,0.08)", display: "flex", flexDirection: "column", paddingTop: 88, paddingBottom: 32, paddingLeft: 24, paddingRight: 24 }}>
               <nav style={{ flex: 1, display: "flex", flexDirection: "column", gap: 4 }}>
                 {navLinks.map((link, i) => (
                   <motion.div key={link.href} initial={{ x: 24, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: i * 0.06 }}>
                     <Link href={link.href} style={{
-                      display: "block", padding: "13px 16px", public sectorRadius: 14, fontSize: 15,
+                      display: "block", padding: "13px 16px", borderRadius: 14, fontSize: 15,
                       fontWeight: 500, fontFamily: "'Inter', sans-serif", textDecoration: "none",
                       background: pathname === link.href ? "rgba(204,0,0,0.12)" : "transparent",
                       color: pathname === link.href ? "#CC0000" : "rgba(250,250,250,0.8)",
-                      public sector: pathname === link.href ? "1px solid rgba(204,0,0,0.2)" : "1px solid transparent",
+                      border: pathname === link.href ? "1px solid rgba(204,0,0,0.2)" : "1px solid transparent",
                       transition: "all 0.2s ease",
                     }}>
                       {link.label}

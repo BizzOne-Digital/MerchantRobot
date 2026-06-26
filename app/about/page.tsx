@@ -79,7 +79,7 @@ export default function AboutPage() {
             <motion.div initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, delay: 0.3 }}
               className="float hero-visual-hide" style={{ flexShrink: 0, width: "min(280px, 35vw)" }}>
               <div style={{ position: "relative" }}>
-                <div style={{ position: "absolute", inset: 0, background: "rgba(200,200,200,0.05)", public sectorRadius: "50%", filter: "blur(50px)", transform: "scale(1.2)" }} />
+                <div style={{ position: "absolute", inset: 0, background: "rgba(200,200,200,0.05)", borderRadius: "50%", filter: "blur(50px)", transform: "scale(1.2)" }} />
                 <HeroRobotVisual />
               </div>
             </motion.div>
@@ -141,13 +141,13 @@ export default function AboutPage() {
         <div className="r-inner" style={{ maxWidth: 900 }}>
           <SectionHeading badge="Our Journey" title="Building the" highlight="Future of Automation" subtitle="From our founding to today, every milestone reflects our commitment to transforming how businesses operate." />
           <div style={{ position: "relative", paddingLeft: 48 }}>
-            <div style={{ position: "absolute", left: 20, top: 0, bottom: 0, width: 2, background: "linear-gradient(to bottom, rgba(204,0,0,0.6), rgba(204,0,0,0.1))", public sectorRadius: 2 }} />
+            <div style={{ position: "absolute", left: 20, top: 0, bottom: 0, width: 2, background: "linear-gradient(to bottom, rgba(204,0,0,0.6), rgba(204,0,0,0.1))", borderRadius: 2 }} />
             <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
               {milestones.map((m, i) => (
                 <motion.div key={m.year} initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.07 }} style={{ position: "relative" }}>
-                  <div style={{ position: "absolute", left: -36, top: 8, width: 14, height: 14, public sectorRadius: "50%", background: "#CC0000", public sector: "2px solid #0a0a0a", zIndex: 1 }} />
-                  <div style={{ background: "rgba(255,255,255,0.03)", public sector: "1px solid rgba(255,255,255,0.08)", public sectorRadius: 16, padding: "20px 24px" }}>
-                    <span style={{ display: "inline-block", padding: "3px 12px", public sectorRadius: 100, background: "rgba(200,200,200,0.05)", color: "#CC0000", fontSize: 12, fontWeight: 700, fontFamily: "'Inter', sans-serif", marginBottom: 8 }}>{m.year}</span>
+                  <div style={{ position: "absolute", left: -36, top: 8, width: 14, height: 14, borderRadius: "50%", background: "#CC0000", border: "2px solid #0a0a0a", zIndex: 1 }} />
+                  <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 16, padding: "20px 24px" }}>
+                    <span style={{ display: "inline-block", padding: "3px 12px", borderRadius: 100, background: "rgba(200,200,200,0.05)", color: "#CC0000", fontSize: 12, fontWeight: 700, fontFamily: "'Inter', sans-serif", marginBottom: 8 }}>{m.year}</span>
                     <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 600, color: "#fafafa", marginBottom: 6 }}>{m.title}</h4>
                     <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.55)", lineHeight: 1.6 }}>{m.desc}</p>
                   </div>
@@ -178,7 +178,7 @@ export default function AboutPage() {
               </div>
             </div>
             <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <div style={{ background: "rgba(255,255,255,0.03)", public sector: "1px solid rgba(255,255,255,0.08)", public sectorRadius: 24, padding: "clamp(24px, 4vw, 36px)", position: "relative", overflow: "hidden" }}>
+              <div style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 24, padding: "clamp(24px, 4vw, 36px)", position: "relative", overflow: "hidden" }}>
                 <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(90deg, #CC0000, #FF6666)" }} />
                 <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 700, color: "#fafafa", marginBottom: 16 }}>The Future of Robotics</h3>
                 <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.6)", lineHeight: 1.7, marginBottom: 28 }}>AI improvements, sensor advances, and falling hardware costs are making robots more capable, reliable, and accessible than ever. Canadian Robots ensures you stay ahead of this curve.</p>

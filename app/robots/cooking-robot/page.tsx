@@ -151,7 +151,7 @@ export default function CookingRobotPage() {
 
             {/* Right */}
             <motion.div initial={{ opacity: 0, scale: 0.85, x: 40 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ duration: 1, delay: 0.2 }} className="hero-visual-center">
-              <div style={{ public sectorRadius: 28, overflow: "hidden", height: 460, width: "100%", public sector: "1px solid rgba(255,255,255,0.08)" }}>
+              <div style={{ borderRadius: 28, overflow: "hidden", height: 460, width: "100%", border: "1px solid rgba(255,255,255,0.08)" }}>
                 <img src="/cooking-robot-4wok.jpg" alt="Canadian Robots Cooking Robot" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }} />
               </div>
             </motion.div>
@@ -160,12 +160,12 @@ export default function CookingRobotPage() {
       </section>
 
       {/* ══ SPECS ══ */}
-      <section style={{ background: "#111111", public sectorTop: "1px solid rgba(255,255,255,0.07)", public sectorBottom: "1px solid rgba(255,255,255,0.07)", padding: "48px 0" }}>
+      <section style={{ background: "#111111", borderTop: "1px solid rgba(255,255,255,0.07)", borderBottom: "1px solid rgba(255,255,255,0.07)", padding: "48px 0" }}>
         <div className="r-inner">
           <div className="r-specs">
             {specs.map((s, i) => (
               <motion.div key={s.label} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}
-                className="r-spec-cell" style={{ public sectorRight: i < 7 ? "1px solid rgba(255,255,255,0.07)" : "none", public sectorBottom: i < 4 ? "1px solid rgba(255,255,255,0.07)" : "none" }}>
+                className="r-spec-cell" style={{ borderRight: i < 7 ? "1px solid rgba(255,255,255,0.07)" : "none", borderBottom: i < 4 ? "1px solid rgba(255,255,255,0.07)" : "none" }}>
                 <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, color: "rgba(250,250,250,0.4)", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 6 }}>{s.label}</div>
                 <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 15, fontWeight: 600, color: "#fafafa" }}>{s.value}</div>
               </motion.div>
@@ -190,14 +190,14 @@ export default function CookingRobotPage() {
           <div className="r-grid-2" style={{ gap: 32, maxWidth: 960, margin: "0 auto" }}>
             {/* Model 1 — 2 Wok */}
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}
-              style={{ background: "rgba(255,255,255,0.03)", public sector: "1px solid rgba(255,255,255,0.1)", public sectorRadius: 24, overflow: "hidden", transition: "all 0.3s ease" }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.public sectorColor = "rgba(204,0,0,0.45)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 20px 50px rgba(0,0,0,0.5)"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.public sectorColor = "rgba(255,255,255,0.1)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "none"; }}>
+              style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 24, overflow: "hidden", transition: "all 0.3s ease" }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,0,0,0.45)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 20px 50px rgba(0,0,0,0.5)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.1)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "none"; }}>
               {/* Image */}
               <div style={{ height: 320, overflow: "hidden", background: "#0d0d0d", position: "relative" }}>
                 <img src="/cooking-robot-2wok.jpg" alt="Cooking Robot 2-Wok Model" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
                 <div style={{ position: "absolute", top: 16, left: 16 }}>
-                  <span style={{ display: "inline-block", padding: "5px 14px", public sectorRadius: 100, background: "rgba(13,13,13,0.85)", public sector: "1px solid rgba(255,255,255,0.15)", fontSize: 12, fontWeight: 600, color: "#fafafa", fontFamily: "'Inter', sans-serif" }}>
+                  <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 100, background: "rgba(13,13,13,0.85)", border: "1px solid rgba(255,255,255,0.15)", fontSize: 12, fontWeight: 600, color: "#fafafa", fontFamily: "'Inter', sans-serif" }}>
                     2-Wok Model
                   </span>
                 </div>
@@ -217,7 +217,7 @@ export default function CookingRobotPage() {
                   ))}
                 </ul>
                 {/* Price */}
-                <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", paddingTop: 20, public sectorTop: "1px solid rgba(255,255,255,0.08)" }}>
+                <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", paddingTop: 20, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
                   <div>
                     <div style={{ fontSize: 11, fontWeight: 600, color: "rgba(250,250,250,0.45)", fontFamily: "'Inter', sans-serif", textTransform: "uppercase" as const, letterSpacing: "0.1em", marginBottom: 4 }}>Monthly Rate</div>
                     <div style={{ fontSize: 36, fontFamily: "'Sora', sans-serif", fontWeight: 900, color: "#CC0000", lineHeight: 1 }}>$650</div>
@@ -230,18 +230,18 @@ export default function CookingRobotPage() {
 
             {/* Model 2 — 4 Wok */}
             <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.12 }}
-              style={{ background: "rgba(255,255,255,0.03)", public sector: "2px solid rgba(204,0,0,0.4)", public sectorRadius: 24, overflow: "hidden", transition: "all 0.3s ease", position: "relative" }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.public sectorColor = "rgba(204,0,0,0.7)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 20px 50px rgba(0,0,0,0.5)"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.public sectorColor = "rgba(204,0,0,0.4)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "none"; }}>
+              style={{ background: "rgba(255,255,255,0.03)", border: "2px solid rgba(204,0,0,0.4)", borderRadius: 24, overflow: "hidden", transition: "all 0.3s ease", position: "relative" }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,0,0,0.7)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 20px 50px rgba(0,0,0,0.5)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,0,0,0.4)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "none"; }}>
               {/* Popular badge */}
-              <div style={{ position: "absolute", top: 16, right: 16, zIndex: 2, background: "#CC0000", color: "#fff", fontSize: 11, fontWeight: 700, padding: "5px 14px", public sectorRadius: 100, fontFamily: "'Inter', sans-serif", letterSpacing: "0.08em", textTransform: "uppercase" as const }}>
+              <div style={{ position: "absolute", top: 16, right: 16, zIndex: 2, background: "#CC0000", color: "#fff", fontSize: 11, fontWeight: 700, padding: "5px 14px", borderRadius: 100, fontFamily: "'Inter', sans-serif", letterSpacing: "0.08em", textTransform: "uppercase" as const }}>
                 Most Popular
               </div>
               {/* Image */}
               <div style={{ height: 320, overflow: "hidden", background: "#0d0d0d", position: "relative" }}>
                 <img src="/cooking-robot-4wok.jpg" alt="Cooking Robot 4-Wok Model" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }} />
                 <div style={{ position: "absolute", top: 16, left: 16 }}>
-                  <span style={{ display: "inline-block", padding: "5px 14px", public sectorRadius: 100, background: "rgba(13,13,13,0.85)", public sector: "1px solid rgba(255,255,255,0.15)", fontSize: 12, fontWeight: 600, color: "#fafafa", fontFamily: "'Inter', sans-serif" }}>
+                  <span style={{ display: "inline-block", padding: "5px 14px", borderRadius: 100, background: "rgba(13,13,13,0.85)", border: "1px solid rgba(255,255,255,0.15)", fontSize: 12, fontWeight: 600, color: "#fafafa", fontFamily: "'Inter', sans-serif" }}>
                     4-Wok Model
                   </span>
                 </div>
@@ -261,7 +261,7 @@ export default function CookingRobotPage() {
                   ))}
                 </ul>
                 {/* Price */}
-                <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", paddingTop: 20, public sectorTop: "1px solid rgba(255,255,255,0.08)" }}>
+                <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", paddingTop: 20, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
                   <div>
                     <div style={{ fontSize: 11, fontWeight: 600, color: "rgba(250,250,250,0.45)", fontFamily: "'Inter', sans-serif", textTransform: "uppercase" as const, letterSpacing: "0.1em", marginBottom: 4 }}>Monthly Rate</div>
                     <div style={{ fontSize: 36, fontFamily: "'Sora', sans-serif", fontWeight: 900, color: "#CC0000", lineHeight: 1 }}>$750</div>
@@ -275,7 +275,7 @@ export default function CookingRobotPage() {
 
           {/* Included with both */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
-            style={{ marginTop: 40, padding: "24px 32px", public sectorRadius: 18, background: "rgba(255,255,255,0.03)", public sector: "1px solid rgba(255,255,255,0.08)", display: "flex", flexWrap: "wrap", gap: 24, justifyContent: "center", alignItems: "center", maxWidth: 960, margin: "40px auto 0" }}>
+            style={{ marginTop: 40, padding: "24px 32px", borderRadius: 18, background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", display: "flex", flexWrap: "wrap", gap: 24, justifyContent: "center", alignItems: "center", maxWidth: 960, margin: "40px auto 0" }}>
             <span style={{ fontSize: 13, fontWeight: 600, color: "rgba(250,250,250,0.5)", fontFamily: "'Inter', sans-serif", textTransform: "uppercase" as const, letterSpacing: "0.08em" }}>Included with both models:</span>
             {["Licensed Electrician Assigned", "City Permits Handled", "Financing Available", "Staff Training", "Ongoing Support"].map(item => (
               <div key={item} style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 13, color: "rgba(250,250,250,0.72)", fontFamily: "'Inter', sans-serif" }}>
@@ -319,14 +319,14 @@ export default function CookingRobotPage() {
           <div className="r-before-after">
             {/* Before */}
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              style={{ background: "rgba(255,255,255,0.02)", public sector: "1px solid rgba(255,255,255,0.08)", public sectorRadius: 24, padding: 36 }}>
+              style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 24, padding: 36 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 28 }}>
-                <div style={{ width: 40, height: 40, public sectorRadius: "50%", background: "rgba(255,80,80,0.12)", public sector: "1px solid rgba(255,80,80,0.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>❌</div>
+                <div style={{ width: 40, height: 40, borderRadius: "50%", background: "rgba(255,80,80,0.12)", border: "1px solid rgba(255,80,80,0.2)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>❌</div>
                 <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 700, color: "#fafafa" }}>Without Robot</h3>
               </div>
               {kitchenBefore.map((item) => (
                 <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: 12, marginBottom: 14 }}>
-                  <div style={{ width: 20, height: 20, public sectorRadius: "50%", background: "rgba(255,80,80,0.15)", public sector: "1px solid rgba(255,80,80,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>
+                  <div style={{ width: 20, height: 20, borderRadius: "50%", background: "rgba(255,80,80,0.15)", border: "1px solid rgba(255,80,80,0.2)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>
                     <span style={{ fontSize: 10, color: "#ff5050" }}>✕</span>
                   </div>
                   <span style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.6)", lineHeight: 1.6 }}>{item}</span>
@@ -336,10 +336,10 @@ export default function CookingRobotPage() {
 
             {/* After */}
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              style={{ background: "rgba(200,200,200,0.05)", public sector: "1px solid rgba(204,0,0,0.2)", public sectorRadius: 24, padding: 36, position: "relative", overflow: "hidden" }}>
+              style={{ background: "rgba(200,200,200,0.05)", border: "1px solid rgba(204,0,0,0.2)", borderRadius: 24, padding: 36, position: "relative", overflow: "hidden" }}>
               <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: "linear-gradient(90deg, #CC0000, #FF6666)" }} />
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 28 }}>
-                <div style={{ width: 40, height: 40, public sectorRadius: "50%", background: "rgba(200,200,200,0.05)", public sector: "1px solid rgba(204,0,0,0.3)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>✅</div>
+                <div style={{ width: 40, height: 40, borderRadius: "50%", background: "rgba(200,200,200,0.05)", border: "1px solid rgba(204,0,0,0.3)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>✅</div>
                 <h3 style={{ fontFamily: "'Sora', sans-serif", fontSize: 20, fontWeight: 700, color: "#fafafa" }}>With Cooking Robot</h3>
               </div>
               {kitchenAfter.map((item) => (
@@ -365,10 +365,10 @@ export default function CookingRobotPage() {
           <div className="r-grid-3">
             {useCases.map((u, i) => (
               <motion.div key={u.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
-                style={{ background: "rgba(255,255,255,0.03)", public sector: "1px solid rgba(255,255,255,0.08)", public sectorRadius: 20, padding: 28, transition: "all 0.3s ease" }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.public sectorColor = "rgba(204,0,0,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-5px)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.public sectorColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
-                <div style={{ width: 48, height: 48, public sectorRadius: 14, background: "rgba(200,200,200,0.05)", public sector: "1px solid rgba(204,0,0,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", marginBottom: 20 }}>
+                style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 20, padding: 28, transition: "all 0.3s ease" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,0,0,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-5px)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
+                <div style={{ width: 48, height: 48, borderRadius: 14, background: "rgba(200,200,200,0.05)", border: "1px solid rgba(204,0,0,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#CC0000", marginBottom: 20 }}>
                   {u.icon}
                 </div>
                 <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 17, fontWeight: 600, color: "#fafafa", marginBottom: 10 }}>{u.title}</h4>
@@ -391,7 +391,7 @@ export default function CookingRobotPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
             {faqs.map((f, i) => (
               <motion.div key={f.q} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.07 }}
-                style={{ background: "rgba(255,255,255,0.03)", public sector: "1px solid rgba(255,255,255,0.08)", public sectorRadius: 18, padding: "24px 28px" }}>
+                style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 18, padding: "24px 28px" }}>
                 <h4 style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 600, color: "#fafafa", marginBottom: 10 }}>{f.q}</h4>
                 <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 14, color: "rgba(250,250,250,0.62)", lineHeight: 1.7 }}>{f.a}</p>
               </motion.div>
@@ -409,9 +409,9 @@ export default function CookingRobotPage() {
               { label: "Robot Dog", href: "/robots/robot-dog", desc: "Smart mobility for events, showrooms & brand activation" },
               { label: "Humanoid Robot", href: "/robots/humanoid", desc: "Interactive robots for guest welcome & customer service" },
             ].map(r => (
-              <Link key={r.href} href={r.href} style={{ display: "block", background: "rgba(255,255,255,0.03)", public sector: "1px solid rgba(255,255,255,0.08)", public sectorRadius: 18, padding: "24px", textDecoration: "none", transition: "all 0.3s ease" }}
-                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.public sectorColor = "rgba(204,0,0,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; }}
-                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.public sectorColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
+              <Link key={r.href} href={r.href} style={{ display: "block", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 18, padding: "24px", textDecoration: "none", transition: "all 0.3s ease" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(204,0,0,0.3)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.08)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}>
                 <div style={{ fontFamily: "'Sora', sans-serif", fontSize: 16, fontWeight: 600, color: "#fafafa", marginBottom: 6, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   {r.label} <ArrowRight size={16} style={{ color: "#CC0000" }} />
                 </div>
