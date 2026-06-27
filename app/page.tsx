@@ -140,7 +140,7 @@ export default function HomePage() {
               <motion.div key={cat.title} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-50px" }} transition={{ duration: 0.6, delay: i * 0.12 }} whileHover={{ y: -8 }} className="robot-card">
                 <div className="visual-area">
                   <img
-                    src={cat.title === "Robot Dog" ? "/robot-dog.jpg" : cat.title === "Humanoid Robot" ? "/humanoid-robot.jpg" : "/cooking-robot-4wok.jpg"}
+                    src={cat.title === "Robot Dog" ? "/robot-dog.jpg" : cat.title === "Humanoid Robot" ? "/humanoid-robot.jpg" : "/cooking-robot-2wok.jpg"}
                     alt={cat.title}
                     style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: cat.title === "Humanoid Robot" ? "center top" : "center center", transition: "transform 0.6s ease" }}
                   />
@@ -202,7 +202,7 @@ export default function HomePage() {
             <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}>
               <div className="visual-panel" style={{ flexDirection: "column", padding: 0, overflow: "hidden", gap: 0 }}>
                 <div style={{ flex: 1, overflow: "hidden", borderRadius: "28px 28px 0 0" }}>
-                  <img src="/cooking-robot-4wok.jpg" alt="Cooking Robot" style={{ width: "100%", height: 280, objectFit: "cover", objectPosition: "center", display: "block" }} />
+                  <img src="/cooking-robot-2wok.jpg" alt="Cooking Robot" style={{ width: "100%", height: 280, objectFit: "cover", objectPosition: "center", display: "block" }} />
                 </div>
                 <div className="r-ministats" style={{ padding: "20px 28px 28px", borderRadius: "0 0 28px 28px", background: "rgba(255,255,255,0.03)" }}>
                   {[{ val: "40%", label: "Faster Service" }, { val: "98%", label: "Consistency" }, { val: "60%", label: "Less Repetition" }].map(s => (

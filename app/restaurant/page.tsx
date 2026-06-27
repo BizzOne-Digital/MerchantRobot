@@ -145,7 +145,7 @@ export default function RestaurantPage() {
                 <div style={{ borderRadius: 28, overflow: "hidden", height: 400, width: "100%", position: "relative", border: "1px solid rgba(255,255,255,0.08)" }}>
                   <img
                     src={
-                      robot.id === "cooking-robot" ? "/cooking-robot-4wok.jpg"
+                      robot.id === "cooking-robot" ? "/cooking-robot-2wok.jpg"
                       : robot.id === "humanoid-front" ? "/humanoid-robot.jpg"
                       : "/robot-dog.jpg"
                     }
