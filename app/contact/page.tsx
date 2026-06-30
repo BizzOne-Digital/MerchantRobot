@@ -9,7 +9,7 @@ const robotInterests = ["Robot Dog", "Humanoid Robot", "Cooking Robot", "General
 
 const contactInfo = [
   { icon: <Mail size={18} />, label: "Email", value: "info@canadianrobots.ca", sub: "We reply within 24 hours" },
-  { icon: <Phone size={18} />, label: "Phone", value: "+1 (800) 000-0000", sub: "Mon–Fri, 9AM–6PM" },
+  { icon: <Phone size={18} />, label: "Phone", value: "+1 778.681.7688", sub: "Mon–Fri, 9AM–6PM" },
   { icon: <MapPin size={18} />, label: "Service Area", value: "Nationwide Coverage", sub: "Serving restaurants & businesses everywhere" },
   { icon: <Clock size={18} />, label: "Business Hours", value: "Mon–Fri: 9AM–6PM", sub: "Weekend inquiries responded Monday" },
 ];
@@ -134,7 +134,7 @@ export default function ContactPage() {
                         <div className="r-form-row" style={{ marginBottom: 20 }}>
                           <div>
                             <label className="form-label">Phone Number</label>
-                            <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="+1 (555) 000-0000" className="form-input" />
+                            <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="+1 778.681.7688" className="form-input" />
                           </div>
                           <div>
                             <label className="form-label">Business Name</label>

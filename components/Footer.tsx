@@ -67,7 +67,7 @@ export default function Footer() {
             <h4 style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#fafafa", marginBottom: 18 }}>Contact</h4>
             {[
               { icon: <Mail size={13} />, text: "info@canadianrobots.ca" },
-              { icon: <Phone size={13} />, text: "+1 (800) 000-0000" },
+              { icon: <Phone size={13} />, text: "+1 778.681.7688" },
               { icon: <MapPin size={13} />, text: "Serving Canada Nationwide" },
             ].map(({ icon, text }) => (
               <div key={text} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 13, color: "rgba(250,250,250,0.55)", fontFamily: "'Inter', sans-serif", marginBottom: 12 }}>

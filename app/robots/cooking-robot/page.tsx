@@ -220,7 +220,7 @@ export default function CookingRobotPage() {
                 <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", paddingTop: 20, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
                   <div>
                     <div style={{ fontSize: 11, fontWeight: 600, color: "rgba(250,250,250,0.45)", fontFamily: "'Inter', sans-serif", textTransform: "uppercase" as const, letterSpacing: "0.1em", marginBottom: 4 }}>Monthly Rate</div>
-                    <div style={{ fontSize: 36, fontFamily: "'Sora', sans-serif", fontWeight: 900, color: "#CC0000", lineHeight: 1 }}>$750</div>
+                    <div style={{ fontSize: 36, fontFamily: "'Sora', sans-serif", fontWeight: 900, color: "#CC0000", lineHeight: 1 }}>$699</div>
                     <div style={{ fontSize: 13, color: "rgba(250,250,250,0.5)", fontFamily: "'Inter', sans-serif" }}>CAD / month</div>
                   </div>
                   <Link href="/contact" className="btn-primary" style={{ padding: "12px 24px", fontSize: 14 }}>Get This Model</Link>
@@ -256,7 +256,7 @@ export default function CookingRobotPage() {
                 <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", paddingTop: 20, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
                   <div>
                     <div style={{ fontSize: 11, fontWeight: 600, color: "rgba(250,250,250,0.45)", fontFamily: "'Inter', sans-serif", textTransform: "uppercase" as const, letterSpacing: "0.1em", marginBottom: 4 }}>Monthly Rate</div>
-                    <div style={{ fontSize: 36, fontFamily: "'Sora', sans-serif", fontWeight: 900, color: "#CC0000", lineHeight: 1 }}>$650</div>
+                    <div style={{ fontSize: 36, fontFamily: "'Sora', sans-serif", fontWeight: 900, color: "#CC0000", lineHeight: 1 }}>$599</div>
                     <div style={{ fontSize: 13, color: "rgba(250,250,250,0.5)", fontFamily: "'Inter', sans-serif" }}>CAD / month</div>
                   </div>
                   <Link href="/contact" className="btn-primary" style={{ padding: "12px 24px", fontSize: 14 }}>Get This Model</Link>
