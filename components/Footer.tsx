@@ -66,12 +66,19 @@ export default function Footer() {
           <div>
             <h4 style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", color: "#fafafa", marginBottom: 18 }}>Contact</h4>
             {[
-              { icon: <Mail size={13} />, text: "info@canadianrobots.ca" },
-              { icon: <Phone size={13} />, text: "+1 778.681.7688" },
-              { icon: <MapPin size={13} />, text: "Serving Canada Nationwide" },
-            ].map(({ icon, text }) => (
+              { icon: <Mail size={13} />, text: "info@canadianrobots.ca", href: "mailto:info@canadianrobots.ca" },
+              { icon: <Phone size={13} />, text: "+1 778.681.7688", href: "tel:+17786817688" },
+              { icon: <MapPin size={13} />, text: "Serving Canada Nationwide", href: null },
+            ].map(({ icon, text, href }) => (
               <div key={text} style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 13, color: "rgba(250,250,250,0.55)", fontFamily: "'Inter', sans-serif", marginBottom: 12 }}>
-                <span style={{ color: "#CC0000", flexShrink: 0 }}>{icon}</span>{text}
+                <span style={{ color: "#CC0000", flexShrink: 0 }}>{icon}</span>
+                {href ? (
+                  <a href={href} style={{ color: "rgba(250,250,250,0.55)", textDecoration: "none", transition: "color 0.2s" }}
+                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#CC0000"}
+                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(250,250,250,0.55)"}>
+                    {text}
+                  </a>
+                ) : text}
               </div>
             ))}
           </div>

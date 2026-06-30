@@ -8,10 +8,10 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, ArrowRight } from "luci
 const robotInterests = ["Robot Dog", "Humanoid Robot", "Cooking Robot", "General Inquiry"];
 
 const contactInfo = [
-  { icon: <Mail size={18} />, label: "Email", value: "info@canadianrobots.ca", sub: "We reply within 24 hours" },
-  { icon: <Phone size={18} />, label: "Phone", value: "+1 778.681.7688", sub: "Mon–Fri, 9AM–6PM" },
-  { icon: <MapPin size={18} />, label: "Service Area", value: "Nationwide Coverage", sub: "Serving restaurants & businesses everywhere" },
-  { icon: <Clock size={18} />, label: "Business Hours", value: "Mon–Fri: 9AM–6PM", sub: "Weekend inquiries responded Monday" },
+  { icon: <Mail size={18} />, label: "Email", value: "info@canadianrobots.ca", sub: "We reply within 24 hours", href: "mailto:info@canadianrobots.ca" },
+  { icon: <Phone size={18} />, label: "Phone", value: "+1 778.681.7688", sub: "Mon–Fri, 9AM–6PM", href: "tel:+17786817688" },
+  { icon: <MapPin size={18} />, label: "Service Area", value: "Nationwide Coverage", sub: "Serving restaurants & businesses everywhere", href: null },
+  { icon: <Clock size={18} />, label: "Business Hours", value: "Mon–Fri: 9AM–6PM", sub: "Weekend inquiries responded Monday", href: null },
 ];
 
 export default function ContactPage() {
@@ -70,7 +70,15 @@ export default function ContactPage() {
                     <div className="icon-box">{info.icon}</div>
                     <div>
                       <div className="label">{info.label}</div>
-                      <div className="value">{info.value}</div>
+                      <div className="value">
+                        {info.href ? (
+                          <a href={info.href} style={{ color: "#fafafa", textDecoration: "none", transition: "color 0.2s" }}
+                            onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#CC0000"}
+                            onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#fafafa"}>
+                            {info.value}
+                          </a>
+                        ) : info.value}
+                      </div>
                       <div className="sub">{info.sub}</div>
                     </div>
                   </motion.div>
